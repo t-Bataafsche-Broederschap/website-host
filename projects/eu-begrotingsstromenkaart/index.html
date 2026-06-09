@@ -2,9 +2,9 @@
 <html lang="nl-NL">
 	<head>
 		<meta charset="utf-8" />
-		<title>EU Budget Flow Map | ’t Bataafsche Broederschap</title>
-		<meta name="description" content="Animated canvas map of EU member state budget net balances from 2000 to 2024." />
-		<link rel="canonical" href="https://tbataafschebroederschap.nl/projects/eu-budget-flow-map/" />
+		<title>Kaart van begrotingsstromen van de Europese Unie | ’t Bataafsche Broederschap</title>
+		<meta name="description" content="Geanimeerde canvaskaart van netto begrotingssaldi van lidstaten van de Europese Unie van 2000 tot en met 2024." />
+		<link rel="canonical" href="https://tbataafschebroederschap.nl/projects/eu-begrotingsstromenkaart/" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="/styles/site.css" />
 	</head>
@@ -23,11 +23,11 @@
 			<div class="eu-budget-flow-page">
 				<main class="app">
 					<section class="map-pane">
-						<canvas id="map" aria-label="Geanimeerde kaart van EU budgetstromen"></canvas>
+						<canvas id="map" aria-label="Geanimeerde kaart van begrotingsstromen van de Europese Unie"></canvas>
 						<div id="countryTooltip" class="country-tooltip" role="status" aria-live="polite" hidden></div>
 						<div class="hud">
 							<div>
-								<p class="eyebrow">EU budget net balance</p>
+								<p class="eyebrow">Netto begrotingssaldo van de Europese Unie</p>
 								<h1 id="yearLabel">2000</h1>
 							</div>
 							<div class="legend" aria-hidden="true">
@@ -38,7 +38,7 @@
 					</section>
 					<aside class="controls">
 						<div class="toolbar">
-							<button id="play" type="button">Pause</button>
+							<button id="play" type="button">Pauze</button>
 							<label>
 								Jaar
 								<input id="year" type="range" min="2000" max="2024" value="2000" step="1" />
@@ -49,9 +49,9 @@
 							<input id="speed" type="range" min="0.25" max="10" value="1" step="0.25" />
 						</label>
 						<div class="metric-switch" role="group" aria-label="Kleurmetriek">
-							<button class="active" type="button" data-metric="net_balance_pct_gni">% GNI</button>
-							<button type="button" data-metric="net_balance_m_eur">EUR mln</button>
-							<button type="button" data-metric="net_balance_per_capita_eur">EUR p.p.</button>
+							<button class="active" type="button" data-metric="net_balance_pct_gni">Percentage bruto nationaal inkomen</button>
+							<button type="button" data-metric="net_balance_m_eur">Miljoen euro</button>
+							<button type="button" data-metric="net_balance_per_capita_eur">Euro per inwoner</button>
 						</div>
 						<div class="stats">
 							<div>
@@ -64,7 +64,7 @@
 							</div>
 						</div>
 						<ol id="ranking" class="ranking"></ol>
-						<p class="source">Bron: EUBudget ranking data. 2001-2006 zijn geïnterpoleerd, omdat EUBudget rankingpagina's voor 2000 en 2007-2024 publiceert.</p>
+						<p class="source">Bron: EUBudget-ranglijstdata. 2001 tot en met 2006 zijn geïnterpoleerd, omdat EUBudget ranglijstpagina's voor 2000 en 2007 tot en met 2024 publiceert.</p>
 					</aside>
 				</main>
 			</div>
@@ -75,16 +75,16 @@
 				<h2 id="project-sources-title">Bronnen</h2>
 				<ul>
 					<li>
-						<a href="https://eubudget.com/ranking" rel="noopener noreferrer" target="_blank">EUBudget ranking data</a>
-						<span>Primary table scraped by year for member-state contributions, receipts, net balance, per-capita balance, and % GNI.</span>
+						<a href="https://eubudget.com/ranking" rel="noopener noreferrer" target="_blank">EUBudget-ranglijstdata</a>
+						<span>Primaire tabel per jaar voor bijdragen, ontvangsten, nettosaldo, saldo per inwoner en saldo als percentage van het bruto nationaal inkomen.</span>
 					</li>
 					<li>
-						<a href="https://commission.europa.eu/strategy-and-policy/eu-budget/long-term-eu-budget/2021-2027/spending-and-revenue_en" rel="noopener noreferrer" target="_blank">European Commission: EU spending and revenue</a>
-						<span>Official background source for EU spending and revenue datasets.</span>
+						<a href="https://commission.europa.eu/strategy-and-policy/eu-budget/long-term-eu-budget/2021-2027/spending-and-revenue_en" rel="noopener noreferrer" target="_blank">Europese Commissie: uitgaven en inkomsten van de Europese Unie</a>
+						<span>Officiele achtergrondbron voor datasets over uitgaven en inkomsten van de Europese Unie.</span>
 					</li>
 					<li>
 						<a href="https://github.com/topojson/world-atlas" rel="noopener noreferrer" target="_blank">world-atlas TopoJSON</a>
-						<span>Country boundaries used for the canvas map.</span>
+						<span>Landsgrenzen voor de canvaskaart.</span>
 					</li>
 				</ul>
 			</aside>

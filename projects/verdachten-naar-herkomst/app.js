@@ -97,21 +97,21 @@ function rowsForStats(point) {
 	if (!point) {
 		return [
 			["Totaal verdachten", "-"],
-			["Met woonadres in NL", "-"],
+			["Met woonadres in Nederland", "-"],
 			["Per 10.000 inwoners", "-"],
 			["Bron", "-"],
 		];
 	}
 	return [
 		["Totaal verdachten", formatNumber(point.totalSuspects)],
-		["Met woonadres in NL", formatNumber(point.suspectsWithDutchAddress)],
+		["Met woonadres in Nederland", formatNumber(point.suspectsWithDutchAddress)],
 		["Bevolking groep", `ca. ${formatNumber(point.populationEstimate)}`],
 		["Aandeel alle verdachten", formatSharePercent(shareOfTotalSuspects(point))],
 		["Aandeel bevolking", formatSharePercent(shareOfTotalPopulation(point))],
 		["Verdachten/bevolking", Number.isFinite(suspectPopulationShareRatio(point)) ? `${ratioFormat.format(suspectPopulationShareRatio(point))}x` : "-"],
 		["Per 10.000 inwoners", formatPer(point.suspectsPer10000)],
 		["Aandeel totaal", formatChance(point.populationEstimate > 0 ? (point.totalSuspects / point.populationEstimate) * 10000 : null)],
-		["Aandeel met NL-adres", formatChance(point.suspectsPer10000)],
+		["Aandeel met Nederlands adres", formatChance(point.suspectsPer10000)],
 		["Type", point.isAggregate ? "Aggregaat" : "Land / herkomst"],
 		["Bron", `${point.source}, ${point.year}`],
 	];
@@ -179,7 +179,7 @@ function showTooltip(event, point) {
 		<span>Verdachten/bevolking: ${Number.isFinite(suspectPopulationShareRatio(point)) ? `${ratioFormat.format(suspectPopulationShareRatio(point))}x` : "-"}</span>
 		<span>Per 10.000 inwoners: ${formatPer(point.suspectsPer10000)}</span>
 		<span>Aandeel totaal: ${formatChance(point.populationEstimate > 0 ? (point.totalSuspects / point.populationEstimate) * 10000 : null)}</span>
-		<span>Aandeel met NL-adres: ${formatChance(point.suspectsPer10000)}</span>
+		<span>Aandeel met Nederlands adres: ${formatChance(point.suspectsPer10000)}</span>
 		<span>T.o.v. Nederlandse achtergrond: ${formatRatioOfDutchBackground(point.suspectsPer10000)}</span>
 		<small>${point.source}, ${point.year}. Geregistreerde verdachten, niet veroordeelden.</small>
 	`;

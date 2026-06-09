@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="nl-NL">
+	<head>
+		<meta charset="utf-8" />
+		<title>Demografische veiligheid | ’t Bataafsche Broederschap</title>
+		<meta name="description" content="Interactief dashboard met CBS Veiligheidsmonitor 2025: veiligheidsgevoel, slachtofferschap, discriminatie en politiecontact naar demografische groepen en gemeenten." />
+		<link rel="canonical" href="https://tbataafschebroederschap.nl/projects/demografische-veiligheid/" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/styles/site.css" />
+	</head>
+	<body>
+		<header class="site-header">
+			<a class="site-title" href="/">’t Bataafsche Broederschap</a>
+			<nav>
+				<a href="/">Home</a>
+				<a href="/projects/">Projecten</a>
+				<a href="/over/">Over</a>
+			</nav>
+		</header>
+		<main class="site-main section-projects">
+			<link rel="stylesheet" href="styles.css" />
+			<link rel="stylesheet" href="/styles/project-theme.css" />
+			<div class="demographic-safety-page">
+				<header class="demographic-safety-header">
+					<div>
+						<p class="eyebrow">CBS Veiligheidsmonitor 2025</p>
+						<h1>Demografische veiligheid</h1>
+					</div>
+					<p>Vergelijk groepen op feitelijk slachtofferschap, veiligheidsbeleving, discriminatie en contact met politie. De grafiek laat zien waar risico en gevoel samenvallen, en waar ze juist uit elkaar lopen.</p>
+				</header>
+				<section class="notes" aria-label="Datatoelichting">
+					<article>
+						<h2>Datatoelichting</h2>
+						<p>Alle cijfers gaan over inwoners van Nederland van 15 jaar of ouder en komen uit de Veiligheidsmonitor 2025. De percentages zijn puntschattingen uit de CBS StatLine-tabellen.</p>
+						<p>De demografische vergelijking gebruikt persoonskenmerken zoals geslacht, leeftijd, herkomst, onderwijsniveau, seksuele orientatie, inkomen, welvaart en stedelijkheid van de woongemeente. De regionale ranglijst gebruikt provincies en 70-duizend-plus gemeenten.</p>
+						<p>Let op bij kleine of specifieke groepen: interpreteer verschillen samen met de CBS-betrouwbaarheidsmarges in StatLine. Deze eerste versie toont de waarden zelf, niet de marges.</p>
+					</article>
+				</section>
+				<main class="demographic-safety-dashboard">
+					<section class="panel chart-panel" aria-labelledby="chartTitle">
+						<div class="toolbar">
+							<label>
+								<span>Groep</span>
+								<select id="groupSelect"></select>
+							</label>
+							<label>
+								<span>X-as</span>
+								<select id="xMetricSelect"></select>
+							</label>
+							<label>
+								<span>Y-as</span>
+								<select id="yMetricSelect"></select>
+							</label>
+							<label>
+								<span>Gemeenten</span>
+								<select id="regionMetricSelect"></select>
+							</label>
+						</div>
+						<div class="summary-strip" id="summaryStrip" aria-label="Samenvatting"></div>
+						<div class="chart-head">
+							<div>
+								<p class="eyebrow">Risico tegenover veiligheidsbeleving</p>
+								<h2 id="chartTitle">Slachtofferschap versus onveiligheidsgevoel in de buurt</h2>
+							</div>
+							<p id="chartMeta" class="chart-meta"></p>
+						</div>
+						<div class="chart-wrap">
+							<svg id="safetyScatter" role="img" aria-labelledby="chartTitle chartDescription"></svg>
+							<p id="chartDescription" class="sr-only">Scatterplot met demografische groepen. De x-as en y-as zijn via selecties instelbaar.</p>
+							<div id="tooltip" class="tooltip" role="status" hidden></div>
+						</div>
+					</section>
+					<aside class="side-panel">
+						<section class="panel detail-panel" aria-labelledby="selectedTitle">
+							<p class="eyebrow">Geselecteerd</p>
+							<h2 id="selectedTitle">Geen selectie</h2>
+							<div id="selectedStats" class="stat-list"></div>
+						</section>
+						<section class="panel ranking-panel" aria-labelledby="rankingTitle">
+							<div class="section-head">
+								<div>
+									<p class="eyebrow">Demografische ranglijst</p>
+									<h2 id="rankingTitle">Hoogste waarden</h2>
+								</div>
+							</div>
+							<div id="rankingList" class="ranking-list"></div>
+						</section>
+						<section class="panel ranking-panel" aria-labelledby="regionTitle">
+							<div class="section-head">
+								<div>
+									<p class="eyebrow">70-duizend-plus gemeenten</p>
+									<h2 id="regionTitle">Regionale uitschieters</h2>
+								</div>
+							</div>
+							<div id="regionList" class="ranking-list"></div>
+						</section>
+					</aside>
+				</main>
+			</div>
+			<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+			<script type="module" src="app.js"></script>
+			<aside class="project-sources" aria-labelledby="project-sources-title">
+				<h2 id="project-sources-title">Bronnen</h2>
+				<ul>
+					<li>
+						<a href="https://www.cbs.nl/nl-nl/longread/rapportages/2026/veiligheidsmonitor-2025/" rel="noopener noreferrer" target="_blank">CBS: Veiligheidsmonitor 2025</a>
+						<span>Hoofdrapportage met toelichting, samenvatting en hoofdstukken over veiligheidsbeleving, criminaliteit, discriminatie, verdachte situaties, politie en preventie.</span>
+					</li>
+					<li>
+						<a href="https://www.cbs.nl/nl-nl/cijfers/detail/85844NED" rel="noopener noreferrer" target="_blank">CBS StatLine: Veiligheidsmonitor; kerncijfers, persoonskenmerken</a>
+						<span>Bron voor de demografische uitsplitsingen in het dashboard.</span>
+					</li>
+					<li>
+						<a href="https://www.cbs.nl/nl-nl/cijfers/detail/85146NED" rel="noopener noreferrer" target="_blank">CBS StatLine: Veiligheidsmonitor; kerncijfers, regio</a>
+						<span>Bron voor de regionale ranglijst van provincies en 70-duizend-plus gemeenten.</span>
+					</li>
+				</ul>
+			</aside>
+		</main>
+	</body>
+</html>

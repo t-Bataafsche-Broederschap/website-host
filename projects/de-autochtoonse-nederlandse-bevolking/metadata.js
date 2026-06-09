@@ -42,7 +42,7 @@ export const metricInfo = {
 	},
 	bornAbroadPopulation: {
 		description:
-			"Bevolking die buiten Nederland is geboren. Vanaf 2022 direct uit CBS geboortelandtabellen; voor 1972-2021 in deze pagina teruggeschat uit 1e generatie migratieachtergrond plus een gekalibreerde kleine groep geboren buiten Nederland met twee in Nederland geboren ouders. De jaren 1972-1995 gebruiken de CBS-reconstructie uit 70787NED.",
+			"Bevolking die buiten Nederland is geboren. Vanaf 2022 direct uit CBS geboortelandtabellen; voor 1972-2021 in deze pagina teruggeschat uit eerste generatie migratieachtergrond plus een gekalibreerde kleine groep geboren buiten Nederland met twee in Nederland geboren ouders. De jaren 1972-1995 gebruiken de CBS-reconstructie uit 70787NED.",
 		source: "CBS StatLine 85384NED vanaf 2022; oudere jaren in deze pagina afgeleid uit 70787NED, 70751NED en de 2022-2025 offset.",
 	},
 	bornAbroadPopulationPctPopulation: {
@@ -58,7 +58,7 @@ export const metricInfo = {
 		source: "Afgeleid uit CBS StatLine 70787NED, 70751NED, 85384NED en de totale bevolking.",
 	},
 	migrationBackgroundTotal: {
-		description: "1972-1995: CBS-reconstructie migratieachtergrond. 1996-2021: CBS migratieachtergrond totaal. Vanaf 2022 afgeleid uit eigen geboorteland plus geboorteland van beide ouders. 3e generatie zit niet publiek in deze reeks.",
+		description: "1972-1995: CBS-reconstructie migratieachtergrond. 1996-2021: CBS migratieachtergrond totaal. Vanaf 2022 afgeleid uit eigen geboorteland plus geboorteland van beide ouders. Derde generatie zit niet publiek in deze reeks.",
 		source: "CBS StatLine 70787NED voor 1972-1995, 70751NED voor 1996-2021; vanaf 2022 afgeleid uit 85384NED.",
 	},
 	migrationBackgroundTotalPctPopulation: {
@@ -66,19 +66,19 @@ export const metricInfo = {
 		source: "Afgeleid uit CBS StatLine 70787NED, 70751NED, 85384NED en de totale bevolking.",
 	},
 	firstGenerationMigrationBackground: {
-		description: "1972-1995: CBS-reconstructie 1e generatie migratieachtergrond. 1996-2021: CBS 1e generatie migratieachtergrond. Vanaf 2022 afgeleid als geboren buiten Nederland, minus geboren buiten Nederland met twee in Nederland geboren ouders.",
+		description: "1972-1995: CBS-reconstructie eerste generatie migratieachtergrond. 1996-2021: CBS eerste generatie migratieachtergrond. Vanaf 2022 afgeleid als geboren buiten Nederland, minus geboren buiten Nederland met twee in Nederland geboren ouders.",
 		source: "CBS StatLine 70787NED voor 1972-1995, 70751NED voor 1996-2021; vanaf 2022 afgeleid uit 85384NED.",
 	},
 	firstGenerationMigrationBackgroundPctPopulation: {
-		description: "Aandeel van de bevolking dat in deze grafiek als 1e generatie migratieachtergrond wordt geteld.",
+		description: "Aandeel van de bevolking dat in deze grafiek als eerste generatie migratieachtergrond wordt geteld.",
 		source: "Afgeleid uit CBS StatLine 70787NED, 70751NED, 85384NED en de totale bevolking.",
 	},
 	secondGenerationMigrationBackground: {
-		description: "1972-1995: CBS-reconstructie 2e generatie migratieachtergrond. 1996-2021: CBS 2e generatie migratieachtergrond. Vanaf 2022 afgeleid als geboren in Nederland met ten minste een buiten Nederland geboren ouder.",
+		description: "1972-1995: CBS-reconstructie tweede generatie migratieachtergrond. 1996-2021: CBS tweede generatie migratieachtergrond. Vanaf 2022 afgeleid als geboren in Nederland met ten minste een buiten Nederland geboren ouder.",
 		source: "CBS StatLine 70787NED voor 1972-1995, 70751NED voor 1996-2021; vanaf 2022 afgeleid uit 85384NED.",
 	},
 	secondGenerationMigrationBackgroundPctPopulation: {
-		description: "Aandeel van de bevolking dat in deze grafiek als 2e generatie migratieachtergrond wordt geteld.",
+		description: "Aandeel van de bevolking dat in deze grafiek als tweede generatie migratieachtergrond wordt geteld.",
 		source: "Afgeleid uit CBS StatLine 70787NED, 70751NED, 85384NED en de totale bevolking.",
 	},
 	secondGenerationOneParentAbroad: {
@@ -90,59 +90,59 @@ export const metricInfo = {
 		source: "CBS StatLine 85384NED.",
 	},
 	bornAbroadDutchParents: {
-		description: "Geboren buiten Nederland met twee in Nederland geboren ouders. Deze groep valt niet onder de oude CBS-definitie van 1e generatie migratieachtergrond, maar zit wel in de recente oudertabellen.",
+		description: "Geboren buiten Nederland met twee in Nederland geboren ouders. Deze groep valt niet onder de oude CBS-definitie van eerste generatie migratieachtergrond, maar zit wel in de recente oudertabellen.",
 		source: "CBS StatLine 85384NED.",
 	},
 	migrationPurposeEuTotal: {
-		description: "EU/EFTA-immigranten totaal binnen de CBS-tabel naar afgeleid migratiedoel.",
+		description: "Immigranten uit landen van de Europese Unie en de Europese Vrijhandelsassociatie totaal binnen de CBS-tabel naar afgeleid migratiedoel.",
 		source: "CBS StatLine 84808ned.",
 	},
 	migrationPurposeEuWork: {
-		description: "EU/EFTA-immigranten met afgeleid migratiedoel arbeid.",
+		description: "Immigranten uit landen van de Europese Unie en de Europese Vrijhandelsassociatie met afgeleid migratiedoel arbeid.",
 		source: "CBS StatLine 84808ned.",
 	},
 	migrationPurposeEuFamily: {
-		description: "EU/EFTA-immigranten met afgeleid migratiedoel gezin.",
+		description: "Immigranten uit landen van de Europese Unie en de Europese Vrijhandelsassociatie met afgeleid migratiedoel gezin.",
 		source: "CBS StatLine 84808ned.",
 	},
 	migrationPurposeEuStudy: {
-		description: "EU/EFTA-immigranten met afgeleid migratiedoel studie.",
+		description: "Immigranten uit landen van de Europese Unie en de Europese Vrijhandelsassociatie met afgeleid migratiedoel studie.",
 		source: "CBS StatLine 84808ned.",
 	},
 	migrationPurposeEuNoDerivedGoal: {
-		description: "EU/EFTA-immigranten waarvoor CBS geen afgeleid migratiedoel publiceert.",
+		description: "Immigranten uit landen van de Europese Unie en de Europese Vrijhandelsassociatie waarvoor het Centraal Bureau voor de Statistiek geen afgeleid migratiedoel publiceert.",
 		source: "CBS StatLine 84808ned.",
 	},
 	migrationPurposeEuOther: {
-		description: "EU/EFTA-immigranten met overig of onbekend afgeleid migratiedoel.",
+		description: "Immigranten uit landen van de Europese Unie en de Europese Vrijhandelsassociatie met overig of onbekend afgeleid migratiedoel.",
 		source: "CBS StatLine 84808ned.",
 	},
 	migrationPurposeNonEuTotal: {
-		description: "Niet-EU/EFTA-immigranten totaal binnen de CBS-tabel naar migratiemotief op basis van IND-vergunning.",
+		description: "Immigranten van buiten landen van de Europese Unie en de Europese Vrijhandelsassociatie totaal binnen de CBS-tabel naar migratiemotief op basis van een vergunning van de Immigratie- en Naturalisatiedienst.",
 		source: "CBS StatLine 84809NED.",
 	},
 	migrationPurposeNonEuWork: {
-		description: "Niet-EU/EFTA-immigranten met migratiemotief arbeid.",
+		description: "Immigranten van buiten landen van de Europese Unie en de Europese Vrijhandelsassociatie met migratiemotief arbeid.",
 		source: "CBS StatLine 84809NED.",
 	},
 	migrationPurposeNonEuFamily: {
-		description: "Niet-EU/EFTA-immigranten met migratiemotief gezin.",
+		description: "Immigranten van buiten landen van de Europese Unie en de Europese Vrijhandelsassociatie met migratiemotief gezin.",
 		source: "CBS StatLine 84809NED.",
 	},
 	migrationPurposeNonEuAsylum: {
-		description: "Niet-EU/EFTA-immigranten met migratiemotief asiel; nareizigers vallen in deze CBS-tabel ook onder asiel.",
+		description: "Immigranten van buiten landen van de Europese Unie en de Europese Vrijhandelsassociatie met migratiemotief asiel; nareizigers vallen in deze CBS-tabel ook onder asiel.",
 		source: "CBS StatLine 84809NED.",
 	},
 	migrationPurposeNonEuStudy: {
-		description: "Niet-EU/EFTA-immigranten met migratiemotief studie.",
+		description: "Immigranten van buiten landen van de Europese Unie en de Europese Vrijhandelsassociatie met migratiemotief studie.",
 		source: "CBS StatLine 84809NED.",
 	},
 	migrationPurposeNonEuTemporaryProtection: {
-		description: "Niet-EU/EFTA-immigranten onder tijdelijke bescherming, zoals Oekraïense ontheemden vanaf 2022.",
+		description: "Immigranten van buiten landen van de Europese Unie en de Europese Vrijhandelsassociatie onder tijdelijke bescherming, zoals Oekraïense ontheemden vanaf 2022.",
 		source: "CBS StatLine 84809NED.",
 	},
 	migrationPurposeNonEuOther: {
-		description: "Niet-EU/EFTA-immigranten met overige migratiemotieven.",
+		description: "Immigranten van buiten landen van de Europese Unie en de Europese Vrijhandelsassociatie met overige migratiemotieven.",
 		source: "CBS StatLine 84809NED.",
 	},
 	immigration: {
@@ -290,7 +290,7 @@ export const viewSourceNotes = {
 	age: "Leeftijdsopbouw gebruikt CBS 70787NED, 37325 en 85384NED; ontbrekende buckets worden niet geinterpoleerd.",
 	origin: "CBS StatLine 85671NED, 85468NED en 85848NED; definities verschillen.",
 	emigration: "Bestemming: CBS 85671NED excl. administratieve correcties; overige reeksen incl. correcties.",
-	motives: "CBS 84808ned gebruikt afgeleid migratiedoel voor EU/EFTA; CBS 84809NED gebruikt IND-migratiemotief voor niet-EU/EFTA.",
+	motives: "CBS 84808ned gebruikt afgeleid migratiedoel voor immigranten uit landen van de Europese Unie en de Europese Vrijhandelsassociatie; CBS 84809NED gebruikt migratiemotief van de Immigratie- en Naturalisatiedienst voor immigranten van buiten die landen.",
 	housing: "CBS StatLine voor woningbouw; CBS/WBO/WoON en ABF/Primos voor woningtekort.",
 	grid: "Netbeheer Nederland wachtrijreeksen.",
 };

@@ -74,9 +74,9 @@ function isSmallScreen() {
 
 const formatters = {
 	net_balance_pct_gni: (value) => `${value > 0 ? "+" : ""}${value.toFixed(2)}%`,
-	net_balance_m_eur: (value) => `${value > 0 ? "+" : ""}${Math.round(value).toLocaleString("nl-NL")} mln`,
-	m_eur: (value) => `${Math.round(value).toLocaleString("nl-NL")} mln`,
-	net_balance_per_capita_eur: (value) => `${value > 0 ? "+" : ""}${Math.round(value).toLocaleString("nl-NL")} EUR`,
+	net_balance_m_eur: (value) => `${value > 0 ? "+" : ""}${Math.round(value).toLocaleString("nl-NL")} miljoen euro`,
+	m_eur: (value) => `${Math.round(value).toLocaleString("nl-NL")} miljoen euro`,
+	net_balance_per_capita_eur: (value) => `${value > 0 ? "+" : ""}${Math.round(value).toLocaleString("nl-NL")} euro`,
 };
 
 function currentRows() {
@@ -296,8 +296,8 @@ function tooltipHtml(row) {
 		<dl>
 			<div><dt>Bijdrage</dt><dd>${formatters.m_eur(row.contribution_m_eur)}</dd></div>
 			<div><dt>Ontvangsten</dt><dd>${formatters.m_eur(row.receipts_m_eur)}</dd></div>
-			<div><dt>Per capita</dt><dd>${formatters.net_balance_per_capita_eur(row.net_balance_per_capita_eur)}</dd></div>
-			<div><dt>% GNI</dt><dd>${formatters.net_balance_pct_gni(row.net_balance_pct_gni)}</dd></div>
+			<div><dt>Per inwoner</dt><dd>${formatters.net_balance_per_capita_eur(row.net_balance_per_capita_eur)}</dd></div>
+			<div><dt>Percentage van bruto nationaal inkomen</dt><dd>${formatters.net_balance_pct_gni(row.net_balance_pct_gni)}</dd></div>
 		</dl>
 	`;
 }
@@ -448,7 +448,7 @@ yearInput.addEventListener("input", (event) => {
 
 playButton.addEventListener("click", () => {
 	playing = !playing;
-	playButton.textContent = playing ? "Pause" : "Play";
+	playButton.textContent = playing ? "Pauze" : "Afspelen";
 });
 
 speedInput.addEventListener("input", (event) => {

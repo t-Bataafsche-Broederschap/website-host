@@ -21,7 +21,7 @@ const metrics = [
 	{
 		id: "buiten-europa-geboren-buiten-nl",
 		label: "Buiten Nederland geboren, buiten-Europese herkomst",
-		shortLabel: "Buiten Europa, geboren buiten NL",
+		shortLabel: "Buiten Europa, geboren buiten Nederland",
 		description: "Personen die buiten Nederland zijn geboren en een buiten-Europese herkomst hebben.",
 		herkomstland: dimensions.originOutsideEurope,
 		geboorteland: dimensions.bornOutsideNetherlands,
@@ -39,7 +39,7 @@ const metrics = [
 	{
 		id: "herkomst-europa-excl-nl",
 		label: "Herkomstland Europa exclusief Nederland",
-		shortLabel: "Herkomst Europa excl. NL",
+		shortLabel: "Herkomst Europa exclusief Nederland",
 		description: "Alle inwoners met een herkomstland in Europa, exclusief Nederland.",
 		herkomstland: dimensions.originEuropeExceptNetherlands,
 		geboorteland: dimensions.birthTotal,
@@ -48,7 +48,7 @@ const metrics = [
 	{
 		id: "geboren-buiten-nl",
 		label: "Geboren buiten Nederland",
-		shortLabel: "Geboren buiten NL",
+		shortLabel: "Geboren buiten Nederland",
 		description: "Alle inwoners die buiten Nederland zijn geboren, ongeacht herkomstland.",
 		herkomstland: dimensions.originTotal,
 		geboorteland: dimensions.bornOutsideNetherlands,
@@ -57,7 +57,7 @@ const metrics = [
 	{
 		id: "geboren-in-nl-herkomst-buiten-europa",
 		label: "Geboren in Nederland, buiten-Europese herkomst",
-		shortLabel: "Geboren in NL, buiten-Europa",
+		shortLabel: "Geboren in Nederland, buiten-Europa",
 		description: "Inwoners die in Nederland zijn geboren en een buiten-Europese herkomst hebben.",
 		herkomstland: dimensions.originOutsideEurope,
 		geboorteland: dimensions.bornInsideNetherlands,

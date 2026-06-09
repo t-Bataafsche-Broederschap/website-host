@@ -81,7 +81,7 @@ export function formatMetric(key, value) {
 
 export function shortNumber(value) {
 	const abs = Math.abs(value);
-	if (abs >= 1000000) return `${formatOne.format(value / 1000000)} mln`;
+	if (abs >= 1000000) return `${formatOne.format(value / 1000000)} miljoen`;
 	if (abs >= 1000) return `${formatOne.format(value / 1000)}k`;
 	return formatNumber.format(value);
 }

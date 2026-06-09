@@ -180,11 +180,23 @@ p:last-child {
 
 .project-list {
 	display: grid;
-	gap: 1rem;
+	gap: 0;
 	max-width: 54rem;
-	margin: 2rem 0 0;
+	margin: 0 0 2rem;
 	padding: 0;
 	list-style: none;
+}
+
+.project-count {
+	margin-top: 1.75rem;
+	color: var(--color-muted);
+}
+
+.project-year {
+	margin: 2.25rem 0 0.85rem;
+	color: #fff8ed;
+	font-size: clamp(1.7rem, 3vw, 2.35rem);
+	line-height: 1.1;
 }
 
 .project-entry {
@@ -192,23 +204,30 @@ p:last-child {
 	border-top: 1px solid rgba(151, 31, 22, 0.36);
 }
 
-.project-entry h2 {
+.project-entry h3 {
 	margin: 0 0 0.45rem;
 	color: #fff8ed;
 	font-size: clamp(1.35rem, 2.5vw, 2rem);
 	line-height: 1.15;
 }
 
-.project-entry h2 a {
+.project-entry h3 a {
 	color: inherit;
 	text-decoration: none;
 }
 
-.project-entry h2 a:hover {
+.project-entry h3 a:hover {
 	color: #f0d7ae;
 	text-decoration: underline;
 	text-decoration-thickness: 1px;
 	text-underline-offset: 0.16em;
+}
+
+.project-entry .project-dates {
+	margin: 0 0 0.45rem;
+	color: var(--color-copper);
+	font-size: 0.98rem;
+	line-height: 1.4;
 }
 
 .project-entry p {

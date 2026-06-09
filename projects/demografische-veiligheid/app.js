@@ -1,0 +1,340 @@
+/* global d3 */
+
+const groupSelect = document.querySelector("#groupSelect");
+const xMetricSelect = document.querySelector("#xMetricSelect");
+const yMetricSelect = document.querySelector("#yMetricSelect");
+const regionMetricSelect = document.querySelector("#regionMetricSelect");
+const summaryStrip = document.querySelector("#summaryStrip");
+const chartTitle = document.querySelector("#chartTitle");
+const chartMeta = document.querySelector("#chartMeta");
+const scatterSvg = d3.select("#safetyScatter");
+const tooltip = document.querySelector("#tooltip");
+const selectedTitle = document.querySelector("#selectedTitle");
+const selectedStats = document.querySelector("#selectedStats");
+const rankingTitle = document.querySelector("#rankingTitle");
+const rankingList = document.querySelector("#rankingList");
+const regionTitle = document.querySelector("#regionTitle");
+const regionList = document.querySelector("#regionList");
+
+const decimalFormat = new Intl.NumberFormat("nl-NL", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+const signedFormat = new Intl.NumberFormat("nl-NL", { minimumFractionDigits: 1, maximumFractionDigits: 1, signDisplay: "always" });
+
+let data;
+let selectedKey;
+
+function metric(key) {
+	return data.metrics.find((item) => item.key === key);
+}
+
+function formatValue(value, metricKey) {
+	if (!Number.isFinite(value)) return "-";
+	const unit = metric(metricKey)?.unit;
+	if (unit === "%") return `${decimalFormat.format(value)}%`;
+	if (unit === "score") return decimalFormat.format(value);
+	return decimalFormat.format(value);
+}
+
+function formatDelta(value, metricKey) {
+	if (!Number.isFinite(value)) return "-";
+	const unit = metric(metricKey)?.unit;
+	if (unit === "%") return `${signedFormat.format(value)} punt`;
+	if (unit === "score") return signedFormat.format(value);
+	return signedFormat.format(value);
+}
+
+function valueOf(row, metricKey) {
+	const value = row?.values?.[metricKey];
+	return Number.isFinite(value) ? value : null;
+}
+
+function totalRow() {
+	return data.demographic.find((row) => row.key === "T001038");
+}
+
+function rowsForGroup() {
+	return data.demographic.filter((row) => row.group === groupSelect.value && Number.isFinite(valueOf(row, xMetricSelect.value)) && Number.isFinite(valueOf(row, yMetricSelect.value)));
+}
+
+function selectedRow() {
+	const rows = rowsForGroup();
+	return rows.find((row) => row.key === selectedKey) || rows[0] || totalRow();
+}
+
+function option(parent, value, label) {
+	const element = document.createElement("option");
+	element.value = value;
+	element.textContent = label;
+	parent.append(element);
+}
+
+function populateControls() {
+	const groups = [...new Set(data.demographic.map((row) => row.group))];
+	for (const group of groups) option(groupSelect, group, group);
+	for (const item of data.metrics) {
+		option(xMetricSelect, item.key, item.label);
+		option(yMetricSelect, item.key, item.label);
+		option(regionMetricSelect, item.key, item.label);
+	}
+
+	groupSelect.value = data.defaults.group;
+	xMetricSelect.value = data.defaults.xMetric;
+	yMetricSelect.value = data.defaults.yMetric;
+	regionMetricSelect.value = data.defaults.regionMetric;
+	selectedKey = data.defaults.selectedKey;
+}
+
+function moveTooltip(event) {
+	const rect = tooltip.parentElement.getBoundingClientRect();
+	tooltip.style.left = `${event.clientX - rect.left + 14}px`;
+	tooltip.style.top = `${event.clientY - rect.top + 14}px`;
+}
+
+function showTooltip(event, row) {
+	tooltip.hidden = false;
+	tooltip.innerHTML = `<strong>${row.label}</strong>${metric(xMetricSelect.value).shortLabel}: ${formatValue(valueOf(row, xMetricSelect.value), xMetricSelect.value)}<br>${metric(yMetricSelect.value).shortLabel}: ${formatValue(valueOf(row, yMetricSelect.value), yMetricSelect.value)}`;
+	moveTooltip(event);
+}
+
+function hideTooltip() {
+	tooltip.hidden = true;
+}
+
+function metricGap(rows, metricKey) {
+	const values = rows.map((row) => valueOf(row, metricKey)).filter(Number.isFinite);
+	return values.length ? d3.max(values) - d3.min(values) : null;
+}
+
+function sortRows(rows, metricKey) {
+	return [...rows].sort((a, b) => {
+		const av = valueOf(a, metricKey);
+		const bv = valueOf(b, metricKey);
+		return metric(metricKey)?.direction === "higher-better" ? av - bv : bv - av;
+	});
+}
+
+function renderSummary() {
+	const rows = rowsForGroup();
+	const xKey = xMetricSelect.value;
+	const yKey = yMetricSelect.value;
+	const topX = sortRows(rows, xKey)[0];
+	const topY = sortRows(rows, yKey)[0];
+	const total = totalRow();
+	const selected = selectedRow();
+	const items = [
+		["Selectie", selected?.label || "-"],
+		[`Nederland: ${metric(yKey).shortLabel}`, formatValue(valueOf(total, yKey), yKey)],
+		[`Hoogste ${metric(xKey).shortLabel}`, topX ? `${topX.label} · ${formatValue(valueOf(topX, xKey), xKey)}` : "-"],
+		[`Spreiding ${metric(yKey).shortLabel}`, formatValue(metricGap(rows, yKey), yKey)],
+	];
+	summaryStrip.replaceChildren(
+		...items.map(([label, value]) => {
+			const item = document.createElement("div");
+			item.innerHTML = `<span>${label}</span><strong>${value}</strong>`;
+			return item;
+		})
+	);
+}
+
+function renderDetails() {
+	const row = selectedRow();
+	const total = totalRow();
+	selectedKey = row?.key;
+	selectedTitle.textContent = row?.label || "Geen selectie";
+
+	const detailMetrics = ["neighborhoodUnsafe", "generalUnsafe", "traditionalVictim", "violenceVictim", "onlineVictim", "discrimination", "streetDisrespect", "policeContact", "socialCohesion", "safetyGrade"];
+	selectedStats.replaceChildren(
+		...detailMetrics.map((metricKey) => {
+			const value = valueOf(row, metricKey);
+			const delta = value - valueOf(total, metricKey);
+			const item = document.createElement("div");
+			item.innerHTML = `<span>${metric(metricKey).label}</span><strong>${formatValue(value, metricKey)} <small>${formatDelta(delta, metricKey)} vs NL</small></strong>`;
+			return item;
+		})
+	);
+}
+
+function renderRanking() {
+	const yKey = yMetricSelect.value;
+	const rows = sortRows(rowsForGroup(), yKey).slice(0, 12);
+	rankingTitle.textContent = `${metric(yKey).shortLabel}: hoogste waarden`;
+	rankingList.replaceChildren(
+		...rows.map((row) => {
+			const button = document.createElement("button");
+			button.type = "button";
+			button.className = row.key === selectedKey ? "active" : "";
+			button.innerHTML = `<span>${row.label}</span><strong>${formatValue(valueOf(row, yKey), yKey)}</strong><small>${metric(xMetricSelect.value).shortLabel}: ${formatValue(valueOf(row, xMetricSelect.value), xMetricSelect.value)}</small>`;
+			button.addEventListener("click", () => {
+				selectedKey = row.key;
+				renderAll();
+			});
+			return button;
+		})
+	);
+}
+
+function renderRegionList() {
+	const metricKey = regionMetricSelect.value;
+	const rows = data.regional
+		.filter((row) => row.group === "70-duizend-plus gemeenten" && Number.isFinite(valueOf(row, metricKey)))
+		.sort((a, b) => {
+			const av = valueOf(a, metricKey);
+			const bv = valueOf(b, metricKey);
+			return metric(metricKey)?.direction === "higher-better" ? av - bv : bv - av;
+		})
+		.slice(0, 12);
+
+	regionTitle.textContent = `${metric(metricKey).shortLabel}: gemeenten`;
+	regionList.replaceChildren(
+		...rows.map((row) => {
+			const item = document.createElement("div");
+			item.className = "ranking-row";
+			item.innerHTML = `<span>${row.label}</span><strong>${formatValue(valueOf(row, metricKey), metricKey)}</strong><small>${row.group}</small>`;
+			return item;
+		})
+	);
+}
+
+function renderScatter() {
+	const rows = rowsForGroup();
+	const xKey = xMetricSelect.value;
+	const yKey = yMetricSelect.value;
+	const selected = selectedRow();
+	const wrap = document.querySelector(".chart-wrap");
+	const width = Math.max(320, Math.floor(wrap.getBoundingClientRect().width));
+	const height = window.matchMedia("(max-width: 720px)").matches ? 420 : 520;
+	const margin = { top: 26, right: 28, bottom: 66, left: 74 };
+	const innerWidth = width - margin.left - margin.right;
+	const innerHeight = height - margin.top - margin.bottom;
+
+	chartTitle.textContent = `${metric(xKey).label} versus ${metric(yKey).label}`;
+	chartMeta.textContent = `${rows.length} punten · ${data.meta.periodLabel}`;
+
+	scatterSvg.attr("viewBox", `0 0 ${width} ${height}`).attr("width", width).attr("height", height);
+	scatterSvg.selectAll("*").remove();
+
+	const xValues = rows.map((row) => valueOf(row, xKey));
+	const yValues = rows.map((row) => valueOf(row, yKey));
+	const xDomain = d3.extent(xValues);
+	const yDomain = d3.extent(yValues);
+	const xPad = Math.max((xDomain[1] - xDomain[0]) * 0.16, xKey === "safetyGrade" || xKey === "socialCohesion" ? 0.12 : 1);
+	const yPad = Math.max((yDomain[1] - yDomain[0]) * 0.16, yKey === "safetyGrade" || yKey === "socialCohesion" ? 0.12 : 1);
+	const x = d3
+		.scaleLinear()
+		.domain([xDomain[0] - xPad, xDomain[1] + xPad])
+		.nice()
+		.range([0, innerWidth]);
+	const y = d3
+		.scaleLinear()
+		.domain([yDomain[0] - yPad, yDomain[1] + yPad])
+		.nice()
+		.range([innerHeight, 0]);
+	const xMedian = d3.median(xValues);
+	const yMedian = d3.median(yValues);
+
+	const root = scatterSvg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+	root.append("g").attr("class", "grid").attr("transform", `translate(0,${innerHeight})`).call(d3.axisBottom(x).ticks(6).tickSize(-innerHeight).tickFormat(""));
+	root.append("g").attr("class", "grid").call(d3.axisLeft(y).ticks(6).tickSize(-innerWidth).tickFormat(""));
+	root.append("line").attr("class", "quadrant-line").attr("x1", x(xMedian)).attr("x2", x(xMedian)).attr("y1", 0).attr("y2", innerHeight);
+	root.append("line").attr("class", "quadrant-line").attr("x1", 0).attr("x2", innerWidth).attr("y1", y(yMedian)).attr("y2", y(yMedian));
+	root
+		.append("g")
+		.attr("class", "axis")
+		.attr("transform", `translate(0,${innerHeight})`)
+		.call(
+			d3
+				.axisBottom(x)
+				.ticks(6)
+				.tickFormat((value) => formatValue(value, xKey))
+		);
+	root
+		.append("g")
+		.attr("class", "axis")
+		.call(
+			d3
+				.axisLeft(y)
+				.ticks(6)
+				.tickFormat((value) => formatValue(value, yKey))
+		);
+
+	root
+		.append("text")
+		.attr("class", "axis-label")
+		.attr("x", innerWidth / 2)
+		.attr("y", innerHeight + 52)
+		.attr("text-anchor", "middle")
+		.text(metric(xKey).label);
+	root
+		.append("text")
+		.attr("class", "axis-label")
+		.attr("transform", "rotate(-90)")
+		.attr("x", -innerHeight / 2)
+		.attr("y", -54)
+		.attr("text-anchor", "middle")
+		.text(metric(yKey).label);
+
+	const color = d3.scaleLinear().domain(d3.extent(yValues)).range(["#7da7c9", "#c43b2f"]);
+	const points = root
+		.selectAll("circle")
+		.data(rows, (row) => row.key)
+		.join("circle")
+		.attr("class", (row) => `point ${row.key === selected?.key ? "point-selected" : ""}`)
+		.attr("cx", (row) => x(valueOf(row, xKey)))
+		.attr("cy", (row) => y(valueOf(row, yKey)))
+		.attr("r", (row) => (row.key === selected?.key ? 7 : 5.5))
+		.attr("fill", (row) => color(valueOf(row, yKey)))
+		.on("mouseenter", (event, row) => {
+			points.classed("point-muted", (candidate) => candidate.key !== row.key);
+			showTooltip(event, row);
+		})
+		.on("mousemove", moveTooltip)
+		.on("mouseleave", () => {
+			points.classed("point-muted", false);
+			hideTooltip();
+		})
+		.on("click", (event, row) => {
+			selectedKey = row.key;
+			renderAll();
+		});
+
+	root
+		.selectAll(".point-label")
+		.data(rows.filter((row) => rows.length <= 12 || row.key === selected?.key))
+		.join("text")
+		.attr("class", "point-label")
+		.attr("x", (row) => x(valueOf(row, xKey)) + 8)
+		.attr("y", (row) => y(valueOf(row, yKey)) - 8)
+		.text((row) => row.label);
+}
+
+function renderAll() {
+	renderSummary();
+	renderDetails();
+	renderRanking();
+	renderRegionList();
+	renderScatter();
+}
+
+function handleGroupChange() {
+	const rows = rowsForGroup();
+	selectedKey = rows.some((row) => row.key === selectedKey) ? selectedKey : rows[0]?.key;
+	renderAll();
+}
+
+fetch("data.json")
+	.then((response) => {
+		if (!response.ok) throw new Error(`Kon data.json niet laden: ${response.status}`);
+		return response.json();
+	})
+	.then((loaded) => {
+		data = loaded;
+		populateControls();
+		groupSelect.addEventListener("change", handleGroupChange);
+		xMetricSelect.addEventListener("change", renderAll);
+		yMetricSelect.addEventListener("change", renderAll);
+		regionMetricSelect.addEventListener("change", renderAll);
+		window.addEventListener("resize", () => renderScatter());
+		renderAll();
+	})
+	.catch((error) => {
+		document.querySelector(".demographic-safety-dashboard").innerHTML = `<section class="panel detail-panel"><h2>Data kon niet worden geladen</h2><p>${error.message}</p></section>`;
+	});

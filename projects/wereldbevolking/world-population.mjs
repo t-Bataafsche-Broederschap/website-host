@@ -32,6 +32,14 @@ const chartColors = {
 };
 const currentYear = new Date().getFullYear();
 const continentOrder = ["Africa", "Asia", "Europe", "North America", "Latin America and the Caribbean", "Oceania"];
+const continentLabels = new Map([
+	["Africa", "Afrika"],
+	["Asia", "Azie"],
+	["Europe", "Europa"],
+	["North America", "Noord-Amerika"],
+	["Latin America and the Caribbean", "Latijns-Amerika en het Caribisch gebied"],
+	["Oceania", "Oceanie"],
+]);
 
 const state = {
 	data: null,
@@ -55,25 +63,25 @@ function formatPopulation(population) {
 }
 
 function formatFertilityRate(value) {
-	return value == null ? "n/a" : value.toFixed(2);
+	return value == null ? "niet beschikbaar" : value.toFixed(2);
 }
 
 function formatSignedInteger(value) {
 	if (value == null) {
-		return "n/a";
+		return "niet beschikbaar";
 	}
 	return `${value >= 0 ? "+" : ""}${new Intl.NumberFormat("en-US").format(value)}`;
 }
 
 function formatSignedPercent(value) {
 	if (value == null) {
-		return "n/a";
+		return "niet beschikbaar";
 	}
 	return `${value >= 0 ? "+" : ""}${value.toFixed(2)}%`;
 }
 
 function formatPercent(value) {
-	return value == null ? "n/a" : `${value.toFixed(1)}%`;
+	return value == null ? "niet beschikbaar" : `${value.toFixed(1)}%`;
 }
 
 function getNetMigrationShare(point) {
@@ -103,15 +111,15 @@ function showTooltip(event, country, point, color, label = null) {
 	const netMigrationShare = getNetMigrationShare(point);
 	tooltipNode.innerHTML = `
 		<strong style="color:${color}">${label ? `${country.name} (${label})` : country.name}</strong>
-		<div>Year: ${point.year}</div>
-		<div>Population: ${formatPopulation(point.population)}</div>
-		<div>Growth: ${formatSignedPercent(point.yearlyPercentChange)} (${formatSignedInteger(point.yearlyChange)})</div>
-		<div>Net migration: ${formatSignedInteger(point.migrantsNet)}</div>
-		<div>Net migration share: ${formatSignedPercent(netMigrationShare)}</div>
-		<div>Fertility rate: ${formatFertilityRate(point.fertilityRate)}</div>
-		<div>Median age: ${point.medianAge == null ? "n/a" : point.medianAge.toFixed(1)}</div>
-		<div>Urban pop: ${formatPercent(point.urbanPopulationPercent)}</div>
-		<div>Global rank: ${point.globalRank ?? "n/a"}</div>
+		<div>Jaar: ${point.year}</div>
+		<div>Bevolking: ${formatPopulation(point.population)}</div>
+		<div>Groei: ${formatSignedPercent(point.yearlyPercentChange)} (${formatSignedInteger(point.yearlyChange)})</div>
+		<div>Nettomigratie: ${formatSignedInteger(point.migrantsNet)}</div>
+		<div>Aandeel nettomigratie: ${formatSignedPercent(netMigrationShare)}</div>
+		<div>Vruchtbaarheidscijfer: ${formatFertilityRate(point.fertilityRate)}</div>
+		<div>Mediane leeftijd: ${point.medianAge == null ? "niet beschikbaar" : point.medianAge.toFixed(1)}</div>
+		<div>Stedelijke bevolking: ${formatPercent(point.urbanPopulationPercent)}</div>
+		<div>Wereldrang: ${point.globalRank ?? "niet beschikbaar"}</div>
 	`;
 	tooltipNode.style.display = "block";
 	tooltipNode.setAttribute("aria-hidden", "false");
@@ -291,7 +299,7 @@ function updateLegend() {
 		const removeButton = document.createElement("button");
 		removeButton.type = "button";
 		removeButton.className = "world-population-chip-remove";
-		removeButton.setAttribute("aria-label", `Remove ${country.name}`);
+		removeButton.setAttribute("aria-label", `Verwijder ${country.name}`);
 		removeButton.textContent = "x";
 		removeButton.addEventListener("click", () => {
 			state.selectionWindows.delete(country.slug);
@@ -399,7 +407,7 @@ function updateContinentButtons() {
 		if (state.continentHighlights.has(continent)) {
 			button.classList.add("is-active");
 		}
-		button.textContent = continent;
+		button.textContent = continentLabels.get(continent) ?? continent;
 		const color = getContinentColor(continent);
 		button.style.borderColor = color;
 		button.style.setProperty("--continent-button-bg", mixHexColors(color, 0.24));
@@ -561,7 +569,7 @@ function addHighlightFromInput() {
 
 	const country = findCountryByInput(rawInput);
 	if (!country) {
-		setStatus(`Country not found: ${highlightInput.value.trim()}`);
+		setStatus(`Land niet gevonden: ${highlightInput.value.trim()}`);
 		return;
 	}
 
@@ -592,8 +600,8 @@ function render() {
 	chartRoot.replaceChildren();
 
 	const isPopulationMetric = state.metricMode === "population";
-	const metricLabel = isPopulationMetric ? "Population" : "Net migration % of population";
-	const svg = d3.select(chartRoot).append("svg").attr("viewBox", `0 0 ${width} ${height}`).attr("role", "img").attr("aria-label", `${metricLabel} by country over time`);
+	const metricLabel = isPopulationMetric ? "Bevolking" : "Nettomigratie als percentage van de bevolking";
+	const svg = d3.select(chartRoot).append("svg").attr("viewBox", `0 0 ${width} ${height}`).attr("role", "img").attr("aria-label", `${metricLabel} per land door de tijd`);
 
 	const allPoints = state.data.countries.flatMap((country) => country.points);
 	const highlightedCountries = getHighlightedCountries();
@@ -894,10 +902,10 @@ function render() {
 			.style("cursor", "crosshair")
 			.on("mouseenter", function (event, datum) {
 				d3.select(this).attr("r", 5.4);
-				showTooltip(event, datum.country, datum.point, datum.color, "without net migration");
+				showTooltip(event, datum.country, datum.point, datum.color, "zonder nettomigratie");
 			})
 			.on("mousemove", function (event, datum) {
-				showTooltip(event, datum.country, datum.point, datum.color, "without net migration");
+				showTooltip(event, datum.country, datum.point, datum.color, "zonder nettomigratie");
 			})
 			.on("mouseleave", function () {
 				d3.select(this).attr("r", 3.6);
@@ -951,7 +959,7 @@ function render() {
 		.attr("fill", chartColors.red)
 		.attr("font-size", 13)
 		.attr("text-anchor", "end")
-		.text("Year");
+		.text("Jaar");
 
 	const endLabelCountries = isPopulationMetric && state.showBackgroundCountries ? state.data.countries : highlightedCountries;
 	const endLabels = buildEndLabels(endLabelCountries, y, margin.top + 8, margin.top + plotHeight - 8, 11);
@@ -1018,22 +1026,22 @@ function render() {
 			.attr("stroke-width", 1)
 			.attr("stroke-dasharray", "4 3");
 
-		svg.append("text").attr("x", labelTextX).attr("y", labelY).attr("dy", "0.32em").attr("fill", comparison.color).attr("font-size", 10.5).attr("font-weight", 600).text(`${comparison.country.name} without migration`);
+		svg.append("text").attr("x", labelTextX).attr("y", labelY).attr("dy", "0.32em").attr("fill", comparison.color).attr("font-size", 10.5).attr("font-weight", 600).text(`${comparison.country.name} zonder nettomigratie`);
 	}
 
 	setStatus(
-		`Showing ${state.data.countries.length} countries. ${getHighlightedCountries().length} highlighted. ${state.selectionWindows.size} selected anchor countries. Active anchor uses ${state.neighborCount} neighbors each side. ${metricLabel}. ${
-			isPopulationMetric ? (state.scaleMode === "log" ? "Log scale" : "Linear scale") : state.scaleMode === "log" ? "Symlog percentage scale" : "Linear percentage scale"
-		}. ${state.showBackgroundCountries ? "Unselected countries visible." : "Unselected countries hidden."} ${state.showNoMigrationComparison && anchorCountries.length > 0 && isPopulationMetric ? `Comparing ${anchorCountries.length} selected countries with no-net-migration estimates.` : ""}`
+		`Toont ${state.data.countries.length} landen. ${getHighlightedCountries().length} gemarkeerd. ${state.selectionWindows.size} geselecteerde ankerlanden. Actief anker gebruikt ${state.neighborCount} buren aan elke kant. ${metricLabel}. ${
+			isPopulationMetric ? (state.scaleMode === "log" ? "Logaritmische schaal" : "Lineaire schaal") : state.scaleMode === "log" ? "Symmetrisch-logaritmische percentageschaal" : "Lineaire percentageschaal"
+		}. ${state.showBackgroundCountries ? "Niet-geselecteerde landen zichtbaar." : "Niet-geselecteerde landen verborgen."} ${state.showNoMigrationComparison && anchorCountries.length > 0 && isPopulationMetric ? `Vergelijkt ${anchorCountries.length} geselecteerde landen met ramingen zonder nettomigratie.` : ""}`
 	);
 	syncUrl();
 }
 
 async function main() {
-	setStatus("Loading chart data…");
+	setStatus("Grafiekdata laden...");
 	const response = await fetch(dataUrl);
 	if (!response.ok) {
-		throw new Error(`Could not load ${dataUrl}`);
+		throw new Error(`Kon ${dataUrl} niet laden`);
 	}
 
 	state.data = await response.json();

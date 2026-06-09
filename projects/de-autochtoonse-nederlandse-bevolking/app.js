@@ -221,17 +221,17 @@ function definitionInfo() {
 		},
 		bornAbroadPopulation: {
 			title: "Gekozen definitie: geboren buiten Nederland",
-			description: "Directe voorraad vanaf 2022; oudere jaren zijn teruggeschat uit 1e generatie plus een vaste correctiegroep.",
+			description: "Directe voorraad vanaf 2022; oudere jaren zijn teruggeschat uit eerste generatie plus een vaste correctiegroep.",
 			key: "bornAbroadPopulation",
 		},
 		firstGenerationMigrationBackground: {
-			title: "Gekozen definitie: 1e generatie",
+			title: "Gekozen definitie: eerste generatie",
 			description: "Geboren buiten Nederland met migratieachtergrond volgens oude CBS-definitie of brugdefinitie.",
 			key: "firstGenerationMigrationBackground",
 		},
 		migrationBackgroundTotal: {
 			title: "Gekozen definitie: migratieachtergrond totaal",
-			description: "1e en 2e generatie volgens oude CBS-definitie of doorgetrokken via geboorteland van persoon en ouders.",
+			description: "Eerste en tweede generatie volgens oude CBS-definitie of doorgetrokken via geboorteland van persoon en ouders.",
 			key: "migrationBackgroundTotal",
 		},
 	}[state.definition];
@@ -419,7 +419,7 @@ function renderStats() {
 		if ((stat.key === "bornAbroadPopulation" || stat.key === "bornAbroadPopulationPctPopulation") && row?.bornAbroadPopulationEstimated) {
 			const note = document.createElement("small");
 			note.className = "stat-note";
-			note.textContent = "Geschat vóór 2022 uit 1e generatie + vaste offset";
+			note.textContent = "Geschat vóór 2022 uit eerste generatie plus vaste correctie";
 			item.append(note);
 		}
 		bindInfoEvents(item, {
@@ -622,29 +622,29 @@ function renderCompositionCards() {
 		mainValue: people(valueFor(row, "bornAbroadPopulation")),
 		rows: [
 			["Aandeel bevolking", percent(valueFor(row, "bornAbroadPopulationPctPopulation"))],
-			["1e generatie", people(valueFor(row, "firstGenerationMigrationBackground"))],
-			["Geboren buiten NL, 2 ouders geboren in NL", people(valueFor(row, "bornAbroadDutchParents"))],
+			["Eerste generatie", people(valueFor(row, "firstGenerationMigrationBackground"))],
+			["Geboren buiten Nederland, twee ouders geboren in Nederland", people(valueFor(row, "bornAbroadDutchParents"))],
 		],
 		note: isParentsBridge
 			? "Dit is de directe CBS-voorraad waarop samenvattingen zoals '3 miljoen in het buitenland geboren' zijn gebaseerd."
 			: isReconstructed
-				? "Voor 1972-1995 is dit teruggeschat uit de CBS-reconstructie voor 1e generatie plus een vaste correctie voor buiten Nederland geboren personen met twee in Nederland geboren ouders."
-				: "Voor 1996-2021 is dit in deze pagina teruggeschat uit 1e generatie plus een vaste correctie voor buiten Nederland geboren personen met twee in Nederland geboren ouders.",
+				? "Voor 1972-1995 is dit teruggeschat uit de CBS-reconstructie voor eerste generatie plus een vaste correctie voor buiten Nederland geboren personen met twee in Nederland geboren ouders."
+				: "Voor 1996-2021 is dit in deze pagina teruggeschat uit eerste generatie plus een vaste correctie voor buiten Nederland geboren personen met twee in Nederland geboren ouders.",
 		info: metricInfo.bornAbroadPopulation,
 	});
 
 	appendMetricCard({
-		title: "Nederlandse achtergrond / 2 ouders geboren in NL",
+		title: "Nederlandse achtergrond / twee ouders geboren in Nederland",
 		mainValue: people(valueFor(row, "nativeBackgroundProxy")),
 		rows: [
 			["Aandeel bevolking", percent(valueFor(row, "nativeBackgroundProxyPctPopulation"))],
 			["Migratieachtergrond totaal", people(valueFor(row, "migrationBackgroundTotal"))],
-			["Geboren buiten NL, 2 ouders geboren in NL", people(valueFor(row, "bornAbroadDutchParents"))],
+			["Geboren buiten Nederland, twee ouders geboren in Nederland", people(valueFor(row, "bornAbroadDutchParents"))],
 			["Geboorten in jaar", people(valueFor(row, "nativeProxyBirths"))],
 			["Aandeel van alle geboorten", percent(valueFor(row, "nativeProxyBirthsPctLiveBirths"))],
 		],
 		note: isParentsBridge
-			? "Vanaf 2022 komt deze reeks uit geboorteland van beide ouders; geboren buiten NL met twee NL-geboren ouders blijven hier dus in zitten. De geboorte-regels gebruiken voor recente jaren CBS 85369NED en zijn daar afgeleid als overledenen plus geboorteoverschot voor dezelfde oudercategorie."
+			? "Vanaf 2022 komt deze reeks uit geboorteland van beide ouders; geboren buiten Nederland met twee in Nederland geboren ouders blijven hier dus in zitten. De geboorteregels gebruiken voor recente jaren CBS 85369NED en zijn daar afgeleid als overledenen plus geboorteoverschot voor dezelfde oudercategorie."
 			: isReconstructed
 				? "Voor 1972-1995 is dit totale bevolking minus de gereconstrueerde CBS-voorraad met migratieachtergrond. Een directe geboortereeks naar geboorteland van ouders is publiek pas vanaf 2022 beschikbaar."
 				: "Voor 1996-2021 gebruikt CBS hier direct de oude categorie Nederlandse achtergrond. Een directe geboortereeks naar geboorteland van ouders is publiek pas vanaf 2022 beschikbaar en is voor oudere jaren nog niet teruggeschat.",
@@ -652,14 +652,14 @@ function renderCompositionCards() {
 	});
 
 	appendMetricCard({
-		title: "1e generatie / migrant",
+		title: "Eerste generatie / migrant",
 		mainValue: people(valueFor(row, "firstGenerationMigrationBackground")),
 		rows: [
 			["Aandeel bevolking", percent(valueFor(row, "firstGenerationMigrationBackgroundPctPopulation"))],
 			["Migratieachtergrond totaal", people(valueFor(row, "migrationBackgroundTotal"))],
 		],
 		note: isParentsBridge
-			? "Vanaf 2022 afgeleid als geboren buiten NL minus geboren buiten NL met twee in NL geboren ouders."
+			? "Vanaf 2022 afgeleid als geboren buiten Nederland minus geboren buiten Nederland met twee in Nederland geboren ouders."
 			: isReconstructed
 				? "Voor 1972-1995 komt dit uit CBS 70787NED; CBS markeert die jaren als reconstructie van het verleden."
 				: "Voor 1996-2021 is dit een direct CBS-label in de migratieachtergrondtabel.",
@@ -667,22 +667,26 @@ function renderCompositionCards() {
 	});
 
 	appendMetricCard({
-		title: "2e generatie / kind van migrant",
+		title: "Tweede generatie / kind van migrant",
 		mainValue: people(valueFor(row, "secondGenerationMigrationBackground")),
 		rows: [
 			["Aandeel bevolking", percent(valueFor(row, "secondGenerationMigrationBackgroundPctPopulation"))],
-			["1 ouder buiten NL", people(valueFor(row, "secondGenerationOneParentAbroad"))],
-			["2 ouders buiten NL", people(valueFor(row, "secondGenerationBothParentsAbroad"))],
+			["Een ouder buiten Nederland", people(valueFor(row, "secondGenerationOneParentAbroad"))],
+			["Twee ouders buiten Nederland", people(valueFor(row, "secondGenerationBothParentsAbroad"))],
 		],
-		note: isParentsBridge ? "De fijnere ouder-split is publiek pas beschikbaar vanaf 2022." : isReconstructed ? "Voor 1972-1995 komt dit uit CBS 70787NED; de fijnere ouder-split is voor die jaren niet publiek beschikbaar." : "Voor 1996-2021 is alleen 2e generatie totaal publiek beschikbaar, niet de ouder-split.",
+		note: isParentsBridge
+			? "De fijnere oudersplitsing is publiek pas beschikbaar vanaf 2022."
+			: isReconstructed
+				? "Voor 1972-1995 komt dit uit CBS 70787NED; de fijnere oudersplitsing is voor die jaren niet publiek beschikbaar."
+				: "Voor 1996-2021 is alleen tweede generatie totaal publiek beschikbaar, niet de oudersplitsing.",
 		info: metricInfo.secondGenerationMigrationBackground,
 	});
 
 	appendMetricCard({
-		title: "3e generatie",
+		title: "Derde generatie",
 		mainValue: "Niet publiek",
 		rows: [],
-		note: "CBS publiceert in deze openbare reeksen geen grootouderherkomst. Daardoor is een doorlopende 3e generatie-telling hier niet verdedigbaar te reconstrueren.",
+		note: "CBS publiceert in deze openbare reeksen geen grootouderherkomst. Daardoor is een doorlopende derde generatie-telling hier niet verdedigbaar te reconstrueren.",
 	});
 
 	const info = definitionInfo();
@@ -730,8 +734,8 @@ function renderAgeCards() {
 				["Bevolking", people(valueFor(bucket, "population"))],
 				["Inheemse proxy", people(valueFor(bucket, "nativeBackgroundProxy"))],
 				["Migratieachtergrond", people(valueFor(bucket, "migrationBackgroundTotal"))],
-				["1e generatie", people(valueFor(bucket, "firstGenerationMigrationBackground"))],
-				["2e generatie", people(valueFor(bucket, "secondGenerationMigrationBackground"))],
+				["Eerste generatie", people(valueFor(bucket, "firstGenerationMigrationBackground"))],
+				["Tweede generatie", people(valueFor(bucket, "secondGenerationMigrationBackground"))],
 			],
 			note: state.year < 1996 ? "Voor 1972-1995 zijn alleen migratieachtergrond en generaties per leeftijdsbucket beschikbaar." : "",
 		});
@@ -758,7 +762,7 @@ function renderOriginCards() {
 	const list = document.createElement("dl");
 	for (const [term, value] of [
 		["Vertrekland bekend", people(valueFor(row, "originDepartureKnown"))],
-		["Geboren buiten NL", people(valueFor(row, "originBornOutsideNetherlands"))],
+		["Geboren buiten Nederland", people(valueFor(row, "originBornOutsideNetherlands"))],
 		["Nederlandse nationaliteit", people(valueFor(row, "originDutchNationality"))],
 		["Niet-Nederlandse nationaliteit", people(valueFor(row, "originNonDutchNationality"))],
 	]) {
@@ -809,7 +813,7 @@ function renderEmigrationCards() {
 		["Totaal incl. correcties", people(valueFor(row, "emigrationTotalDetailed"))],
 		["Bestemming gepubliceerd", people(valueFor(row, "emigrationDestinationKnown"))],
 		["Administratieve afvoeringen", people(valueFor(row, "emigrationAdministrativeRemovals"))],
-		["Geboren in NL", people(valueFor(row, "emigrationBornNetherlands"))],
+		["Geboren in Nederland", people(valueFor(row, "emigrationBornNetherlands"))],
 		["Nederlandse nationaliteit", people(valueFor(row, "emigrationDutchNationality"))],
 	]) {
 		const wrapper = document.createElement("div");
@@ -840,11 +844,11 @@ function renderEmigrationCards() {
 function renderMotivesCards() {
 	const row = rowForYear(state.year);
 	detailEyebrow.textContent = "Motieven geselecteerd jaar";
-	detailTitle.textContent = "EU/EFTA en niet-EU/EFTA";
+	detailTitle.textContent = "Binnen en buiten Europese Unie en Vrijhandelsassociatie";
 	gridCards.replaceChildren();
 
 	appendMetricCard({
-		title: "EU/EFTA afgeleid migratiedoel",
+		title: "Europese Unie en Vrijhandelsassociatie: afgeleid migratiedoel",
 		mainValue: people(valueFor(row, "migrationPurposeEuTotal")),
 		rows: [
 			["Arbeid", people(valueFor(row, "migrationPurposeEuWork"))],
@@ -853,12 +857,12 @@ function renderMotivesCards() {
 			["Geen doel", people(valueFor(row, "migrationPurposeEuNoDerivedGoal"))],
 			["Overig/onbekend", people(valueFor(row, "migrationPurposeEuOther"))],
 		],
-		note: "CBS leidt dit af; het is niet hetzelfde als een IND-migratiemotief.",
+		note: "Het Centraal Bureau voor de Statistiek leidt dit af; het is niet hetzelfde als een migratiemotief van de Immigratie- en Naturalisatiedienst.",
 		info: metricInfo.migrationPurposeEuTotal,
 	});
 
 	appendMetricCard({
-		title: "Niet-EU/EFTA migratiemotief",
+		title: "Buiten Europese Unie en Vrijhandelsassociatie: migratiemotief",
 		mainValue: people(valueFor(row, "migrationPurposeNonEuTotal")),
 		rows: [
 			["Arbeid", people(valueFor(row, "migrationPurposeNonEuWork"))],
@@ -868,7 +872,7 @@ function renderMotivesCards() {
 			["Tijdelijke bescherming", people(valueFor(row, "migrationPurposeNonEuTemporaryProtection"))],
 			["Overig", people(valueFor(row, "migrationPurposeNonEuOther"))],
 		],
-		note: "Gebaseerd op de eerste vergunning volgens IND/CBS-definitie.",
+		note: "Gebaseerd op de eerste vergunning volgens de definitie van de Immigratie- en Naturalisatiedienst en het Centraal Bureau voor de Statistiek.",
 		info: metricInfo.migrationPurposeNonEuTotal,
 	});
 }
@@ -939,7 +943,8 @@ function renderDetailCards() {
 	}
 
 	if (state.view === "motives") {
-		chartNote.textContent = "EU/EFTA gebruikt CBS 'afgeleid migratiedoel'; niet-EU/EFTA gebruikt migratiemotief op basis van IND-vergunning. Die definities zijn verwant, maar niet identiek.";
+		chartNote.textContent =
+			"Immigratie uit landen van de Europese Unie en de Europese Vrijhandelsassociatie gebruikt het afgeleide migratiedoel van het Centraal Bureau voor de Statistiek; immigratie van buiten die landen gebruikt migratiemotief op basis van een vergunning van de Immigratie- en Naturalisatiedienst. Die definities zijn verwant, maar niet identiek.";
 		chartNote.hidden = false;
 		return;
 	}
@@ -1693,7 +1698,7 @@ function updateZoomControls() {
 	const rows = rowsForView(state.view);
 	const zoomed = isZoomed(state.view, rows);
 	resetZoomButton.disabled = !zoomed;
-	resetZoomButton.textContent = zoomed ? "Reset zoom" : "Volledig bereik";
+	resetZoomButton.textContent = zoomed ? "Herstel zoom" : "Volledig bereik";
 }
 
 let urlTimer = null;
@@ -1847,14 +1852,14 @@ function interpolationLabel(row) {
 function renderChartNote() {
 	if (state.view === "population") {
 		chartNote.textContent =
-			"Deze tab combineert nu bevolking en samenstellingsvoorraden bovenin, aandelen in het midden, en jaarstromen van geboorte, sterfte en migratie onderin. 'Inheemse proxy' betekent hier vanaf 2022: twee in Nederland geboren ouders. Voor 1972-1995 is het totale bevolking minus de CBS-reconstructie van migratieachtergrond; voor 1996-2021 is het de oude CBS-categorie Nederlandse achtergrond. De lijn 'bevolking min cum. nettomigratie (gekalibreerd)' is geen nul-geankerde flowsom meer: vanaf 1972 sluit zij aan op de reeks 'in buitenland geboren', en voor eerdere jaren gebruikt de pagina een op 1972 geankerde backcast op basis van cumulatieve nettomigratie. De goud gemarkeerde band en open punten tonen dat 'in buitenland geboren' vóór 2022 is teruggeschat uit 1e generatie plus een kleine vaste correctiegroep.";
+			"Deze tab combineert nu bevolking en samenstellingsvoorraden bovenin, aandelen in het midden, en jaarstromen van geboorte, sterfte en migratie onderin. 'Inheemse proxy' betekent hier vanaf 2022: twee in Nederland geboren ouders. Voor 1972-1995 is het totale bevolking minus de CBS-reconstructie van migratieachtergrond; voor 1996-2021 is het de oude CBS-categorie Nederlandse achtergrond. De lijn 'bevolking min cumulatieve nettomigratie (gekalibreerd)' is geen nul-geankerde flowsom meer: vanaf 1972 sluit zij aan op de reeks 'in buitenland geboren', en voor eerdere jaren gebruikt de pagina een op 1972 geankerde terugschatting op basis van cumulatieve nettomigratie. De goud gemarkeerde band en open punten tonen dat 'in buitenland geboren' vóór 2022 is teruggeschat uit eerste generatie plus een kleine vaste correctiegroep.";
 		chartNote.hidden = false;
 		return;
 	}
 
 	if (state.view === "composition") {
 		chartNote.textContent =
-			"1972-1995 gebruikt deze tab CBS 70787NED: een door CBS als reconstructie gemarkeerde reeks voor migratieachtergrond en 1e/2e generatie. 1996-2021 gebruikt de tab de oude CBS-reeks voor Nederlandse achtergrond en 1e/2e generatie migratieachtergrond. Vanaf 2022 loopt de reeks door via geboorteland van persoon en ouders. De reeks 'in het buitenland geboren' is vanaf 2022 direct uit CBS en voor 1972-2021 teruggeschat uit 1e generatie plus een kleine vaste correctiegroep. 3e generatie blijft niet publiek zichtbaar.";
+			"1972-1995 gebruikt deze tab CBS 70787NED: een door CBS als reconstructie gemarkeerde reeks voor migratieachtergrond en eerste en tweede generatie. 1996-2021 gebruikt de tab de oude CBS-reeks voor Nederlandse achtergrond en eerste en tweede generatie migratieachtergrond. Vanaf 2022 loopt de reeks door via geboorteland van persoon en ouders. De reeks 'in het buitenland geboren' is vanaf 2022 direct uit CBS en voor 1972-2021 teruggeschat uit eerste generatie plus een kleine vaste correctiegroep. Derde generatie blijft niet publiek zichtbaar.";
 		chartNote.hidden = false;
 		return;
 	}
