@@ -1,0 +1,19 @@
+{
+  "aantalProjectenMetApi": 1,
+  "links": {
+    "api": "/api/v1/index.json",
+    "catalogus": "/api/v1/catalogus/index.json",
+    "root": "/api/index.json",
+    "zelf": "/api/v1/projecten/index.json"
+  },
+  "projecten": [
+    {
+      "href": "/api/v1/projecten/uitkeringen-naar-afkomst/index.json",
+      "manifest": "/api/v1/projecten/uitkeringen-naar-afkomst/manifest.json",
+      "slug": "uitkeringen-naar-afkomst",
+      "titel": "Uitkeringen Naar Afkomst"
+    }
+  ],
+  "type": "projectencollectie",
+  "versie": "v1"
+}

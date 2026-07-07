@@ -1,0 +1,525 @@
+{
+  "gegenereerdOp": "2026-06-28T21:36:42.359Z",
+  "relaties": [
+    {
+      "naar": "gegevensset:bronset-cbs-2026",
+      "type": "levert",
+      "van": "gegevensbron:cbs-2026"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-37325",
+      "type": "levert",
+      "van": "gegevensbron:cbs-37325"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-70751ned",
+      "type": "levert",
+      "van": "gegevensbron:cbs-70751ned"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-70787ned",
+      "type": "levert",
+      "van": "gegevensbron:cbs-70787ned"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-80794ned",
+      "type": "levert",
+      "van": "gegevensbron:cbs-80794ned"
+    },
+    {
+      "naar": "gegevensset:uitkeringen-regionaal",
+      "type": "afgeleid-van",
+      "van": "gegevensbron:cbs-80794ned"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-81959ned",
+      "type": "levert",
+      "van": "gegevensbron:cbs-81959ned"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-82235ned",
+      "type": "levert",
+      "van": "gegevensbron:cbs-82235ned"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-84808ned",
+      "type": "levert",
+      "van": "gegevensbron:cbs-84808ned"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-84809ned",
+      "type": "levert",
+      "van": "gegevensbron:cbs-84809ned"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-85369ned",
+      "type": "levert",
+      "van": "gegevensbron:cbs-85369ned"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-85384ned",
+      "type": "levert",
+      "van": "gegevensbron:cbs-85384ned"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-85384ned",
+      "type": "levert",
+      "van": "gegevensbron:cbs-85384ned"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-85451ned",
+      "type": "levert",
+      "van": "gegevensbron:cbs-85451ned"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-85468ned",
+      "type": "levert",
+      "van": "gegevensbron:cbs-85468ned"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-85496ned",
+      "type": "levert",
+      "van": "gegevensbron:cbs-85496ned"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-85497ned",
+      "type": "levert",
+      "van": "gegevensbron:cbs-85497ned"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-85524ned",
+      "type": "levert",
+      "van": "gegevensbron:cbs-85524ned"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-85658ned",
+      "type": "levert",
+      "van": "gegevensbron:cbs-85658ned"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-85671ned",
+      "type": "levert",
+      "van": "gegevensbron:cbs-85671ned"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-85692ned",
+      "type": "levert",
+      "van": "gegevensbron:cbs-85692ned"
+    },
+    {
+      "naar": "gegevensset:uitkeringen-nationaal",
+      "type": "afgeleid-van",
+      "van": "gegevensbron:cbs-85692ned"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-85721ned",
+      "type": "levert",
+      "van": "gegevensbron:cbs-85721ned"
+    },
+    {
+      "naar": "gegevensset:uitkeringen-nationaal",
+      "type": "afgeleid-van",
+      "van": "gegevensbron:cbs-85721ned"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-85844ned",
+      "type": "levert",
+      "van": "gegevensbron:cbs-85844ned"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-85848ned",
+      "type": "levert",
+      "van": "gegevensbron:cbs-85848ned"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-cbs-12e-volkstelling-annex-woningtelling-1947",
+      "type": "levert",
+      "van": "gegevensbron:cbs-cbs-12e-volkstelling-annex-woningtelling-1947"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-cbs-cbs-introduceert-nieuwe-indeling-bevolking-naar-herkomst",
+      "type": "levert",
+      "van": "gegevensbron:cbs-cbs-cbs-introduceert-nieuwe-indeling-bevolking-naar-herkomst"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-cbs-moeders-iets-ouder-bij-geboorte-eerste-kind",
+      "type": "levert",
+      "van": "gegevensbron:cbs-cbs-moeders-iets-ouder-bij-geboorte-eerste-kind"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-cbs-statline-bevolking-herkomstland-geboorteland-leeftijd-regio-1-januari",
+      "type": "levert",
+      "van": "gegevensbron:cbs-cbs-statline-bevolking-herkomstland-geboorteland-leeftijd-regio-1-januari"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-cbs-veiligheidsmonitor-2025",
+      "type": "levert",
+      "van": "gegevensbron:cbs-cbs-veiligheidsmonitor-2025"
+    },
+    {
+      "naar": "gegevensset:bronset-commission-europa-eu-europese-commissie-uitgaven-en-inkomsten-van-de-europese-unie",
+      "type": "levert",
+      "van": "gegevensbron:commission-europa-eu-europese-commissie-uitgaven-en-inkomsten-van-de-europese-unie"
+    },
+    {
+      "naar": "gegevensset:bronset-data-partnersinenergie-nl-netbeheer-nederland-capaciteitskaart-elektriciteitsnet",
+      "type": "levert",
+      "van": "gegevensbron:data-partnersinenergie-nl-netbeheer-nederland-capaciteitskaart-elektriciteitsnet"
+    },
+    {
+      "naar": "gegevensset:bronset-eubudget-eubudget-ranglijstdata",
+      "type": "levert",
+      "van": "gegevensbron:eubudget-eubudget-ranglijstdata"
+    },
+    {
+      "naar": "gegevensset:bronset-github-com-world-atlas-topojson",
+      "type": "levert",
+      "van": "gegevensbron:github-com-world-atlas-topojson"
+    },
+    {
+      "naar": "gegevensset:bronset-lokaal-dataset-voor-culturele-kaart-van-european-values-study-en-world-values-survey",
+      "type": "levert",
+      "van": "gegevensbron:lokaal-dataset-voor-culturele-kaart-van-european-values-study-en-world-values-survey"
+    },
+    {
+      "naar": "gegevensset:bronset-lokaal-lokale-tennet-csv-bestanden",
+      "type": "levert",
+      "van": "gegevensbron:lokaal-lokale-tennet-csv-bestanden"
+    },
+    {
+      "naar": "gegevensset:bronset-netbeheernederland-nl-netbeheer-nederland-feiten-en-cijfers",
+      "type": "levert",
+      "van": "gegevensbron:netbeheernederland-nl-netbeheer-nederland-feiten-en-cijfers"
+    },
+    {
+      "naar": "gegevensset:bronset-netbeheernederland-nl-netbeheer-nederland-tennet-adviseert-capaciteitsmechanisme",
+      "type": "levert",
+      "van": "gegevensbron:netbeheernederland-nl-netbeheer-nederland-tennet-adviseert-capaciteitsmechanisme"
+    },
+    {
+      "naar": "gegevensset:bronset-parlement-com-parlement-com-de-huidige-eerste-kamer",
+      "type": "levert",
+      "van": "gegevensbron:parlement-com-parlement-com-de-huidige-eerste-kamer"
+    },
+    {
+      "naar": "gegevensset:bronset-parlement-com-parlement-com-de-huidige-tweede-kamer",
+      "type": "levert",
+      "van": "gegevensbron:parlement-com-parlement-com-de-huidige-tweede-kamer"
+    },
+    {
+      "naar": "gegevensset:bronset-parlement-com-parlement-com-individuele-biografie-n",
+      "type": "levert",
+      "van": "gegevensbron:parlement-com-parlement-com-individuele-biografie-n"
+    },
+    {
+      "naar": "gegevensset:uitkeringen-regionaal",
+      "type": "afgeleid-van",
+      "van": "gegevensbron:pdok-cbs-gebiedsindelingen-2025"
+    },
+    {
+      "naar": "gegevensset:bronset-pdok-pdok-cbs-gebiedsindelingen-2025-wfs",
+      "type": "levert",
+      "van": "gegevensbron:pdok-pdok-cbs-gebiedsindelingen-2025-wfs"
+    },
+    {
+      "naar": "gegevensset:bronset-pdok-pdok-cbs-gebiedsindelingen-2025-wfs",
+      "type": "levert",
+      "van": "gegevensbron:pdok-pdok-cbs-gebiedsindelingen-2025-wfs"
+    },
+    {
+      "naar": "gegevensset:bronset-population-un-org-verenigde-naties-world-population-prospects",
+      "type": "levert",
+      "van": "gegevensbron:population-un-org-verenigde-naties-world-population-prospects"
+    },
+    {
+      "naar": "gegevensset:bronset-volkshuisvestingnederland-nl-vro-abf-research-huishoudens-woningen-en-woningtekort-2024-2039",
+      "type": "levert",
+      "van": "gegevensbron:volkshuisvestingnederland-nl-vro-abf-research-huishoudens-woningen-en-woningtekort-2024-2039"
+    },
+    {
+      "naar": "gegevensset:bronset-vzinfo-nl-vzinfo-bevolking-regionaal-migratieachtergrond",
+      "type": "levert",
+      "van": "gegevensbron:vzinfo-nl-vzinfo-bevolking-regionaal-migratieachtergrond"
+    },
+    {
+      "naar": "gegevensset:bronset-worldometer-worldometer-landen-naar-bevolkingsomvang",
+      "type": "levert",
+      "van": "gegevensbron:worldometer-worldometer-landen-naar-bevolkingsomvang"
+    },
+    {
+      "naar": "gegevensset:bronset-ygeiamou-gr-originele-excel-download-cultural-map-2023",
+      "type": "levert",
+      "van": "gegevensbron:ygeiamou-gr-originele-excel-download-cultural-map-2023"
+    },
+    {
+      "naar": "gegevensset:bronset-zoek-officielebekendmakingen-nl-abf-research-evaluatie-woningtekort",
+      "type": "levert",
+      "van": "gegevensbron:zoek-officielebekendmakingen-nl-abf-research-evaluatie-woningtekort"
+    },
+    {
+      "naar": "gegevensset:bronset-zoek-officielebekendmakingen-nl-overheid-nl-woningtekort-volgens-primos-abf",
+      "type": "levert",
+      "van": "gegevensbron:zoek-officielebekendmakingen-nl-overheid-nl-woningtekort-volgens-primos-abf"
+    },
+    {
+      "naar": "gegevensset:bronset-zoek-officielebekendmakingen-nl-primos-prognose-2011-woningtekort-2006-2020",
+      "type": "levert",
+      "van": "gegevensbron:zoek-officielebekendmakingen-nl-primos-prognose-2011-woningtekort-2006-2020"
+    },
+    {
+      "naar": "gegevensset:bronset-zoek-officielebekendmakingen-nl-staat-van-de-volkshuisvesting-2025",
+      "type": "levert",
+      "van": "gegevensbron:zoek-officielebekendmakingen-nl-staat-van-de-volkshuisvesting-2025"
+    },
+    {
+      "naar": "gegevensset:tennet-monitor-voorzieningszekerheid-2026-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-cbs-2026"
+    },
+    {
+      "naar": "gegevensset:autochtoonse-nederlandse-bevolking-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-cbs-37325"
+    },
+    {
+      "naar": "gegevensset:autochtoonse-nederlandse-bevolking-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-cbs-70751ned"
+    },
+    {
+      "naar": "gegevensset:autochtoonse-nederlandse-bevolking-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-cbs-70787ned"
+    },
+    {
+      "naar": "gegevensset:uitkeringen-naar-afkomst-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-cbs-80794ned"
+    },
+    {
+      "naar": "gegevensset:verdachten-naar-afkomst-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-cbs-81959ned"
+    },
+    {
+      "naar": "gegevensset:autochtoonse-nederlandse-bevolking-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-cbs-82235ned"
+    },
+    {
+      "naar": "gegevensset:autochtoonse-nederlandse-bevolking-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-cbs-84808ned"
+    },
+    {
+      "naar": "gegevensset:autochtoonse-nederlandse-bevolking-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-cbs-84809ned"
+    },
+    {
+      "naar": "gegevensset:autochtoonse-nederlandse-bevolking-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-cbs-85369ned"
+    },
+    {
+      "naar": "gegevensset:autochtoonse-nederlandse-bevolking-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-cbs-85384ned"
+    },
+    {
+      "naar": "gegevensset:geboortecijfers-nederlandse-afkomst-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-cbs-85384ned"
+    },
+    {
+      "naar": "gegevensset:autochtoonse-nederlandse-bevolking-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-cbs-85451ned"
+    },
+    {
+      "naar": "gegevensset:autochtoonse-nederlandse-bevolking-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-cbs-85468ned"
+    },
+    {
+      "naar": "gegevensset:autochtoonse-nederlandse-bevolking-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-cbs-85496ned"
+    },
+    {
+      "naar": "gegevensset:geboortecijfers-nederlandse-afkomst-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-cbs-85497ned"
+    },
+    {
+      "naar": "gegevensset:autochtoonse-nederlandse-bevolking-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-cbs-85524ned"
+    },
+    {
+      "naar": "gegevensset:verdachten-naar-afkomst-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-cbs-85658ned"
+    },
+    {
+      "naar": "gegevensset:autochtoonse-nederlandse-bevolking-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-cbs-85671ned"
+    },
+    {
+      "naar": "gegevensset:uitkeringen-naar-afkomst-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-cbs-85692ned"
+    },
+    {
+      "naar": "gegevensset:uitkeringen-naar-afkomst-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-cbs-85721ned"
+    },
+    {
+      "naar": "gegevensset:demografische-veiligheid-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-cbs-85844ned"
+    },
+    {
+      "naar": "gegevensset:autochtoonse-nederlandse-bevolking-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-cbs-85848ned"
+    },
+    {
+      "naar": "gegevensset:autochtoonse-nederlandse-bevolking-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-cbs-cbs-12e-volkstelling-annex-woningtelling-1947"
+    },
+    {
+      "naar": "gegevensset:geboortecijfers-nederlandse-afkomst-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-cbs-cbs-cbs-introduceert-nieuwe-indeling-bevolking-naar-herkomst"
+    },
+    {
+      "naar": "gegevensset:geboortecijfers-nederlandse-afkomst-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-cbs-cbs-moeders-iets-ouder-bij-geboorte-eerste-kind"
+    },
+    {
+      "naar": "gegevensset:migratieachtergrond-per-gemeenten-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-cbs-cbs-statline-bevolking-herkomstland-geboorteland-leeftijd-regio-1-januari"
+    },
+    {
+      "naar": "gegevensset:demografische-veiligheid-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-cbs-cbs-veiligheidsmonitor-2025"
+    },
+    {
+      "naar": "gegevensset:begrotingsstromen-van-de-europese-Unie-budget-flows",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-commission-europa-eu-europese-commissie-uitgaven-en-inkomsten-van-de-europese-unie"
+    },
+    {
+      "naar": "gegevensset:autochtoonse-nederlandse-bevolking-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-data-partnersinenergie-nl-netbeheer-nederland-capaciteitskaart-elektriciteitsnet"
+    },
+    {
+      "naar": "gegevensset:begrotingsstromen-van-de-europese-Unie-budget-flows",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-eubudget-eubudget-ranglijstdata"
+    },
+    {
+      "naar": "gegevensset:begrotingsstromen-van-de-europese-Unie-budget-flows",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-github-com-world-atlas-topojson"
+    },
+    {
+      "naar": "gegevensset:culturele-afstandskaart-cultural-map-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-lokaal-dataset-voor-culturele-kaart-van-european-values-study-en-world-values-survey"
+    },
+    {
+      "naar": "gegevensset:tennet-monitor-voorzieningszekerheid-2026-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-lokaal-lokale-tennet-csv-bestanden"
+    },
+    {
+      "naar": "gegevensset:autochtoonse-nederlandse-bevolking-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-netbeheernederland-nl-netbeheer-nederland-feiten-en-cijfers"
+    },
+    {
+      "naar": "gegevensset:tennet-monitor-voorzieningszekerheid-2026-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-netbeheernederland-nl-netbeheer-nederland-tennet-adviseert-capaciteitsmechanisme"
+    },
+    {
+      "naar": "gegevensset:politiek-ouderschap-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-parlement-com-parlement-com-de-huidige-eerste-kamer"
+    },
+    {
+      "naar": "gegevensset:politiek-ouderschap-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-parlement-com-parlement-com-de-huidige-tweede-kamer"
+    },
+    {
+      "naar": "gegevensset:politiek-ouderschap-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-parlement-com-parlement-com-individuele-biografie-n"
+    },
+    {
+      "naar": "gegevensset:migratieachtergrond-per-gemeenten-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-pdok-pdok-cbs-gebiedsindelingen-2025-wfs"
+    },
+    {
+      "naar": "gegevensset:uitkeringen-naar-afkomst-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-pdok-pdok-cbs-gebiedsindelingen-2025-wfs"
+    },
+    {
+      "naar": "gegevensset:autochtoonse-nederlandse-bevolking-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-volkshuisvestingnederland-nl-vro-abf-research-huishoudens-woningen-en-woningtekort-2024-2039"
+    },
+    {
+      "naar": "gegevensset:migratieachtergrond-per-gemeenten-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-vzinfo-nl-vzinfo-bevolking-regionaal-migratieachtergrond"
+    },
+    {
+      "naar": "gegevensset:culturele-afstandskaart-cultural-map-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-ygeiamou-gr-originele-excel-download-cultural-map-2023"
+    },
+    {
+      "naar": "gegevensset:autochtoonse-nederlandse-bevolking-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-zoek-officielebekendmakingen-nl-abf-research-evaluatie-woningtekort"
+    },
+    {
+      "naar": "gegevensset:autochtoonse-nederlandse-bevolking-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-zoek-officielebekendmakingen-nl-overheid-nl-woningtekort-volgens-primos-abf"
+    },
+    {
+      "naar": "gegevensset:autochtoonse-nederlandse-bevolking-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-zoek-officielebekendmakingen-nl-primos-prognose-2011-woningtekort-2006-2020"
+    },
+    {
+      "naar": "gegevensset:autochtoonse-nederlandse-bevolking-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-zoek-officielebekendmakingen-nl-staat-van-de-volkshuisvesting-2025"
+    },
+    {
+      "naar": "gegevensset:uitkeringen-viewmodel",
+      "type": "afgeleid-van",
+      "van": "gegevensset:uitkeringen-nationaal"
+    },
+    {
+      "naar": "gegevensset:uitkeringen-viewmodel",
+      "type": "afgeleid-van",
+      "van": "gegevensset:uitkeringen-regionaal"
+    }
+  ]
+}

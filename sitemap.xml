@@ -2,53 +2,56 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://tbb.localhost:1313/projects/politiek-ouderschap/</loc>
-    <lastmod>2026-06-27T22:56:07+02:00</lastmod>
+    <loc>https://tbataafschebroederschap.nl/data-catalogus/</loc>
+    <lastmod>2026-07-07T22:04:59+02:00</lastmod>
   </url><url>
-    <loc>http://tbb.localhost:1313/projects/geboortecijfers-nederlandse-afkomst/</loc>
-    <lastmod>2026-06-27T22:59:20+02:00</lastmod>
+    <loc>https://tbataafschebroederschap.nl/projecten/politiek-ouderschap/</loc>
+    <lastmod>2026-06-28T19:32:41+02:00</lastmod>
   </url><url>
-    <loc>http://tbb.localhost:1313/regels/</loc>
+    <loc>https://tbataafschebroederschap.nl/projecten/geboortecijfers-nederlandse-afkomst/</loc>
+    <lastmod>2026-06-28T19:32:41+02:00</lastmod>
+  </url><url>
+    <loc>https://tbataafschebroederschap.nl/regels/</loc>
     <lastmod>2026-06-24T18:35:55+02:00</lastmod>
   </url><url>
-    <loc>http://tbb.localhost:1313/projects/tennet-monitor-voorzieningszekerheid-2026/</loc>
-    <lastmod>2026-06-22T23:41:08+02:00</lastmod>
+    <loc>https://tbataafschebroederschap.nl/projecten/tennet-monitor-voorzieningszekerheid-2026/</loc>
+    <lastmod>2026-06-28T19:32:41+02:00</lastmod>
   </url><url>
-    <loc>http://tbb.localhost:1313/projects/demografische-veiligheid/</loc>
-    <lastmod>2026-06-23T01:09:55+02:00</lastmod>
+    <loc>https://tbataafschebroederschap.nl/projecten/demografische-veiligheid/</loc>
+    <lastmod>2026-06-28T19:32:41+02:00</lastmod>
   </url><url>
-    <loc>http://tbb.localhost:1313/projects/</loc>
-    <lastmod>2026-06-08T22:45:23+02:00</lastmod>
+    <loc>https://tbataafschebroederschap.nl/projecten/</loc>
+    <lastmod>2026-06-28T19:32:41+02:00</lastmod>
   </url><url>
-    <loc>http://tbb.localhost:1313/</loc>
+    <loc>https://tbataafschebroederschap.nl/</loc>
     <lastmod>2026-06-05T16:27:59+02:00</lastmod>
   </url><url>
-    <loc>http://tbb.localhost:1313/over/</loc>
+    <loc>https://tbataafschebroederschap.nl/over/</loc>
     <lastmod>2026-06-16T18:30:03+02:00</lastmod>
   </url><url>
-    <loc>http://tbb.localhost:1313/projects/uitkeringen-naar-afkomst/</loc>
-    <lastmod>2026-06-27T22:53:07+02:00</lastmod>
+    <loc>https://tbataafschebroederschap.nl/projecten/uitkeringen-naar-afkomst/</loc>
+    <lastmod>2026-06-28T19:32:41+02:00</lastmod>
   </url><url>
-    <loc>http://tbb.localhost:1313/projects/migratieachtergrond-per-gemeenten/</loc>
-    <lastmod>2026-06-27T22:52:00+02:00</lastmod>
+    <loc>https://tbataafschebroederschap.nl/projecten/migratieachtergrond-per-gemeenten/</loc>
+    <lastmod>2026-06-28T19:32:41+02:00</lastmod>
   </url><url>
-    <loc>http://tbb.localhost:1313/projects/verdachten-naar-afkomst/</loc>
-    <lastmod>2026-06-27T21:48:39+02:00</lastmod>
+    <loc>https://tbataafschebroederschap.nl/projecten/verdachten-naar-afkomst/</loc>
+    <lastmod>2026-06-28T19:32:41+02:00</lastmod>
   </url><url>
-    <loc>http://tbb.localhost:1313/projects/autochtoonse-nederlandse-bevolking/</loc>
-    <lastmod>2026-06-27T21:47:48+02:00</lastmod>
+    <loc>https://tbataafschebroederschap.nl/projecten/autochtoonse-nederlandse-bevolking/</loc>
+    <lastmod>2026-06-28T19:32:41+02:00</lastmod>
   </url><url>
-    <loc>http://tbb.localhost:1313/projects/culturele-afstandskaart/</loc>
-    <lastmod>2026-06-22T23:41:08+02:00</lastmod>
+    <loc>https://tbataafschebroederschap.nl/projecten/culturele-afstandskaart/</loc>
+    <lastmod>2026-06-28T19:32:41+02:00</lastmod>
   </url><url>
-    <loc>http://tbb.localhost:1313/projects/begrotingsstromen-van-de-europese-unie/</loc>
-    <lastmod>2026-06-27T21:25:38+02:00</lastmod>
+    <loc>https://tbataafschebroederschap.nl/projecten/begrotingsstromen-van-de-europese-unie/</loc>
+    <lastmod>2026-06-28T19:32:41+02:00</lastmod>
   </url><url>
-    <loc>http://tbb.localhost:1313/projects/wereldbevolking/</loc>
-    <lastmod>2026-06-22T23:41:08+02:00</lastmod>
+    <loc>https://tbataafschebroederschap.nl/projecten/wereldbevolking/</loc>
+    <lastmod>2026-06-28T19:32:41+02:00</lastmod>
   </url><url>
-    <loc>http://tbb.localhost:1313/categories/</loc>
+    <loc>https://tbataafschebroederschap.nl/categories/</loc>
   </url><url>
-    <loc>http://tbb.localhost:1313/tags/</loc>
+    <loc>https://tbataafschebroederschap.nl/tags/</loc>
   </url>
 </urlset>
