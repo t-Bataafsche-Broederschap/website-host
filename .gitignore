@@ -1,0 +1,29 @@
+# ignore all direct items, nonrecursively
+/*
+
+# unignore folders
+!api/
+!categories/
+!data-catalogus/
+!fonts/
+!images/
+!over/
+!projecten/
+!regels/
+!styles/
+!tags/
+
+# unignore files
+!.git
+!.gitattributes
+!.gitignore
+!404.html
+!CNAME
+!README.md
+!data-catalogus.js
+!index.html
+!project-tooltip.js
+!search-index.json
+!search.js
+!sitemap.xml
+!theme-toggle.js
