@@ -352,6 +352,43 @@
 	border-color: var(--series-3);
 	color: var(--series-3);
 }
+.crime-dashboard .timeline-number--migration {
+	border-color: var(--series-6);
+	color: var(--series-6);
+}
+.crime-dashboard .timeline-kind {
+	display: inline-block;
+	margin-top: 2px;
+	color: var(--series-6);
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+.crime-dashboard .timeline-legend {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 5px 12px;
+	margin-top: 8px;
+	color: var(--muted);
+	font-size: 11px;
+}
+.crime-dashboard .timeline-legend strong {
+	color: var(--text);
+	font-size: inherit;
+}
+.crime-dashboard .timeline-legend span {
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+}
+.crime-dashboard .timeline-legend i {
+	width: 9px;
+	height: 9px;
+	border: 2px solid;
+	border-radius: 50%;
+}
 .crime-dashboard .tooltip-event {
 	max-width: 280px;
 	margin-top: 7px;

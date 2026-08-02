@@ -171,14 +171,30 @@ const COMPOSITION = [
 	{ category: "Overige misdrijven", y2010: 1.3, y2025: 1.8 },
 ];
 
+const MIGRATION_CHARTS = ["overviewChart", "overviewRateChart", "totalChart", "rateChart"];
+const CBS_MIGRATION_TIMELINE = "https://www.cbs.nl/nl-nl/longread/diversen/2025/tijdlijn-migratie-1849-2025?onepage=true";
 const TIMELINE_EVENTS = [
-	{ year: 1960, label: "Wervingsakkoord Italië", detail: "Nederland sloot een breder wervingsakkoord met Italië. De arbeidswerving was eind jaren vijftig al begonnen en werd vanaf het midden van de jaren zestig grootschalig.", kind: "context" },
-	{ year: 1973, label: "Wervingsstop", detail: "Na de oliecrisis stelde Nederland een officiële wervingsstop in; gezinsmigratie ging daarna door.", kind: "context" },
+	{ year: 1948, label: "Migratie uit voormalig Nederlands-Indië (1945–1962)", detail: "Tussen 1945 en 1962 vestigden zich ongeveer 400.000 mensen uit voormalig Nederlands-Indië in Nederland; deze stroom begon vóór de grafiekreeks.", kind: "migration", charts: MIGRATION_CHARTS, sourceUrl: CBS_MIGRATION_TIMELINE },
+	{ year: 1960, label: "Italiaanse en Spaanse arbeidsmigratie", detail: "De werving begon eind jaren vijftig; eerst kwamen vooral Italiaanse en Spaanse werknemers. 1960 is een beleidsmijlpaal, geen exact beginjaar.", kind: "migration", charts: MIGRATION_CHARTS, sourceUrl: CBS_MIGRATION_TIMELINE },
+	{ year: 1964, label: "Turkse en Marokkaanse arbeidsmigratie (1964–1969)", detail: "Later in de jaren zestig volgden vooral Turkse en Marokkaanse werknemers; de wervingsakkoorden dateren uit 1964 en 1969.", kind: "migration", charts: MIGRATION_CHARTS, sourceUrl: CBS_MIGRATION_TIMELINE },
+	{ year: 1973, label: "Wervingsstop", detail: "Nederland stopte de officiële werving uit mediterrane landen; migratie via gezinshereniging ging daarna door.", kind: "migration", charts: MIGRATION_CHARTS, sourceUrl: CBS_MIGRATION_TIMELINE },
+	{
+		year: 1975,
+		label: "Surinaamse migratiepiek",
+		detail: "De migratie uit Suriname liep al vanaf de jaren zestig op en bereikte rond de onafhankelijkheid in 1975 een piek van ongeveer 40.000 immigranten.",
+		kind: "migration",
+		charts: MIGRATION_CHARTS,
+		sourceUrl: "https://www.cbs.nl/nl-nl/nieuws/2025/47/sinds-onafhankelijkheid-ruim-250-duizend-surinamers-naar-nederland-gekomen",
+	},
+	{ year: 1991, label: "Asielmigratie in de jaren negentig", detail: "Na het uitbreken van de oorlogen in voormalig Joegoslavië kwamen grotere groepen uit die regio en Somalië; later volgden vooral mensen uit Irak en Afghanistan.", kind: "migration", charts: MIGRATION_CHARTS, sourceUrl: CBS_MIGRATION_TIMELINE },
 	{ year: 2002, label: "Piek 2001–2002", detail: "In 2001 en 2002 bereikte de reeks 93 geregistreerde misdrijven per 1.000 inwoners; het absolute maximum lag in 2002.", kind: "trend" },
+	{ year: 2004, label: "Midden- en Oost-Europese arbeidsmigratie", detail: "Na de EU-uitbreiding van 2004 nam vooral de immigratie uit Polen sterk toe; vanaf 2007 groeide ook de instroom uit Bulgarije en Roemenië.", kind: "migration", charts: MIGRATION_CHARTS, sourceUrl: CBS_MIGRATION_TIMELINE },
 	{ year: 2010, label: "Trendbreuk registratie", detail: "Vanaf 2010 kwamen de gegevens uit een nieuwere landelijke politiewaarneming; CBS meldt een lichte trendbreuk met eerdere jaren.", kind: "method" },
+	{ year: 2014, label: "Syrische vluchtelingen", detail: "Vanaf 2014 kwamen steeds meer vluchtelingen uit Syrië naar Nederland; de eerste immigratiepiek volgde in 2016.", kind: "migration", charts: MIGRATION_CHARTS, sourceUrl: CBS_MIGRATION_TIMELINE },
 	{ year: 2015, label: "Internetoplichting meegeteld", detail: "Sinds juni 2015 telt CBS ook misdrijven mee die bij het Landelijk Meldpunt Internet Oplichting zijn gemeld.", kind: "method", charts: ["onlineChart"] },
 	{ year: 2018, label: "Delicten apart geregistreerd", detail: "Sinds juli 2018 kunnen samenhangende delicten niet meer in één registratie; daarvoor telde alleen het zwaarste delict.", kind: "method" },
 	{ year: 2020, label: "Corona en online aangifte", detail: "Corona veranderde het criminaliteitsbeeld. Vanaf 30 april kon WhatsAppfraude online worden aangegeven, wat de registraties mede beïnvloedde.", kind: "method" },
+	{ year: 2022, label: "Oekraïense vluchtelingen", detail: "Na de Russische invasie kwamen in 2022 ongeveer 108.000 vluchtelingen uit Oekraïne naar Nederland onder tijdelijke bescherming.", kind: "migration", charts: MIGRATION_CHARTS, sourceUrl: CBS_MIGRATION_TIMELINE },
 	{ year: 2024, label: "Wet seksuele misdrijven", detail: "Sinds 1 juli 2024 zijn meer vormen van seksueel grensoverschrijdend gedrag strafbaar; dit verandert de reikwijdte van de registratie.", kind: "method", charts: ["violenceChart"] },
 ];
 
@@ -203,6 +219,12 @@ const typeMeta = {
 };
 const color = (n) => getComputedStyle(dashboard).getPropertyValue(`--series-${n}`).trim();
 const css = (name) => getComputedStyle(dashboard).getPropertyValue(name).trim();
+const eventKindMeta = {
+	migration: { label: "Migratiecontext", color: () => color(6) },
+	trend: { label: "Trend in de reeks", color: () => color(3) },
+	method: { label: "Registratie / wetgeving", color: () => color(4) },
+	context: { label: "Maatschappelijke context", color: () => css("--muted") },
+};
 const formatValue = (v, kind = "number") => {
 	if (v == null || Number.isNaN(v)) return "–";
 	if (kind === "percent") return `${pf.format(v)}%`;
@@ -249,7 +271,7 @@ function renderLineChart(id, data, series, options = {}) {
 
 	const W = 960,
 		H = 430,
-		M = { l: 72, r: 24, t: state.showEvents ? 44 : 25, b: 52 },
+		M = { l: 72, r: 24, t: state.showEvents ? 68 : 25, b: 52 },
 		PW = W - M.l - M.r,
 		PH = H - M.t - M.b;
 	const values = [];
@@ -312,15 +334,20 @@ function renderLineChart(id, data, series, options = {}) {
 	svg.innerHTML = grid + `<rect x="${M.l}" y="${M.t}" width="${PW}" height="${PH}" fill="transparent" stroke="${gridColor}" />`;
 
 	const timelineEvents = state.showEvents ? TIMELINE_EVENTS.filter((event) => event.year >= xMin && event.year <= xMax && (!event.charts || event.charts.includes(id))) : [];
+	const markerLevels = [];
 	timelineEvents.forEach((event, index) => {
 		const xx = M.l + (xMin === xMax ? PW / 2 : ((event.year - xMin) / (xMax - xMin)) * PW);
-		const eventColor = event.kind === "method" ? color(4) : event.kind === "trend" ? color(3) : muted;
+		const openLevel = markerLevels.findIndex((lastX) => xx - lastX >= 24);
+		const level = openLevel === -1 ? markerLevels.length : openLevel;
+		markerLevels[level] = xx;
+		const markerY = M.t - 14 - level * 23;
+		const eventColor = eventKindMeta[event.kind]?.color() || muted;
 		svg.insertAdjacentHTML(
 			"beforeend",
 			`<g class="timeline-marker timeline-marker--${event.kind}" aria-label="${escapeHtml(`${event.year}: ${event.label}`)}">
 				<line x1="${xx}" y1="${M.t}" x2="${xx}" y2="${H - M.b}" stroke="${eventColor}" stroke-width="1.25" stroke-dasharray="3 5" opacity=".7"/>
-				<circle cx="${xx}" cy="${M.t - 14}" r="10" fill="${panel}" stroke="${eventColor}" stroke-width="1.5"/>
-				<text x="${xx}" y="${M.t - 10}" fill="${eventColor}" font-size="10" font-weight="700" text-anchor="middle">${index + 1}</text>
+				<circle cx="${xx}" cy="${markerY}" r="10" fill="${panel}" stroke="${eventColor}" stroke-width="1.5"/>
+				<text x="${xx}" y="${markerY + 4}" fill="${eventColor}" font-size="10" font-weight="700" text-anchor="middle">${index + 1}</text>
 			</g>`
 		);
 	});
@@ -365,10 +392,20 @@ function renderLineChart(id, data, series, options = {}) {
 	});
 	host.appendChild(legend);
 	if (timelineEvents.length) {
+		const timelineLegend = document.createElement("div");
+		timelineLegend.className = "timeline-legend";
+		timelineLegend.setAttribute("aria-label", "Legenda gebeurtenissen");
+		const kinds = [...new Set(timelineEvents.map((event) => event.kind))];
+		timelineLegend.innerHTML = `<strong>Gebeurtenissen:</strong>${kinds.map((kind) => `<span><i style="border-color:${eventKindMeta[kind].color()}" aria-hidden="true"></i>${escapeHtml(eventKindMeta[kind].label)}</span>`).join("")}`;
+		host.appendChild(timelineLegend);
+
 		const timeline = document.createElement("details");
 		timeline.className = "chart-timeline";
 		timeline.innerHTML = `<summary>Tijdspunten in deze grafiek</summary><ol>${timelineEvents
-			.map((event, index) => `<li><span class="timeline-number timeline-number--${event.kind}">${index + 1}</span><span><strong>${event.year} — ${escapeHtml(event.label)}</strong><small>${escapeHtml(event.detail)}</small></span></li>`)
+			.map(
+				(event, index) =>
+					`<li><span class="timeline-number timeline-number--${event.kind}">${index + 1}</span><span><strong>${event.year} — ${escapeHtml(event.label)}</strong>${event.kind === "migration" ? '<span class="timeline-kind">Migratiecontext</span>' : ""}<small>${escapeHtml(event.detail)}${event.sourceUrl ? ` <a href="${escapeHtml(event.sourceUrl)}" target="_blank" rel="noreferrer">Bron</a>` : ""}</small></span></li>`
+			)
 			.join("")}</ol><p>Deze markeringen geven context en tonen geen bewezen oorzaak-gevolgrelatie.</p>`;
 		host.appendChild(timeline);
 	}
