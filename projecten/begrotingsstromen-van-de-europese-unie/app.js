@@ -487,7 +487,7 @@ new MutationObserver(refreshThemePalette).observe(document.documentElement, {
 });
 
 const topologyUrl = isSmallScreen() ? "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json" : "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json";
-const [budgetData, topology] = await Promise.all([fetch("budget-flows.json").then((response) => response.json()), fetch(topologyUrl).then((response) => response.json())]);
+const [budgetData, topology] = await Promise.all([fetch("/api/v1/projecten/begrotingsstromen-van-de-europese-Unie/data.json").then((response) => response.json()), fetch(topologyUrl).then((response) => response.json())]);
 
 data = budgetData;
 world = topojson.feature(topology, topology.objects.countries);

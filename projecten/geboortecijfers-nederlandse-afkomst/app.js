@@ -150,6 +150,42 @@ function drawRates() {
 	]);
 }
 
+function drawBirths() {
+	clearChart();
+	const rows = metricsFor();
+	const { width, height, margin } = dimensions();
+	const svg = chart.attr("viewBox", `0 0 ${width} ${height}`);
+	const x = d3
+		.scaleLinear()
+		.domain(d3.extent(rows, (row) => row.year))
+		.range([margin.left, width - margin.right]);
+	const y = d3
+		.scaleLinear()
+		.domain([0, d3.max(rows, (row) => row.geboorten) * 1.15])
+		.nice()
+		.range([height - margin.bottom, margin.top]);
+	const line = d3
+		.line()
+		.x((row) => x(row.year))
+		.y((row) => y(row.geboorten));
+
+	addAxes(svg, x, y, width, height, margin, "Aantal levendgeborenen");
+	svg.append("path").datum(rows).attr("fill", "none").attr("stroke", colors.births).attr("stroke-width", 3).attr("d", line);
+	svg
+		.selectAll("circle")
+		.data(rows)
+		.join("circle")
+		.attr("cx", (row) => x(row.year))
+		.attr("cy", (row) => y(row.geboorten))
+		.attr("r", (row) => (row.year === state.year ? 6 : 4))
+		.attr("fill", colors.births)
+		.on("mouseenter", (event, row) => showTooltip(event, `<strong>${row.year}</strong><br>${fmtInt.format(row.geboorten)} levendgeborenen`))
+		.on("mousemove", moveTooltip)
+		.on("click", (_event, row) => setYear(row.year))
+		.on("mouseleave", hideTooltip);
+	setLegend([{ color: colors.births, label: "Levendgeborenen" }]);
+}
+
 function drawReplacement() {
 	clearChart();
 	const rows = metricsFor();
@@ -446,6 +482,7 @@ function updateText() {
 	selectedTitle.textContent = String(state.year);
 	chartKicker.textContent = `${group.shortLabel}, ${data.years[0]}-${data.years[data.years.length - 1]}`;
 	chartTitle.textContent = {
+		births: "Aantal geboorten per jaar",
 		rates: "Ruwe ratio tegenover vruchtbare leeftijden",
 		structure: "Leeftijdsopbouw per 5-jaarsgroep",
 		fertility: "Leeftijdsspecifieke geboortecijfers",
@@ -497,6 +534,7 @@ function renderTable() {
 
 function render() {
 	updateText();
+	if (state.view === "births") drawBirths();
 	if (state.view === "rates") drawRates();
 	if (state.view === "structure") drawStructure();
 	if (state.view === "fertility") drawFertility();
@@ -519,7 +557,7 @@ function exportCsv() {
 }
 
 async function init() {
-	data = await fetch("data.json").then((response) => response.json());
+	data = await fetch("/api/v1/projecten/geboortecijfers-nederlandse-afkomst/data.json").then((response) => response.json());
 	state.year = Math.max(...data.years);
 	yearRange.min = Math.min(...data.years);
 	yearRange.max = Math.max(...data.years);

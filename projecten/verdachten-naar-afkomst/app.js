@@ -566,7 +566,7 @@ function exportCsv() {
 }
 
 async function init() {
-	const response = await fetch("/projecten/verdachten-naar-herkomst/data.json");
+	const response = await fetch("/api/v1/projecten/verdachten-naar-afkomst/data.json");
 	if (!response.ok) throw new Error(`Kon data.json niet laden: ${response.status}`);
 	data = await response.json();
 

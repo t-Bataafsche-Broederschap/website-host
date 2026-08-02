@@ -423,7 +423,7 @@ function handleGroupChange() {
 	renderAll();
 }
 
-fetch("data.json")
+fetch("/api/v1/projecten/demografische-veiligheid/data.json")
 	.then((response) => {
 		if (!response.ok) throw new Error(`Kon data.json niet laden: ${response.status}`);
 		return response.json();

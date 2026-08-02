@@ -1,5 +1,5 @@
 {
-  "gegenereerdOp": "2026-06-28T21:36:42.359Z",
+  "gegenereerdOp": "2026-07-10T21:42:50+02:00",
   "gegevensbronnen": [
     {
       "aanbieder": "CBS",
@@ -8,6 +8,7 @@
       "producten": [
         "autochtoonse-nederlandse-bevolking"
       ],
+      "rol": "context",
       "titel": "CBS StatLine: Bevolking; leeftijd, generatie en migratieachtergrond, 1996-2022",
       "type": "odata",
       "url": "https://www.cbs.nl/nl-nl/cijfers/detail/37325"
@@ -19,6 +20,7 @@
       "producten": [
         "autochtoonse-nederlandse-bevolking"
       ],
+      "rol": "context",
       "titel": "CBS StatLine: Bevolkingsontwikkeling; migratieachtergrond en generatie; 1996-2021",
       "type": "odata",
       "url": "https://www.cbs.nl/nl-nl/cijfers/detail/70751NED"
@@ -30,6 +32,7 @@
       "producten": [
         "autochtoonse-nederlandse-bevolking"
       ],
+      "rol": "context",
       "titel": "CBS StatLine: Bevolking met migratieachtergrond; geslacht, leeftijd, 1 januari 1972-2022",
       "type": "odata",
       "url": "https://www.cbs.nl/nl-nl/cijfers/detail/70787NED"
@@ -37,24 +40,26 @@
     {
       "aanbieder": "CBS",
       "id": "cbs-80794ned",
-      "opmerking": "Regionale aantallen per uitkeringstype, zonder herkomstuitsplitsing.",
+      "opmerking": "",
       "producten": [
         "uitkeringen-naar-afkomst"
       ],
+      "rol": "data",
       "titel": "CBS StatLine: Personen met een uitkering; uitkeringsontvangers per regio",
       "type": "odata",
-      "url": "https://www.cbs.nl/nl-nl/cijfers/detail/80794ned"
+      "url": null
     },
     {
       "aanbieder": "CBS",
       "id": "cbs-81959ned",
-      "opmerking": "Hoofdscatter voor 2022. Deze oude CBS-tabel bevat de volledige landenlijst naar migratieachtergrond.",
+      "opmerking": "",
       "producten": [
         "verdachten-naar-afkomst"
       ],
-      "titel": "CBS StatLine: Verdachten; geslacht, leeftijd, migratieachtergrond en generatie 1999-2022",
+      "rol": "data",
+      "titel": "CBS StatLine: Verdachten naar migratieachtergrond en generatie",
       "type": "odata",
-      "url": "https://www.cbs.nl/nl-nl/cijfers/detail/81959NED"
+      "url": null
     },
     {
       "aanbieder": "CBS",
@@ -63,6 +68,7 @@
       "producten": [
         "autochtoonse-nederlandse-bevolking"
       ],
+      "rol": "context",
       "titel": "CBS StatLine: Voorraad woningen; standen en mutaties vanaf 1921",
       "type": "odata",
       "url": "https://www.cbs.nl/nl-nl/cijfers/detail/82235NED"
@@ -74,6 +80,7 @@
       "producten": [
         "autochtoonse-nederlandse-bevolking"
       ],
+      "rol": "context",
       "titel": "CBS StatLine: immigranten uit Europese Unie en Europese Vrijhandelsassociatie; afgeleid migratiedoel",
       "type": "odata",
       "url": "https://www.cbs.nl/nl-nl/cijfers/detail/84808ned"
@@ -85,6 +92,7 @@
       "producten": [
         "autochtoonse-nederlandse-bevolking"
       ],
+      "rol": "context",
       "titel": "CBS StatLine: immigranten van buiten Europese Unie en Europese Vrijhandelsassociatie; migratiemotief",
       "type": "odata",
       "url": "https://www.cbs.nl/nl-nl/cijfers/detail/84809NED"
@@ -96,6 +104,7 @@
       "producten": [
         "autochtoonse-nederlandse-bevolking"
       ],
+      "rol": "context",
       "titel": "CBS StatLine: Bevolkingsontwikkeling; herkomstland en geboorteland (ouders)",
       "type": "odata",
       "url": "https://www.cbs.nl/nl-nl/cijfers/detail/85369NED"
@@ -103,14 +112,15 @@
     {
       "aanbieder": "CBS",
       "id": "cbs-85384ned",
-      "opmerking": "Recente bevolkingstabel vanaf 2022 waarmee de compositietab de oude logica voor eerste en tweede generatie doorzet via geboorteland van persoon en ouders.",
+      "opmerking": "",
       "producten": [
         "autochtoonse-nederlandse-bevolking",
         "geboortecijfers-nederlandse-afkomst"
       ],
-      "titel": "CBS StatLine: Bevolking; herkomstland, geboorteland en geboorteland ouders",
+      "rol": "data",
+      "titel": "CBS StatLine: Bevolking naar herkomst en geboorteland (ouders)",
       "type": "odata",
-      "url": "https://www.cbs.nl/nl-nl/cijfers/detail/85384NED"
+      "url": null
     },
     {
       "aanbieder": "CBS",
@@ -119,9 +129,22 @@
       "producten": [
         "autochtoonse-nederlandse-bevolking"
       ],
+      "rol": "context",
       "titel": "CBS StatLine: Immi- en emigratie; geslacht, leeftijd, nationaliteit, regio",
       "type": "odata",
       "url": "https://www.cbs.nl/nl-nl/cijfers/detail/85451NED"
+    },
+    {
+      "aanbieder": "CBS",
+      "id": "cbs-85458ned",
+      "opmerking": "",
+      "producten": [
+        "migratieachtergrond-per-gemeenten"
+      ],
+      "rol": "data",
+      "titel": "CBS StatLine: Bevolking naar herkomst, leeftijd en regio",
+      "type": "odata",
+      "url": null
     },
     {
       "aanbieder": "CBS",
@@ -130,6 +153,7 @@
       "producten": [
         "autochtoonse-nederlandse-bevolking"
       ],
+      "rol": "context",
       "titel": "CBS StatLine: Immigratie en emigratie; geslacht, leeftijd, geboorteland, regio",
       "type": "odata",
       "url": "https://www.cbs.nl/nl-nl/cijfers/detail/85468NED"
@@ -141,6 +165,7 @@
       "producten": [
         "autochtoonse-nederlandse-bevolking"
       ],
+      "rol": "context",
       "titel": "CBS StatLine: Bevolking; kerncijfers",
       "type": "odata",
       "url": "https://www.cbs.nl/nl-nl/cijfers/detail/85496NED"
@@ -148,35 +173,38 @@
     {
       "aanbieder": "CBS",
       "id": "cbs-85497ned",
-      "opmerking": "Hoofdbron voor levendgeborenen naar herkomstland, geboorteland en leeftijd van de moeder; gebruikt voor de teller en leeftijdsspecifieke geboorten.",
+      "opmerking": "",
       "producten": [
         "geboortecijfers-nederlandse-afkomst"
       ],
-      "titel": "CBS StatLine: Levend geboren kinderen; herkomstland moeder en leeftijd moeder",
+      "rol": "data",
+      "titel": "CBS StatLine: Levend geboren kinderen naar herkomst en leeftijd moeder",
       "type": "odata",
-      "url": "https://www.cbs.nl/nl-nl/cijfers/detail/85497NED"
+      "url": null
     },
     {
       "aanbieder": "CBS",
       "id": "cbs-85524ned",
-      "opmerking": "Lange CBS-reeks voor bevolking, immigratie, emigratie en migratiesaldo. Waarden zijn in duizendtallen; recente jaren worden waar mogelijk vervangen door preciezere CBS-tabellen.",
+      "opmerking": "",
       "producten": [
         "autochtoonse-nederlandse-bevolking"
       ],
-      "titel": "CBS StatLine: Bevolking, huishoudens en bevolkingsontwikkeling; vanaf 1899",
+      "rol": "data",
+      "titel": "CBS StatLine: Bevolking, huishoudens en bevolkingsontwikkeling vanaf 1899",
       "type": "odata",
-      "url": "https://www.cbs.nl/nl-nl/cijfers/detail/85524NED"
+      "url": null
     },
     {
       "aanbieder": "CBS",
       "id": "cbs-85658ned",
-      "opmerking": "Actuele contexttabel tot en met 2025 met de nieuwe CBS-indeling naar herkomst.",
+      "opmerking": "",
       "producten": [
         "verdachten-naar-afkomst"
       ],
-      "titel": "CBS StatLine: Verdachten; geslacht, leeftijd, herkomst, opleiding, huishoudensinkomen",
+      "rol": "data",
+      "titel": "CBS StatLine: Verdachten naar herkomst en persoonskenmerken",
       "type": "odata",
-      "url": "https://www.cbs.nl/nl-nl/cijfers/detail/85658NED"
+      "url": null
     },
     {
       "aanbieder": "CBS",
@@ -185,6 +213,7 @@
       "producten": [
         "autochtoonse-nederlandse-bevolking"
       ],
+      "rol": "context",
       "titel": "CBS StatLine: Migratie; land vertrek / bestemming, geboorteland en geslacht",
       "type": "odata",
       "url": "https://www.cbs.nl/nl-nl/cijfers/detail/85671NED"
@@ -192,35 +221,38 @@
     {
       "aanbieder": "CBS",
       "id": "cbs-85692ned",
-      "opmerking": "Nationale uitkeringsontvangers naar geslacht, leeftijd, herkomstland en geboorteland ouders.",
+      "opmerking": "",
       "producten": [
         "uitkeringen-naar-afkomst"
       ],
+      "rol": "data",
       "titel": "CBS StatLine: Personen met een uitkering; kenmerken uitkeringsontvangers",
       "type": "odata",
-      "url": "https://www.cbs.nl/nl-nl/cijfers/detail/85692NED"
+      "url": null
     },
     {
       "aanbieder": "CBS",
       "id": "cbs-85721ned",
-      "opmerking": "Bevolkingsnoemer voor relatieve nationale cijfers vanaf 2022.",
+      "opmerking": "",
       "producten": [
         "uitkeringen-naar-afkomst"
       ],
-      "titel": "CBS StatLine: Bevolking op de eerste van de maand; geslacht, leeftijd, herkomstland",
+      "rol": "data",
+      "titel": "CBS StatLine: Bevolking op de eerste van de maand naar herkomst",
       "type": "odata",
-      "url": "https://www.cbs.nl/nl-nl/cijfers/detail/85721NED"
+      "url": null
     },
     {
       "aanbieder": "CBS",
       "id": "cbs-85844ned",
-      "opmerking": "Bron voor de demografische uitsplitsingen in het.",
+      "opmerking": "",
       "producten": [
         "demografische-veiligheid"
       ],
-      "titel": "CBS StatLine: Veiligheidsmonitor; kerncijfers, persoonskenmerken",
+      "rol": "data",
+      "titel": "CBS StatLine: Veiligheidsmonitor naar persoonskenmerken",
       "type": "odata",
-      "url": "https://www.cbs.nl/nl-nl/cijfers/detail/85844NED"
+      "url": null
     },
     {
       "aanbieder": "CBS",
@@ -229,6 +261,7 @@
       "producten": [
         "autochtoonse-nederlandse-bevolking"
       ],
+      "rol": "context",
       "titel": "CBS StatLine: Immi- en emigratie; nationaliteit, leeftijd en geslacht",
       "type": "odata",
       "url": "https://www.cbs.nl/nl-nl/cijfers/detail/85848NED"
@@ -240,6 +273,7 @@
       "producten": [
         "autochtoonse-nederlandse-bevolking"
       ],
+      "rol": "context",
       "titel": "CBS: 12e Volkstelling annex woningtelling 1947",
       "type": "web",
       "url": "https://www.cbs.nl/nl-nl/visualisaties/tijdlijn-bevolking-tellen/1947"
@@ -251,6 +285,7 @@
       "producten": [
         "geboortecijfers-nederlandse-afkomst"
       ],
+      "rol": "context",
       "titel": "CBS: CBS introduceert nieuwe indeling bevolking naar herkomst",
       "type": "web",
       "url": "https://www.cbs.nl/nl-nl/nieuws/2022/07/cbs-introduceert-nieuwe-indeling-bevolking-naar-herkomst"
@@ -262,6 +297,7 @@
       "producten": [
         "geboortecijfers-nederlandse-afkomst"
       ],
+      "rol": "context",
       "titel": "CBS: Moeders iets ouder bij geboorte eerste kind",
       "type": "web",
       "url": "https://www.cbs.nl/nl-nl/nieuws/2025/19/moeders-iets-ouder-bij-geboorte-eerste-kind"
@@ -273,6 +309,7 @@
       "producten": [
         "migratieachtergrond-per-gemeenten"
       ],
+      "rol": "context",
       "titel": "CBS StatLine: Bevolking; herkomstland, geboorteland, leeftijd, regio, 1 januari",
       "type": "odata",
       "url": "https://opendata.cbs.nl/#/CBS/nl/dataset/85458NED/table"
@@ -284,20 +321,34 @@
       "producten": [
         "demografische-veiligheid"
       ],
+      "rol": "context",
       "titel": "CBS: Veiligheidsmonitor 2025",
       "type": "web",
       "url": "https://www.cbs.nl/nl-nl/longread/rapportages/2026/veiligheidsmonitor-2025/"
     },
     {
       "aanbieder": "EUBudget",
-      "id": "eubudget-eubudget-ranglijstdata",
-      "opmerking": "Primaire tabel per jaar voor bijdragen, ontvangsten, nettosaldo, saldo per inwoner en saldo als percentage van het bruto nationaal inkomen.",
+      "id": "eubudget-ranglijst",
+      "opmerking": "",
       "producten": [
         "begrotingsstromen-van-de-europese-Unie"
       ],
+      "rol": "data",
       "titel": "EUBudget-ranglijstdata",
-      "type": "web",
+      "type": "html",
       "url": "https://eubudget.com/ranking"
+    },
+    {
+      "aanbieder": "EVS/WVS",
+      "id": "culturele-kaart-2023-xlsx",
+      "opmerking": "",
+      "producten": [
+        "culturele-afstandskaart"
+      ],
+      "rol": "data",
+      "titel": "European Values Study/World Values Survey Cultural Map 2023",
+      "type": "xlsx",
+      "url": null
     },
     {
       "aanbieder": "Lokaal",
@@ -306,6 +357,7 @@
       "producten": [
         "culturele-afstandskaart"
       ],
+      "rol": "context",
       "titel": "Dataset voor culturele kaart van European Values Study en World Values Survey",
       "type": "bestand",
       "url": "source-files/F00016619-CulturalMapFinalEVSWVS_2023.xlsx"
@@ -317,75 +369,94 @@
       "producten": [
         "tennet-monitor-voorzieningszekerheid-2026"
       ],
+      "rol": "context",
       "titel": "Lokale TenneT CSV-bestanden",
       "type": "bestand",
       "url": null
     },
     {
-      "aanbieder": "PDOK",
-      "id": "pdok-cbs-gebiedsindelingen-2025",
-      "opmerking": "Gegeneraliseerde gemeentegrenzen 2025 voor de kaart.",
+      "aanbieder": "Netbeheer Nederland",
+      "id": "netbeheer-voedingsgebieden",
+      "opmerking": "",
       "producten": [
-        "uitkeringen-naar-afkomst"
+        "autochtoonse-nederlandse-bevolking"
       ],
-      "titel": "PDOK/CBS Gebiedsindelingen 2025 WFS",
-      "type": "wfs",
-      "url": "https://service.pdok.nl/cbs/gebiedsindelingen/2025/wfs/v1_0"
+      "rol": "data",
+      "titel": "Netbeheer Nederland capaciteitskaart per voedingsgebied",
+      "type": "csv",
+      "url": "https://data.partnersinenergie.nl/api/download/voedingsgebieden.csv"
     },
     {
       "aanbieder": "PDOK",
-      "id": "pdok-pdok-cbs-gebiedsindelingen-2025-wfs",
-      "opmerking": "Gegeneraliseerde gemeentegrenzen 2025 voor de kaart.",
+      "id": "pdok-cbs-gebiedsindelingen-2025",
+      "opmerking": "",
       "producten": [
         "migratieachtergrond-per-gemeenten",
         "uitkeringen-naar-afkomst"
       ],
+      "rol": "data",
       "titel": "PDOK/CBS Gebiedsindelingen 2025 WFS",
       "type": "wfs",
-      "url": "https://service.pdok.nl/cbs/gebiedsindelingen/2025/wfs/v1_0"
+      "url": "https://service.pdok.nl/cbs/gebiedsindelingen/2025/wfs/v1_0?service=WFS&version=2.0.0&request=GetFeature&typeNames=gebiedsindelingen:gemeente_gegeneraliseerd&outputFormat=application/json&count=10000"
     },
     {
       "aanbieder": "Parlement.com",
-      "id": "parlement-com-parlement-com-de-huidige-eerste-kamer",
-      "opmerking": "Actuele lijst van zittende Eerste Kamerleden per fractie; gebruikt voor namen, fracties en biografielinks.",
+      "id": "parlement-biografieen",
+      "opmerking": "",
       "producten": [
         "politiek-ouderschap"
       ],
-      "titel": "Parlement.com: De huidige Eerste Kamer",
-      "type": "web",
+      "rol": "data",
+      "titel": "Parlement.com-biografieën",
+      "type": "html",
+      "url": "https://www.parlement.com/biografie"
+    },
+    {
+      "aanbieder": "Parlement.com",
+      "id": "parlement-eerste-kamer",
+      "opmerking": "",
+      "producten": [
+        "politiek-ouderschap"
+      ],
+      "rol": "data",
+      "titel": "Parlement.com: huidige Eerste Kamer",
+      "type": "html",
       "url": "https://www.parlement.com/de-huidige-eerste-kamer"
     },
     {
       "aanbieder": "Parlement.com",
-      "id": "parlement-com-parlement-com-de-huidige-tweede-kamer",
-      "opmerking": "Actuele lijst van zittende Tweede Kamerleden per fractie; gebruikt voor namen, fracties en biografielinks.",
+      "id": "parlement-tweede-kamer",
+      "opmerking": "",
       "producten": [
         "politiek-ouderschap"
       ],
-      "titel": "Parlement.com: De huidige Tweede Kamer",
-      "type": "web",
+      "rol": "data",
+      "titel": "Parlement.com: huidige Tweede Kamer",
+      "type": "html",
       "url": "https://www.parlement.com/de-huidige-tweede-kamer"
     },
     {
-      "aanbieder": "Parlement.com",
-      "id": "parlement-com-parlement-com-individuele-biografie-n",
-      "opmerking": "Per Kamerlid is de openbare biografie geraadpleegd; alleen de sectie Familie/gezin, onderdeel kinderen, bepaalt de ouderstatus.",
+      "aanbieder": "TenneT",
+      "id": "tennet-monitor-2026-csv",
+      "opmerking": "",
       "producten": [
-        "politiek-ouderschap"
+        "tennet-monitor-voorzieningszekerheid-2026"
       ],
-      "titel": "Parlement.com: individuele biografieën",
-      "type": "web",
-      "url": "https://www.parlement.com/biografie"
+      "rol": "data",
+      "titel": "Lokale TenneT Monitor Voorzieningszekerheid 2026 CSV-bestanden",
+      "type": "csv",
+      "url": null
     },
     {
       "aanbieder": "Worldometer",
-      "id": "worldometer-worldometer-landen-naar-bevolkingsomvang",
-      "opmerking": "Brontabel die is omgezet naar projectdata voor de grafiek.",
+      "id": "worldometer-bevolkingsreeksen",
+      "opmerking": "",
       "producten": [
         "wereldbevolking"
       ],
-      "titel": "Worldometer: landen naar bevolkingsomvang",
-      "type": "web",
+      "rol": "data",
+      "titel": "Worldometer-bevolkingsreeksen per land",
+      "type": "html",
       "url": "https://www.worldometers.info/world-population/population-by-country/"
     },
     {
@@ -395,6 +466,7 @@
       "producten": [
         "begrotingsstromen-van-de-europese-Unie"
       ],
+      "rol": "context",
       "titel": "Europese Commissie: uitgaven en inkomsten van de Europese Unie",
       "type": "web",
       "url": "https://commission.europa.eu/strategy-and-policy/eu-budget/long-term-eu-budget/2021-2027/spending-and-revenue_en"
@@ -406,6 +478,7 @@
       "producten": [
         "autochtoonse-nederlandse-bevolking"
       ],
+      "rol": "context",
       "titel": "Netbeheer Nederland: Capaciteitskaart elektriciteitsnet",
       "type": "web",
       "url": "https://data.partnersinenergie.nl/capaciteitskaart/info/algemene-info"
@@ -417,6 +490,7 @@
       "producten": [
         "begrotingsstromen-van-de-europese-Unie"
       ],
+      "rol": "context",
       "titel": "world-atlas TopoJSON",
       "type": "web",
       "url": "https://github.com/topojson/world-atlas"
@@ -428,6 +502,7 @@
       "producten": [
         "autochtoonse-nederlandse-bevolking"
       ],
+      "rol": "context",
       "titel": "Netbeheer Nederland: Feiten en cijfers",
       "type": "web",
       "url": "https://www.netbeheernederland.nl/feiten-en-cijfers"
@@ -439,6 +514,7 @@
       "producten": [
         "tennet-monitor-voorzieningszekerheid-2026"
       ],
+      "rol": "context",
       "titel": "Netbeheer Nederland: TenneT adviseert capaciteitsmechanisme",
       "type": "web",
       "url": "https://www.netbeheernederland.nl/artikelen/nieuws/tennet-adviseert-politiek-te-starten-met-capaciteitsmechanisme-voor"
@@ -450,9 +526,22 @@
       "producten": [
         "wereldbevolking"
       ],
+      "rol": "context",
       "titel": "Verenigde Naties: World Population Prospects",
       "type": "web",
       "url": "https://population.un.org/wpp/"
+    },
+    {
+      "aanbieder": "t-Bataafsche Broederschap",
+      "id": "autochtoonse-bevolking-legacy-baseline",
+      "opmerking": "Gechecksumde baseline totdat de volledige historische CBS-pipeline is gereconstrueerd.",
+      "producten": [
+        "autochtoonse-nederlandse-bevolking"
+      ],
+      "rol": "data",
+      "titel": "Legacy-baseline autochtone Nederlandse bevolking",
+      "type": "json",
+      "url": null
     },
     {
       "aanbieder": "vemw.nl",
@@ -461,6 +550,7 @@
       "producten": [
         "tennet-monitor-voorzieningszekerheid-2026"
       ],
+      "rol": "context",
       "titel": "VEMW: Monitor Voorzieningszekerheid 2026",
       "type": "web",
       "url": "https://www.vemw.nl/kennisbank-detail/2026/06/10/monitor-voorzieningszekerheid-2026"
@@ -472,6 +562,7 @@
       "producten": [
         "autochtoonse-nederlandse-bevolking"
       ],
+      "rol": "context",
       "titel": "VRO / ABF Research: Huishoudens, woningen en woningtekort 2024-2039",
       "type": "web",
       "url": "https://www.volkshuisvestingnederland.nl/binaries/volkshuisvestingnederland/documenten/publicaties/2024/08/12/berekening-woningbouwopgave/ABF-min-VRO-infographics-2024_T.pdf"
@@ -483,6 +574,7 @@
       "producten": [
         "migratieachtergrond-per-gemeenten"
       ],
+      "rol": "context",
       "titel": "VZinfo: Bevolking | Regionaal | Migratieachtergrond",
       "type": "web",
       "url": "https://www.vzinfo.nl/bevolking/regionaal/migratieachtergrond"
@@ -494,6 +586,7 @@
       "producten": [
         "culturele-afstandskaart"
       ],
+      "rol": "context",
       "titel": "Originele Excel-download Cultural Map 2023",
       "type": "bestand",
       "url": "https://www.ygeiamou.gr/wp-content/uploads/2024/12/F00016619-CulturalMapFinalEVSWVS_2023.xlsx"
@@ -505,6 +598,7 @@
       "producten": [
         "autochtoonse-nederlandse-bevolking"
       ],
+      "rol": "context",
       "titel": "ABF Research: Evaluatie woningtekort",
       "type": "web",
       "url": "https://zoek.officielebekendmakingen.nl/blg-1152089.pdf"
@@ -516,6 +610,7 @@
       "producten": [
         "autochtoonse-nederlandse-bevolking"
       ],
+      "rol": "context",
       "titel": "Overheid.nl: woningtekort volgens Primos/ABF",
       "type": "web",
       "url": "https://zoek.officielebekendmakingen.nl/kst-35925-VII-10.html"
@@ -527,6 +622,7 @@
       "producten": [
         "autochtoonse-nederlandse-bevolking"
       ],
+      "rol": "context",
       "titel": "Primos Prognose 2011: woningtekort 2006-2020",
       "type": "web",
       "url": "https://zoek.officielebekendmakingen.nl/blg-134955.pdf"
@@ -538,6 +634,7 @@
       "producten": [
         "autochtoonse-nederlandse-bevolking"
       ],
+      "rol": "context",
       "titel": "Staat van de Volkshuisvesting 2025",
       "type": "web",
       "url": "https://zoek.officielebekendmakingen.nl/blg-1226836.pdf"

@@ -38,7 +38,7 @@ const elements = {
 init();
 
 async function init() {
-	const response = await fetch("data.json");
+	const response = await fetch("/api/v1/projecten/politiek-ouderschap/data.json");
 	state.data = await response.json();
 	setupFilters();
 	render();

@@ -299,7 +299,7 @@ function render() {
 }
 
 async function init() {
-	const response = await fetch("data.json");
+	const response = await fetch("/api/v1/projecten/migratieachtergrond-per-gemeenten/data.json");
 	if (!response.ok) throw new Error(`data.json kon niet worden geladen: ${response.status}`);
 	data = await response.json();
 	const years = data.metadata.periods.map((period) => period.year);

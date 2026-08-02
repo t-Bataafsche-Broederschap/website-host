@@ -894,7 +894,7 @@ function activateTab(tab) {
 	renderAll();
 }
 
-fetch("data.json")
+fetch("/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/data.json")
 	.then((response) => {
 		if (!response.ok) throw new Error(`Kon data.json niet laden: ${response.status}`);
 		return response.json();

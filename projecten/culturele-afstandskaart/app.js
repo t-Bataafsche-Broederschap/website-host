@@ -716,7 +716,7 @@ function render() {
 }
 
 async function init() {
-	const response = await fetch("cultural-map-data.json");
+	const response = await fetch("/api/v1/projecten/culturele-afstandskaart/data.json");
 	const payload = await response.json();
 	data = payload.records;
 	metadata = payload.metadata;

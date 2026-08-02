@@ -2078,7 +2078,7 @@ function syncYearRange() {
 }
 
 async function init() {
-	data = await fetch("data.json").then((response) => response.json());
+	data = await fetch("/api/v1/projecten/autochtoonse-nederlandse-bevolking/data.json").then((response) => response.json());
 	for (const row of data.timeline) {
 		row.nativeBackgroundProxyExtended = Number.isFinite(row.nativeBackgroundProxy) ? row.nativeBackgroundProxy : row.populationMinusNetMigration;
 		row.netMigrationPctNativeBackgroundProxy = Number.isFinite(row.netMigration) && Number.isFinite(row.nativeBackgroundProxyExtended) && row.nativeBackgroundProxyExtended > 0 ? (row.netMigration / row.nativeBackgroundProxyExtended) * 100 : null;

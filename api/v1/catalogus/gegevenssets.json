@@ -1,53 +1,65 @@
 {
-  "gegenereerdOp": "2026-06-28T21:36:42.359Z",
+  "gegenereerdOp": "2026-07-10T21:42:50+02:00",
   "gegevenssets": [
     {
       "bestanden": [
         {
-          "aantalRecords": 14,
-          "bytes": 153643,
           "formaat": "json",
-          "pad": "gegevens/ruw/_manifest.json"
+          "pad": "/api/v1/projecten/autochtoonse-nederlandse-bevolking/leeftijdsopbouw.json"
         }
       ],
       "formaat": "json",
-      "id": "_manifest.json-ruw-manifest",
-      "laag": "ruw",
-      "product": "_manifest.json",
-      "status": "gebouwd",
-      "titel": "_manifest.json - _manifest.json"
+      "id": "autochtoonse-bevolking-leeftijdsopbouw",
+      "laag": "verwerkt",
+      "product": "autochtoonse-nederlandse-bevolking",
+      "publiekBestand": "/api/v1/projecten/autochtoonse-nederlandse-bevolking/leeftijdsopbouw.json",
+      "status": "beschreven",
+      "titel": "Leeftijdsopbouw per jaar"
     },
     {
       "bestanden": [
         {
-          "aantalRecords": 413,
-          "bytes": 717605,
           "formaat": "json",
-          "pad": "content/projecten/autochtoonse-nederlandse-bevolking/data.json"
+          "pad": "/api/v1/projecten/autochtoonse-nederlandse-bevolking/migratie.json"
         }
       ],
       "formaat": "json",
-      "id": "autochtoonse-nederlandse-bevolking-data",
+      "id": "autochtoonse-bevolking-migratie",
+      "laag": "verwerkt",
+      "product": "autochtoonse-nederlandse-bevolking",
+      "publiekBestand": "/api/v1/projecten/autochtoonse-nederlandse-bevolking/migratie.json",
+      "status": "beschreven",
+      "titel": "Migratie-uitsplitsingen en landentrends"
+    },
+    {
+      "bestanden": [
+        {
+          "formaat": "json",
+          "pad": "/api/v1/projecten/autochtoonse-nederlandse-bevolking/tijdlijn.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "autochtoonse-bevolking-tijdlijn",
+      "laag": "verwerkt",
+      "product": "autochtoonse-nederlandse-bevolking",
+      "publiekBestand": "/api/v1/projecten/autochtoonse-nederlandse-bevolking/tijdlijn.json",
+      "status": "beschreven",
+      "titel": "Historische tijdlijn"
+    },
+    {
+      "bestanden": [
+        {
+          "formaat": "json",
+          "pad": "/api/v1/projecten/autochtoonse-nederlandse-bevolking/data.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "autochtoonse-bevolking-viewmodel",
       "laag": "publiek",
       "product": "autochtoonse-nederlandse-bevolking",
-      "status": "bestaand",
-      "titel": "Autochtoonse Nederlandse Bevolking - data.json"
-    },
-    {
-      "bestanden": [
-        {
-          "aantalRecords": 751,
-          "bytes": 166162,
-          "formaat": "json",
-          "pad": "content/projecten/begrotingsstromen-van-de-europese-Unie/budget-flows.json"
-        }
-      ],
-      "formaat": "json",
-      "id": "begrotingsstromen-van-de-europese-Unie-budget-flows",
-      "laag": "publiek",
-      "product": "begrotingsstromen-van-de-europese-Unie",
-      "status": "bestaand",
-      "titel": "Begrotingsstromen van de Europese Unie - budget-flows.json"
+      "publiekBestand": "/api/v1/projecten/autochtoonse-nederlandse-bevolking/data.json",
+      "status": "beschreven",
+      "titel": "Frontend-viewmodel autochtone Nederlandse bevolking"
     },
     {
       "bestanden": [],
@@ -92,26 +104,6 @@
     {
       "bestanden": [],
       "formaat": "odata",
-      "gegevensbron": "cbs-80794ned",
-      "id": "bronset-cbs-80794ned",
-      "laag": "ruw",
-      "product": "uitkeringen-naar-afkomst",
-      "status": "gecatalogiseerd",
-      "titel": "CBS StatLine: Personen met een uitkering; uitkeringsontvangers per regio"
-    },
-    {
-      "bestanden": [],
-      "formaat": "odata",
-      "gegevensbron": "cbs-81959ned",
-      "id": "bronset-cbs-81959ned",
-      "laag": "ruw",
-      "product": "verdachten-naar-afkomst",
-      "status": "gecatalogiseerd",
-      "titel": "CBS StatLine: Verdachten; geslacht, leeftijd, migratieachtergrond en generatie 1999-2022"
-    },
-    {
-      "bestanden": [],
-      "formaat": "odata",
       "gegevensbron": "cbs-82235ned",
       "id": "bronset-cbs-82235ned",
       "laag": "ruw",
@@ -152,16 +144,6 @@
     {
       "bestanden": [],
       "formaat": "odata",
-      "gegevensbron": "cbs-85384ned",
-      "id": "bronset-cbs-85384ned",
-      "laag": "ruw",
-      "product": "autochtoonse-nederlandse-bevolking",
-      "status": "gecatalogiseerd",
-      "titel": "CBS StatLine: Bevolking; herkomstland, geboorteland en geboorteland ouders"
-    },
-    {
-      "bestanden": [],
-      "formaat": "odata",
       "gegevensbron": "cbs-85451ned",
       "id": "bronset-cbs-85451ned",
       "laag": "ruw",
@@ -192,72 +174,12 @@
     {
       "bestanden": [],
       "formaat": "odata",
-      "gegevensbron": "cbs-85497ned",
-      "id": "bronset-cbs-85497ned",
-      "laag": "ruw",
-      "product": "geboortecijfers-nederlandse-afkomst",
-      "status": "gecatalogiseerd",
-      "titel": "CBS StatLine: Levend geboren kinderen; herkomstland moeder en leeftijd moeder"
-    },
-    {
-      "bestanden": [],
-      "formaat": "odata",
-      "gegevensbron": "cbs-85524ned",
-      "id": "bronset-cbs-85524ned",
-      "laag": "ruw",
-      "product": "autochtoonse-nederlandse-bevolking",
-      "status": "gecatalogiseerd",
-      "titel": "CBS StatLine: Bevolking, huishoudens en bevolkingsontwikkeling; vanaf 1899"
-    },
-    {
-      "bestanden": [],
-      "formaat": "odata",
-      "gegevensbron": "cbs-85658ned",
-      "id": "bronset-cbs-85658ned",
-      "laag": "ruw",
-      "product": "verdachten-naar-afkomst",
-      "status": "gecatalogiseerd",
-      "titel": "CBS StatLine: Verdachten; geslacht, leeftijd, herkomst, opleiding, huishoudensinkomen"
-    },
-    {
-      "bestanden": [],
-      "formaat": "odata",
       "gegevensbron": "cbs-85671ned",
       "id": "bronset-cbs-85671ned",
       "laag": "ruw",
       "product": "autochtoonse-nederlandse-bevolking",
       "status": "gecatalogiseerd",
       "titel": "CBS StatLine: Migratie; land vertrek / bestemming, geboorteland en geslacht"
-    },
-    {
-      "bestanden": [],
-      "formaat": "odata",
-      "gegevensbron": "cbs-85692ned",
-      "id": "bronset-cbs-85692ned",
-      "laag": "ruw",
-      "product": "uitkeringen-naar-afkomst",
-      "status": "gecatalogiseerd",
-      "titel": "CBS StatLine: Personen met een uitkering; kenmerken uitkeringsontvangers"
-    },
-    {
-      "bestanden": [],
-      "formaat": "odata",
-      "gegevensbron": "cbs-85721ned",
-      "id": "bronset-cbs-85721ned",
-      "laag": "ruw",
-      "product": "uitkeringen-naar-afkomst",
-      "status": "gecatalogiseerd",
-      "titel": "CBS StatLine: Bevolking op de eerste van de maand; geslacht, leeftijd, herkomstland"
-    },
-    {
-      "bestanden": [],
-      "formaat": "odata",
-      "gegevensbron": "cbs-85844ned",
-      "id": "bronset-cbs-85844ned",
-      "laag": "ruw",
-      "product": "demografische-veiligheid",
-      "status": "gecatalogiseerd",
-      "titel": "CBS StatLine: Veiligheidsmonitor; kerncijfers, persoonskenmerken"
     },
     {
       "bestanden": [],
@@ -342,16 +264,6 @@
     {
       "bestanden": [],
       "formaat": "web",
-      "gegevensbron": "eubudget-eubudget-ranglijstdata",
-      "id": "bronset-eubudget-eubudget-ranglijstdata",
-      "laag": "ruw",
-      "product": "begrotingsstromen-van-de-europese-Unie",
-      "status": "gecatalogiseerd",
-      "titel": "EUBudget-ranglijstdata"
-    },
-    {
-      "bestanden": [],
-      "formaat": "web",
       "gegevensbron": "github-com-world-atlas-topojson",
       "id": "bronset-github-com-world-atlas-topojson",
       "laag": "ruw",
@@ -402,46 +314,6 @@
     {
       "bestanden": [],
       "formaat": "web",
-      "gegevensbron": "parlement-com-parlement-com-de-huidige-eerste-kamer",
-      "id": "bronset-parlement-com-parlement-com-de-huidige-eerste-kamer",
-      "laag": "ruw",
-      "product": "politiek-ouderschap",
-      "status": "gecatalogiseerd",
-      "titel": "Parlement.com: De huidige Eerste Kamer"
-    },
-    {
-      "bestanden": [],
-      "formaat": "web",
-      "gegevensbron": "parlement-com-parlement-com-de-huidige-tweede-kamer",
-      "id": "bronset-parlement-com-parlement-com-de-huidige-tweede-kamer",
-      "laag": "ruw",
-      "product": "politiek-ouderschap",
-      "status": "gecatalogiseerd",
-      "titel": "Parlement.com: De huidige Tweede Kamer"
-    },
-    {
-      "bestanden": [],
-      "formaat": "web",
-      "gegevensbron": "parlement-com-parlement-com-individuele-biografie-n",
-      "id": "bronset-parlement-com-parlement-com-individuele-biografie-n",
-      "laag": "ruw",
-      "product": "politiek-ouderschap",
-      "status": "gecatalogiseerd",
-      "titel": "Parlement.com: individuele biografieën"
-    },
-    {
-      "bestanden": [],
-      "formaat": "wfs",
-      "gegevensbron": "pdok-pdok-cbs-gebiedsindelingen-2025-wfs",
-      "id": "bronset-pdok-pdok-cbs-gebiedsindelingen-2025-wfs",
-      "laag": "ruw",
-      "product": "migratieachtergrond-per-gemeenten",
-      "status": "gecatalogiseerd",
-      "titel": "PDOK/CBS Gebiedsindelingen 2025 WFS"
-    },
-    {
-      "bestanden": [],
-      "formaat": "web",
       "gegevensbron": "population-un-org-verenigde-naties-world-population-prospects",
       "id": "bronset-population-un-org-verenigde-naties-world-population-prospects",
       "laag": "ruw",
@@ -468,16 +340,6 @@
       "product": "migratieachtergrond-per-gemeenten",
       "status": "gecatalogiseerd",
       "titel": "VZinfo: Bevolking | Regionaal | Migratieachtergrond"
-    },
-    {
-      "bestanden": [],
-      "formaat": "web",
-      "gegevensbron": "worldometer-worldometer-landen-naar-bevolkingsomvang",
-      "id": "bronset-worldometer-worldometer-landen-naar-bevolkingsomvang",
-      "laag": "ruw",
-      "product": "wereldbevolking",
-      "status": "gecatalogiseerd",
-      "titel": "Worldometer: landen naar bevolkingsomvang"
     },
     {
       "bestanden": [],
@@ -532,526 +394,407 @@
     {
       "bestanden": [
         {
-          "aantalRecords": 468,
-          "bytes": 94560,
           "formaat": "json",
-          "pad": "content/projecten/culturele-afstandskaart/cultural-map-data.json"
+          "pad": "/api/v1/projecten/culturele-afstandskaart/data.json"
         }
       ],
       "formaat": "json",
-      "id": "culturele-afstandskaart-cultural-map-data",
+      "id": "culturele-afstand-viewmodel",
       "laag": "publiek",
       "product": "culturele-afstandskaart",
-      "status": "bestaand",
-      "titel": "Culturele afstandskaart - cultural-map-data.json"
+      "publiekBestand": "/api/v1/projecten/culturele-afstandskaart/data.json",
+      "status": "beschreven",
+      "titel": "Frontend-viewmodel culturele afstand"
     },
     {
       "bestanden": [
         {
-          "aantalRecords": 75,
-          "bytes": 37338,
           "formaat": "json",
-          "pad": "content/projecten/demografische-veiligheid/data.json"
+          "pad": "/api/v1/projecten/culturele-afstandskaart/records.json"
         }
       ],
       "formaat": "json",
-      "id": "demografische-veiligheid-data",
+      "id": "culturele-kaart-records",
+      "laag": "verwerkt",
+      "product": "culturele-afstandskaart",
+      "publiekBestand": "/api/v1/projecten/culturele-afstandskaart/records.json",
+      "status": "beschreven",
+      "titel": "Culturele waarden per land en jaar"
+    },
+    {
+      "bestanden": [
+        {
+          "formaat": "json",
+          "pad": "/api/v1/projecten/demografische-veiligheid/demografie.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "demografische-veiligheid-demografie",
+      "laag": "verwerkt",
+      "product": "demografische-veiligheid",
+      "publiekBestand": "/api/v1/projecten/demografische-veiligheid/demografie.json",
+      "status": "beschreven",
+      "titel": "Waarden naar demografische groep"
+    },
+    {
+      "bestanden": [
+        {
+          "formaat": "json",
+          "pad": "/api/v1/projecten/demografische-veiligheid/meetdefinities.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "demografische-veiligheid-meetdefinities",
+      "laag": "verwerkt",
+      "product": "demografische-veiligheid",
+      "publiekBestand": "/api/v1/projecten/demografische-veiligheid/meetdefinities.json",
+      "status": "beschreven",
+      "titel": "Definities van veiligheidsmaten"
+    },
+    {
+      "bestanden": [
+        {
+          "formaat": "json",
+          "pad": "/api/v1/projecten/demografische-veiligheid/data.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "demografische-veiligheid-viewmodel",
       "laag": "publiek",
       "product": "demografische-veiligheid",
-      "status": "bestaand",
-      "titel": "Demografische veiligheid - data.json"
+      "publiekBestand": "/api/v1/projecten/demografische-veiligheid/data.json",
+      "status": "beschreven",
+      "titel": "Frontend-viewmodel demografische veiligheid"
     },
     {
       "bestanden": [
         {
-          "aantalRecords": 767,
-          "bytes": 185108,
           "formaat": "json",
-          "pad": "content/projecten/geboortecijfers-nederlandse-afkomst/data.json"
+          "pad": "/api/v1/projecten/begrotingsstromen-van-de-europese-Unie/jaarwaarden.json"
         }
       ],
       "formaat": "json",
-      "id": "geboortecijfers-nederlandse-afkomst-data",
+      "id": "eu-begrotingsstromen-jaarwaarden",
+      "laag": "verwerkt",
+      "product": "begrotingsstromen-van-de-europese-Unie",
+      "publiekBestand": "/api/v1/projecten/begrotingsstromen-van-de-europese-Unie/jaarwaarden.json",
+      "status": "beschreven",
+      "titel": "Begrotingswaarden per jaar"
+    },
+    {
+      "bestanden": [
+        {
+          "formaat": "json",
+          "pad": "/api/v1/projecten/begrotingsstromen-van-de-europese-Unie/landen.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "eu-begrotingsstromen-landen",
+      "laag": "verwerkt",
+      "product": "begrotingsstromen-van-de-europese-Unie",
+      "publiekBestand": "/api/v1/projecten/begrotingsstromen-van-de-europese-Unie/landen.json",
+      "status": "beschreven",
+      "titel": "EU-landen"
+    },
+    {
+      "bestanden": [
+        {
+          "formaat": "json",
+          "pad": "/api/v1/projecten/begrotingsstromen-van-de-europese-Unie/data.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "eu-begrotingsstromen-viewmodel",
+      "laag": "publiek",
+      "product": "begrotingsstromen-van-de-europese-Unie",
+      "publiekBestand": "/api/v1/projecten/begrotingsstromen-van-de-europese-Unie/data.json",
+      "status": "beschreven",
+      "titel": "Frontend-viewmodel EU-begrotingsstromen"
+    },
+    {
+      "bestanden": [
+        {
+          "formaat": "json",
+          "pad": "/api/v1/projecten/geboortecijfers-nederlandse-afkomst/kerncijfers.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "geboortecijfers-kerncijfers",
+      "laag": "verwerkt",
+      "product": "geboortecijfers-nederlandse-afkomst",
+      "publiekBestand": "/api/v1/projecten/geboortecijfers-nederlandse-afkomst/kerncijfers.json",
+      "status": "beschreven",
+      "titel": "Kerncijfers per jaar en herkomstgroep"
+    },
+    {
+      "bestanden": [
+        {
+          "formaat": "json",
+          "pad": "/api/v1/projecten/geboortecijfers-nederlandse-afkomst/leeftijdsopbouw.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "geboortecijfers-leeftijdsopbouw",
+      "laag": "verwerkt",
+      "product": "geboortecijfers-nederlandse-afkomst",
+      "publiekBestand": "/api/v1/projecten/geboortecijfers-nederlandse-afkomst/leeftijdsopbouw.json",
+      "status": "beschreven",
+      "titel": "Leeftijdsopbouw en leeftijdsboom"
+    },
+    {
+      "bestanden": [
+        {
+          "formaat": "json",
+          "pad": "/api/v1/projecten/geboortecijfers-nederlandse-afkomst/leeftijdsspecifiek.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "geboortecijfers-leeftijdsspecifiek",
+      "laag": "verwerkt",
+      "product": "geboortecijfers-nederlandse-afkomst",
+      "publiekBestand": "/api/v1/projecten/geboortecijfers-nederlandse-afkomst/leeftijdsspecifiek.json",
+      "status": "beschreven",
+      "titel": "Leeftijdsspecifieke geboortecijfers"
+    },
+    {
+      "bestanden": [
+        {
+          "formaat": "json",
+          "pad": "/api/v1/projecten/geboortecijfers-nederlandse-afkomst/data.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "geboortecijfers-viewmodel",
       "laag": "publiek",
       "product": "geboortecijfers-nederlandse-afkomst",
-      "status": "bestaand",
-      "titel": "Geboortecijfers Nederlandse Afkomst - data.json"
+      "publiekBestand": "/api/v1/projecten/geboortecijfers-nederlandse-afkomst/data.json",
+      "status": "beschreven",
+      "titel": "Frontend-viewmodel geboortecijfers"
     },
     {
       "bestanden": [
         {
-          "aantalRecords": 1,
-          "bytes": 524,
           "formaat": "json",
-          "pad": "/api/v1/projecten/index.json"
+          "pad": "/api/v1/projecten/migratieachtergrond-per-gemeenten/gemeenten.json"
         }
       ],
       "formaat": "json",
-      "id": "index.json-index-static",
-      "laag": "publiek",
-      "product": "index.json",
-      "status": "gepubliceerd",
-      "titel": "index.json - index.json"
+      "id": "migratie-gemeenten",
+      "laag": "verwerkt",
+      "product": "migratieachtergrond-per-gemeenten",
+      "publiekBestand": "/api/v1/projecten/migratieachtergrond-per-gemeenten/gemeenten.json",
+      "status": "beschreven",
+      "titel": "Migratieachtergrond per gemeente en jaar"
     },
     {
       "bestanden": [
         {
-          "aantalRecords": 701,
-          "bytes": 2893672,
           "formaat": "json",
-          "pad": "content/projecten/migratieachtergrond-per-gemeenten/data.json"
+          "pad": "/api/v1/projecten/migratieachtergrond-per-gemeenten/geometrie.json"
         }
       ],
       "formaat": "json",
-      "id": "migratieachtergrond-per-gemeenten-data",
+      "id": "migratie-gemeenten-geometrie",
+      "laag": "verwerkt",
+      "product": "migratieachtergrond-per-gemeenten",
+      "publiekBestand": "/api/v1/projecten/migratieachtergrond-per-gemeenten/geometrie.json",
+      "status": "beschreven",
+      "titel": "Gemeentegeometrieën"
+    },
+    {
+      "bestanden": [
+        {
+          "formaat": "json",
+          "pad": "/api/v1/projecten/migratieachtergrond-per-gemeenten/data.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "migratie-gemeenten-viewmodel",
       "laag": "publiek",
       "product": "migratieachtergrond-per-gemeenten",
-      "status": "bestaand",
-      "titel": "Migratieachtergrond per Gemeente - data.json"
+      "publiekBestand": "/api/v1/projecten/migratieachtergrond-per-gemeenten/data.json",
+      "status": "beschreven",
+      "titel": "Frontend-viewmodel migratieachtergrond per gemeente"
     },
     {
       "bestanden": [
         {
-          "aantalRecords": 225,
-          "bytes": 80575,
           "formaat": "json",
-          "pad": "content/projecten/politiek-ouderschap/data.json"
+          "pad": "/api/v1/projecten/politiek-ouderschap/kamerleden.json"
         }
       ],
       "formaat": "json",
-      "id": "politiek-ouderschap-data",
+      "id": "politiek-ouderschap-kamerleden",
+      "laag": "verwerkt",
+      "product": "politiek-ouderschap",
+      "publiekBestand": "/api/v1/projecten/politiek-ouderschap/kamerleden.json",
+      "status": "beschreven",
+      "titel": "Kamerleden en ouderstatus"
+    },
+    {
+      "bestanden": [
+        {
+          "formaat": "json",
+          "pad": "/api/v1/projecten/politiek-ouderschap/samenvatting.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "politiek-ouderschap-samenvatting",
+      "laag": "verwerkt",
+      "product": "politiek-ouderschap",
+      "publiekBestand": "/api/v1/projecten/politiek-ouderschap/samenvatting.json",
+      "status": "beschreven",
+      "titel": "Samenvatting politiek ouderschap"
+    },
+    {
+      "bestanden": [
+        {
+          "formaat": "json",
+          "pad": "/api/v1/projecten/politiek-ouderschap/data.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "politiek-ouderschap-viewmodel",
       "laag": "publiek",
       "product": "politiek-ouderschap",
-      "status": "bestaand",
-      "titel": "Politiek Ouderschap - data.json"
+      "publiekBestand": "/api/v1/projecten/politiek-ouderschap/data.json",
+      "status": "beschreven",
+      "titel": "Frontend-viewmodel politiek ouderschap"
     },
     {
       "bestanden": [
         {
-          "aantalRecords": 10982,
-          "bytes": 2367398,
           "formaat": "json",
-          "pad": "content/projecten/tennet-monitor-voorzieningszekerheid-2026/data.json"
+          "pad": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/duurcurves.json"
         }
       ],
       "formaat": "json",
-      "id": "tennet-monitor-voorzieningszekerheid-2026-data",
+      "id": "tennet-2026-duurcurves",
+      "laag": "verwerkt",
+      "product": "tennet-monitor-voorzieningszekerheid-2026",
+      "publiekBestand": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/duurcurves.json",
+      "status": "beschreven",
+      "titel": "ENS-duurcurves"
+    },
+    {
+      "bestanden": [
+        {
+          "formaat": "json",
+          "pad": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/hoofdresultaten.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "tennet-2026-hoofdresultaten",
+      "laag": "verwerkt",
+      "product": "tennet-monitor-voorzieningszekerheid-2026",
+      "publiekBestand": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/hoofdresultaten.json",
+      "status": "beschreven",
+      "titel": "Hoofdresultaten"
+    },
+    {
+      "bestanden": [
+        {
+          "formaat": "json",
+          "pad": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/ontbrekende-capaciteit.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "tennet-2026-ontbrekende-capaciteit",
+      "laag": "verwerkt",
+      "product": "tennet-monitor-voorzieningszekerheid-2026",
+      "publiekBestand": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/ontbrekende-capaciteit.json",
+      "status": "beschreven",
+      "titel": "Ontbrekende-capaciteitsanalyse"
+    },
+    {
+      "bestanden": [
+        {
+          "formaat": "json",
+          "pad": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/simultaniteit.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "tennet-2026-simultaniteit",
+      "laag": "verwerkt",
+      "product": "tennet-monitor-voorzieningszekerheid-2026",
+      "publiekBestand": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/simultaniteit.json",
+      "status": "beschreven",
+      "titel": "Simultaniteitsanalyse"
+    },
+    {
+      "bestanden": [
+        {
+          "formaat": "json",
+          "pad": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/systeemmix.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "tennet-2026-systeemmix",
+      "laag": "verwerkt",
+      "product": "tennet-monitor-voorzieningszekerheid-2026",
+      "publiekBestand": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/systeemmix.json",
+      "status": "beschreven",
+      "titel": "Systeemmix"
+    },
+    {
+      "bestanden": [
+        {
+          "formaat": "json",
+          "pad": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/tekortevents.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "tennet-2026-tekortevents",
+      "laag": "verwerkt",
+      "product": "tennet-monitor-voorzieningszekerheid-2026",
+      "publiekBestand": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/tekortevents.json",
+      "status": "beschreven",
+      "titel": "Verdeling van tekortevents"
+    },
+    {
+      "bestanden": [
+        {
+          "formaat": "json",
+          "pad": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/data.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "tennet-2026-viewmodel",
       "laag": "publiek",
       "product": "tennet-monitor-voorzieningszekerheid-2026",
-      "status": "bestaand",
-      "titel": "TenneT Monitor Voorzieningszekerheid 2026 - data.json"
+      "publiekBestand": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/data.json",
+      "status": "beschreven",
+      "titel": "Frontend-viewmodel TenneT-monitor"
     },
     {
       "bestanden": [
         {
-          "aantalRecords": 6336,
-          "bytes": 7754679,
           "formaat": "json",
-          "pad": "content/projecten/uitkeringen-naar-afkomst/data.json"
+          "pad": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/vraag.json"
         }
       ],
       "formaat": "json",
-      "id": "uitkeringen-naar-afkomst-data",
-      "laag": "publiek",
-      "product": "uitkeringen-naar-afkomst",
-      "status": "bestaand",
-      "titel": "Uitkeringen Naar Afkomst - data.json"
-    },
-    {
-      "bestanden": [
-        {
-          "aantalRecords": 6336,
-          "bytes": 6247329,
-          "formaat": "json",
-          "pad": "/api/v1/projecten/uitkeringen-naar-afkomst/data.json"
-        }
-      ],
-      "formaat": "json",
-      "id": "uitkeringen-naar-afkomst-data-static",
-      "laag": "publiek",
-      "product": "uitkeringen-naar-afkomst",
-      "status": "gepubliceerd",
-      "titel": "uitkeringen-naar-afkomst - data.json"
-    },
-    {
-      "bestanden": [
-        {
-          "aantalRecords": 5,
-          "bytes": 1215,
-          "formaat": "json",
-          "pad": "/api/v1/projecten/uitkeringen-naar-afkomst/index.json"
-        }
-      ],
-      "formaat": "json",
-      "id": "uitkeringen-naar-afkomst-index-static",
-      "laag": "publiek",
-      "product": "uitkeringen-naar-afkomst",
-      "status": "gepubliceerd",
-      "titel": "uitkeringen-naar-afkomst - index.json"
-    },
-    {
-      "bestanden": [
-        {
-          "aantalRecords": 13,
-          "bytes": 1673,
-          "formaat": "json",
-          "pad": "/api/v1/projecten/uitkeringen-naar-afkomst/manifest.json"
-        }
-      ],
-      "formaat": "json",
-      "id": "uitkeringen-naar-afkomst-manifest-static",
-      "laag": "publiek",
-      "product": "uitkeringen-naar-afkomst",
-      "status": "gepubliceerd",
-      "titel": "uitkeringen-naar-afkomst - manifest.json"
-    },
-    {
-      "bestanden": [
-        {
-          "aantalRecords": 4,
-          "bytes": 389,
-          "formaat": "json",
-          "pad": "/api/v1/projecten/uitkeringen-naar-afkomst/metadata.json"
-        }
-      ],
-      "formaat": "json",
-      "id": "uitkeringen-naar-afkomst-metadata-static",
-      "laag": "publiek",
-      "product": "uitkeringen-naar-afkomst",
-      "status": "gepubliceerd",
-      "titel": "uitkeringen-naar-afkomst - metadata.json"
-    },
-    {
-      "bestanden": [
-        {
-          "aantalRecords": 5484,
-          "bytes": 4648332,
-          "formaat": "json",
-          "pad": "/api/v1/projecten/uitkeringen-naar-afkomst/nationaal.json"
-        }
-      ],
-      "formaat": "json",
-      "id": "uitkeringen-naar-afkomst-nationaal-static",
-      "laag": "publiek",
-      "product": "uitkeringen-naar-afkomst",
-      "status": "gepubliceerd",
-      "titel": "uitkeringen-naar-afkomst - nationaal.json"
-    },
-    {
-      "bestanden": [
-        {
-          "aantalRecords": 848,
-          "bytes": 1598573,
-          "formaat": "json",
-          "pad": "/api/v1/projecten/uitkeringen-naar-afkomst/regionaal.json"
-        }
-      ],
-      "formaat": "json",
-      "id": "uitkeringen-naar-afkomst-regionaal-static",
-      "laag": "publiek",
-      "product": "uitkeringen-naar-afkomst",
-      "status": "gepubliceerd",
-      "titel": "uitkeringen-naar-afkomst - regionaal.json"
-    },
-    {
-      "bestanden": [
-        {
-          "aantalRecords": 346,
-          "bytes": 395450,
-          "compressie": "zstd",
-          "formaat": "json",
-          "pad": "gegevens/ruw/uitkeringen-naar-afkomst/pdok-cbs-gebiedsindelingen-2025/bron.json.zst"
-        }
-      ],
-      "formaat": "json",
-      "id": "uitkeringen-naar-afkomst-ruw-bron-json",
-      "laag": "ruw",
-      "product": "uitkeringen-naar-afkomst",
-      "status": "gebouwd",
-      "titel": "uitkeringen-naar-afkomst - bron.json.zst"
-    },
-    {
-      "bestanden": [
-        {
-          "aantalRecords": 18,
-          "bytes": 3517,
-          "compressie": "zstd",
-          "formaat": "json",
-          "pad": "gegevens/ruw/uitkeringen-naar-afkomst/cbs-80794ned/data-properties.json.zst"
-        },
-        {
-          "aantalRecords": 21,
-          "bytes": 4147,
-          "compressie": "zstd",
-          "formaat": "json",
-          "pad": "gegevens/ruw/uitkeringen-naar-afkomst/cbs-85692ned/data-properties.json.zst"
-        }
-      ],
-      "formaat": "json",
-      "id": "uitkeringen-naar-afkomst-ruw-data-properties-json",
-      "laag": "ruw",
-      "product": "uitkeringen-naar-afkomst",
-      "status": "gebouwd",
-      "titel": "uitkeringen-naar-afkomst - data-properties.json.zst"
-    },
-    {
-      "bestanden": [
-        {
-          "aantalRecords": 6,
-          "bytes": 260,
-          "compressie": "zstd",
-          "formaat": "json",
-          "pad": "gegevens/ruw/uitkeringen-naar-afkomst/cbs-85692ned/geboorteland-ouders.json.zst"
-        }
-      ],
-      "formaat": "json",
-      "id": "uitkeringen-naar-afkomst-ruw-geboorteland-ouders-json",
-      "laag": "ruw",
-      "product": "uitkeringen-naar-afkomst",
-      "status": "gebouwd",
-      "titel": "uitkeringen-naar-afkomst - geboorteland-ouders.json.zst"
-    },
-    {
-      "bestanden": [
-        {
-          "aantalRecords": 3,
-          "bytes": 138,
-          "compressie": "zstd",
-          "formaat": "json",
-          "pad": "gegevens/ruw/uitkeringen-naar-afkomst/cbs-85692ned/geslacht.json.zst"
-        }
-      ],
-      "formaat": "json",
-      "id": "uitkeringen-naar-afkomst-ruw-geslacht-json",
-      "laag": "ruw",
-      "product": "uitkeringen-naar-afkomst",
-      "status": "gebouwd",
-      "titel": "uitkeringen-naar-afkomst - geslacht.json.zst"
-    },
-    {
-      "bestanden": [
-        {
-          "aantalRecords": 5,
-          "bytes": 323,
-          "compressie": "zstd",
-          "formaat": "json",
-          "pad": "gegevens/ruw/uitkeringen-naar-afkomst/cbs-85692ned/herkomstland.json.zst"
-        }
-      ],
-      "formaat": "json",
-      "id": "uitkeringen-naar-afkomst-ruw-herkomstland-json",
-      "laag": "ruw",
-      "product": "uitkeringen-naar-afkomst",
-      "status": "gebouwd",
-      "titel": "uitkeringen-naar-afkomst - herkomstland.json.zst"
-    },
-    {
-      "bestanden": [
-        {
-          "aantalRecords": 16,
-          "bytes": 883,
-          "compressie": "zstd",
-          "formaat": "json",
-          "pad": "gegevens/ruw/uitkeringen-naar-afkomst/cbs-85692ned/leeftijd.json.zst"
-        }
-      ],
-      "formaat": "json",
-      "id": "uitkeringen-naar-afkomst-ruw-leeftijd-json",
-      "laag": "ruw",
-      "product": "uitkeringen-naar-afkomst",
-      "status": "gebouwd",
-      "titel": "uitkeringen-naar-afkomst - leeftijd.json.zst"
-    },
-    {
-      "bestanden": [
-        {
-          "aantalRecords": 228,
-          "bytes": 792,
-          "compressie": "zstd",
-          "formaat": "json",
-          "pad": "gegevens/ruw/uitkeringen-naar-afkomst/cbs-80794ned/perioden.json.zst"
-        },
-        {
-          "aantalRecords": 159,
-          "bytes": 738,
-          "compressie": "zstd",
-          "formaat": "json",
-          "pad": "gegevens/ruw/uitkeringen-naar-afkomst/cbs-85692ned/perioden.json.zst"
-        },
-        {
-          "aantalRecords": 53,
-          "bytes": 399,
-          "compressie": "zstd",
-          "formaat": "json",
-          "pad": "gegevens/ruw/uitkeringen-naar-afkomst/cbs-85721ned/perioden.json.zst"
-        }
-      ],
-      "formaat": "json",
-      "id": "uitkeringen-naar-afkomst-ruw-perioden-json",
-      "laag": "ruw",
-      "product": "uitkeringen-naar-afkomst",
-      "status": "gebouwd",
-      "titel": "uitkeringen-naar-afkomst - perioden.json.zst"
-    },
-    {
-      "bestanden": [
-        {
-          "aantalRecords": 575,
-          "bytes": 16822,
-          "compressie": "zstd",
-          "formaat": "json",
-          "pad": "gegevens/ruw/uitkeringen-naar-afkomst/cbs-80794ned/regios.json.zst"
-        }
-      ],
-      "formaat": "json",
-      "id": "uitkeringen-naar-afkomst-ruw-regios-json",
-      "laag": "ruw",
-      "product": "uitkeringen-naar-afkomst",
-      "status": "gebouwd",
-      "titel": "uitkeringen-naar-afkomst - regios.json.zst"
-    },
-    {
-      "bestanden": [
-        {
-          "aantalRecords": 575,
-          "bytes": 11369,
-          "compressie": "zstd",
-          "formaat": "jsonl",
-          "pad": "gegevens/ruw/uitkeringen-naar-afkomst/cbs-80794ned/typed-dataset-gefilterd.jsonl.zst"
-        },
-        {
-          "aantalRecords": 8100,
-          "bytes": 114719,
-          "compressie": "zstd",
-          "formaat": "jsonl",
-          "pad": "gegevens/ruw/uitkeringen-naar-afkomst/cbs-85692ned/typed-dataset-gefilterd.jsonl.zst"
-        },
-        {
-          "aantalRecords": 276480,
-          "bytes": 1418378,
-          "compressie": "zstd",
-          "formaat": "jsonl",
-          "pad": "gegevens/ruw/uitkeringen-naar-afkomst/cbs-85721ned/typed-dataset-gefilterd.jsonl.zst"
-        }
-      ],
-      "formaat": "jsonl",
-      "id": "uitkeringen-naar-afkomst-ruw-typed-dataset-gefilterd-jsonl",
-      "laag": "ruw",
-      "product": "uitkeringen-naar-afkomst",
-      "status": "gebouwd",
-      "titel": "uitkeringen-naar-afkomst - typed-dataset-gefilterd.jsonl.zst"
-    },
-    {
-      "bestanden": [
-        {
-          "aantalRecords": 6336,
-          "bytes": 6247329,
-          "formaat": "json",
-          "pad": "gegevens/verwerkt/uitkeringen-naar-afkomst/data.json"
-        }
-      ],
-      "formaat": "json",
-      "id": "uitkeringen-naar-afkomst-verwerkt-data",
+      "id": "tennet-2026-vraag",
       "laag": "verwerkt",
-      "product": "uitkeringen-naar-afkomst",
-      "status": "gebouwd",
-      "titel": "uitkeringen-naar-afkomst - data.json"
+      "product": "tennet-monitor-voorzieningszekerheid-2026",
+      "publiekBestand": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/vraag.json",
+      "status": "beschreven",
+      "titel": "Wekelijkse elektriciteitsvraag"
     },
     {
       "bestanden": [
         {
-          "aantalRecords": 4,
-          "bytes": 389,
           "formaat": "json",
-          "pad": "gegevens/verwerkt/uitkeringen-naar-afkomst/metadata.json"
+          "pad": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/weersverdelingen.json"
         }
       ],
       "formaat": "json",
-      "id": "uitkeringen-naar-afkomst-verwerkt-metadata",
+      "id": "tennet-2026-weersverdelingen",
       "laag": "verwerkt",
-      "product": "uitkeringen-naar-afkomst",
-      "status": "gebouwd",
-      "titel": "uitkeringen-naar-afkomst - metadata.json"
-    },
-    {
-      "bestanden": [
-        {
-          "aantalRecords": 5484,
-          "bytes": 4648332,
-          "formaat": "json",
-          "pad": "gegevens/verwerkt/uitkeringen-naar-afkomst/nationaal.json"
-        }
-      ],
-      "formaat": "json",
-      "id": "uitkeringen-naar-afkomst-verwerkt-nationaal",
-      "laag": "verwerkt",
-      "product": "uitkeringen-naar-afkomst",
-      "status": "gebouwd",
-      "titel": "uitkeringen-naar-afkomst - nationaal.json"
-    },
-    {
-      "bestanden": [
-        {
-          "aantalRecords": 5400,
-          "bytes": 4641956,
-          "formaat": "jsonl",
-          "pad": "gegevens/verwerkt/uitkeringen-naar-afkomst/nationaal-records.jsonl"
-        }
-      ],
-      "formaat": "jsonl",
-      "id": "uitkeringen-naar-afkomst-verwerkt-nationaal-records",
-      "laag": "verwerkt",
-      "product": "uitkeringen-naar-afkomst",
-      "status": "gebouwd",
-      "titel": "uitkeringen-naar-afkomst - nationaal-records.jsonl"
-    },
-    {
-      "bestanden": [
-        {
-          "aantalRecords": 848,
-          "bytes": 1598573,
-          "formaat": "json",
-          "pad": "gegevens/verwerkt/uitkeringen-naar-afkomst/regionaal.json"
-        }
-      ],
-      "formaat": "json",
-      "id": "uitkeringen-naar-afkomst-verwerkt-regionaal",
-      "laag": "verwerkt",
-      "product": "uitkeringen-naar-afkomst",
-      "status": "gebouwd",
-      "titel": "uitkeringen-naar-afkomst - regionaal.json"
-    },
-    {
-      "bestanden": [
-        {
-          "aantalRecords": 497,
-          "bytes": 172046,
-          "formaat": "jsonl",
-          "pad": "gegevens/verwerkt/uitkeringen-naar-afkomst/regionaal-waarden.jsonl"
-        }
-      ],
-      "formaat": "jsonl",
-      "id": "uitkeringen-naar-afkomst-verwerkt-regionaal-waarden",
-      "laag": "verwerkt",
-      "product": "uitkeringen-naar-afkomst",
-      "status": "gebouwd",
-      "titel": "uitkeringen-naar-afkomst - regionaal-waarden.jsonl"
-    },
-    {
-      "bestanden": [
-        {
-          "aantalRecords": 6336,
-          "bytes": 6247329,
-          "formaat": "json",
-          "pad": "/projecten/uitkeringen-naar-herkomst/data.json"
-        }
-      ],
-      "formaat": "json",
-      "id": "uitkeringen-naar-herkomst-data-static",
-      "laag": "publiek",
-      "product": "uitkeringen-naar-herkomst",
-      "status": "gepubliceerd",
-      "titel": "uitkeringen-naar-herkomst - data.json"
+      "product": "tennet-monitor-voorzieningszekerheid-2026",
+      "publiekBestand": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/weersverdelingen.json",
+      "status": "beschreven",
+      "titel": "Verdelingen over weerscenario's"
     },
     {
       "bestanden": [
@@ -1096,55 +839,82 @@
       "product": "uitkeringen-naar-afkomst",
       "publiekBestand": "/api/v1/projecten/uitkeringen-naar-afkomst/data.json",
       "status": "beschreven",
-      "titel": "Frontend view-model voor de bestaande grafiek"
+      "titel": "Frontend-viewmodel voor uitkeringen naar afkomst"
     },
     {
       "bestanden": [
         {
-          "aantalRecords": 119,
-          "bytes": 31559,
           "formaat": "json",
-          "pad": "content/projecten/verdachten-naar-afkomst/data.json"
+          "pad": "/api/v1/projecten/verdachten-naar-afkomst/actuele-reeks.json"
         }
       ],
       "formaat": "json",
-      "id": "verdachten-naar-afkomst-data",
+      "id": "verdachten-actuele-reeks",
+      "laag": "verwerkt",
+      "product": "verdachten-naar-afkomst",
+      "publiekBestand": "/api/v1/projecten/verdachten-naar-afkomst/actuele-reeks.json",
+      "status": "beschreven",
+      "titel": "Actuele verdachtenreeks"
+    },
+    {
+      "bestanden": [
+        {
+          "formaat": "json",
+          "pad": "/api/v1/projecten/verdachten-naar-afkomst/historisch-2022.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "verdachten-historisch-2022",
+      "laag": "verwerkt",
+      "product": "verdachten-naar-afkomst",
+      "publiekBestand": "/api/v1/projecten/verdachten-naar-afkomst/historisch-2022.json",
+      "status": "beschreven",
+      "titel": "Historische landenvergelijking voor 2022"
+    },
+    {
+      "bestanden": [
+        {
+          "formaat": "json",
+          "pad": "/api/v1/projecten/verdachten-naar-afkomst/data.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "verdachten-viewmodel",
       "laag": "publiek",
       "product": "verdachten-naar-afkomst",
-      "status": "bestaand",
-      "titel": "Verdachten naar afkomst - data.json"
+      "publiekBestand": "/api/v1/projecten/verdachten-naar-afkomst/data.json",
+      "status": "beschreven",
+      "titel": "Frontend-viewmodel verdachten naar afkomst"
     },
     {
       "bestanden": [
         {
-          "aantalRecords": 119,
-          "bytes": 31559,
           "formaat": "json",
-          "pad": "/projecten/verdachten-naar-herkomst/data.json"
+          "pad": "/api/v1/projecten/wereldbevolking/landen.json"
         }
       ],
       "formaat": "json",
-      "id": "verdachten-naar-herkomst-data-static",
-      "laag": "publiek",
-      "product": "verdachten-naar-herkomst",
-      "status": "gepubliceerd",
-      "titel": "verdachten-naar-herkomst - data.json"
+      "id": "wereldbevolking-landen",
+      "laag": "verwerkt",
+      "product": "wereldbevolking",
+      "publiekBestand": "/api/v1/projecten/wereldbevolking/landen.json",
+      "status": "beschreven",
+      "titel": "Bevolkingsreeksen per land"
     },
     {
       "bestanden": [
         {
-          "aantalRecords": 234,
-          "bytes": 2664600,
           "formaat": "json",
-          "pad": "/projecten/wereldbevolking/world-population-series.json"
+          "pad": "/api/v1/projecten/wereldbevolking/data.json"
         }
       ],
       "formaat": "json",
-      "id": "wereldbevolking-world-population-series-static",
+      "id": "wereldbevolking-viewmodel",
       "laag": "publiek",
       "product": "wereldbevolking",
-      "status": "gepubliceerd",
-      "titel": "wereldbevolking - world-population-series.json"
+      "publiekBestand": "/api/v1/projecten/wereldbevolking/data.json",
+      "status": "beschreven",
+      "titel": "Frontend-viewmodel wereldbevolking"
     }
   ]
 }
