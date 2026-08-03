@@ -1,5 +1,5 @@
 {
-  "gegenereerdOp": "2026-07-10T21:42:50+02:00",
+  "gegenereerdOp": "2026-08-02T22:09:34Z",
   "relaties": [
     {
       "naar": "gegevensset:autochtoonse-bevolking-leeftijdsopbouw",
@@ -32,6 +32,11 @@
       "van": "gegevensbron:cbs-37325"
     },
     {
+      "naar": "gegevensset:sociale-cohesie-historie",
+      "type": "afgeleid-van",
+      "van": "gegevensbron:cbs-60027ned"
+    },
+    {
       "naar": "gegevensset:bronset-cbs-70751ned",
       "type": "levert",
       "van": "gegevensbron:cbs-70751ned"
@@ -40,6 +45,11 @@
       "naar": "gegevensset:bronset-cbs-70787ned",
       "type": "levert",
       "van": "gegevensbron:cbs-70787ned"
+    },
+    {
+      "naar": "gegevensset:sociale-cohesie-verbondenheid",
+      "type": "afgeleid-van",
+      "van": "gegevensbron:cbs-80270ned"
     },
     {
       "naar": "gegevensset:uitkeringen-regionaal",
@@ -57,6 +67,16 @@
       "van": "gegevensbron:cbs-82235ned"
     },
     {
+      "naar": "gegevensset:bronset-cbs-83648ned",
+      "type": "levert",
+      "van": "gegevensbron:cbs-83648ned"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-83723ned",
+      "type": "levert",
+      "van": "gegevensbron:cbs-83723ned"
+    },
+    {
       "naar": "gegevensset:bronset-cbs-84808ned",
       "type": "levert",
       "van": "gegevensbron:cbs-84808ned"
@@ -65,6 +85,11 @@
       "naar": "gegevensset:bronset-cbs-84809ned",
       "type": "levert",
       "van": "gegevensbron:cbs-84809ned"
+    },
+    {
+      "naar": "gegevensset:buurtcohesie-regio",
+      "type": "afgeleid-van",
+      "van": "gegevensbron:cbs-85146ned"
     },
     {
       "naar": "gegevensset:bronset-cbs-85369ned",
@@ -117,6 +142,31 @@
       "van": "gegevensbron:cbs-85497ned"
     },
     {
+      "naar": "gegevensset:sociale-cohesie-profielen",
+      "type": "afgeleid-van",
+      "van": "gegevensbron:cbs-85533ned"
+    },
+    {
+      "naar": "gegevensset:sociale-cohesie-tijdlijn",
+      "type": "afgeleid-van",
+      "van": "gegevensbron:cbs-85533ned"
+    },
+    {
+      "naar": "gegevensset:vertrouwen-tijdlijn",
+      "type": "afgeleid-van",
+      "van": "gegevensbron:cbs-85533ned"
+    },
+    {
+      "naar": "gegevensset:sociale-cohesie-profielen",
+      "type": "afgeleid-van",
+      "van": "gegevensbron:cbs-85541ned"
+    },
+    {
+      "naar": "gegevensset:sociale-cohesie-tijdlijn",
+      "type": "afgeleid-van",
+      "van": "gegevensbron:cbs-85541ned"
+    },
+    {
       "naar": "gegevensset:verdachten-actuele-reeks",
       "type": "afgeleid-van",
       "van": "gegevensbron:cbs-85658ned"
@@ -135,6 +185,11 @@
       "naar": "gegevensset:uitkeringen-nationaal",
       "type": "afgeleid-van",
       "van": "gegevensbron:cbs-85721ned"
+    },
+    {
+      "naar": "gegevensset:sociale-cohesie-profielen",
+      "type": "afgeleid-van",
+      "van": "gegevensbron:cbs-85766ned"
     },
     {
       "naar": "gegevensset:demografische-veiligheid-demografie",
@@ -157,6 +212,11 @@
       "van": "gegevensbron:cbs-85848ned"
     },
     {
+      "naar": "gegevensset:sociale-cohesie-verbondenheid",
+      "type": "afgeleid-van",
+      "van": "gegevensbron:cbs-buitensluiting-2024"
+    },
+    {
       "naar": "gegevensset:bronset-cbs-cbs-12e-volkstelling-annex-woningtelling-1947",
       "type": "levert",
       "van": "gegevensbron:cbs-cbs-12e-volkstelling-annex-woningtelling-1947"
@@ -172,14 +232,34 @@
       "van": "gegevensbron:cbs-cbs-moeders-iets-ouder-bij-geboorte-eerste-kind"
     },
     {
+      "naar": "gegevensset:bronset-cbs-cbs-onderzoeksomschrijving-geregistreerde-criminaliteit",
+      "type": "levert",
+      "van": "gegevensbron:cbs-cbs-onderzoeksomschrijving-geregistreerde-criminaliteit"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-cbs-statistische-trends-langdurige-daling-criminaliteit-ten-einde",
+      "type": "levert",
+      "van": "gegevensbron:cbs-cbs-statistische-trends-langdurige-daling-criminaliteit-ten-einde"
+    },
+    {
       "naar": "gegevensset:bronset-cbs-cbs-statline-bevolking-herkomstland-geboorteland-leeftijd-regio-1-januari",
       "type": "levert",
       "van": "gegevensbron:cbs-cbs-statline-bevolking-herkomstland-geboorteland-leeftijd-regio-1-januari"
     },
     {
+      "naar": "gegevensset:bronset-cbs-cbs-tijdlijn-migratie-1849-2025",
+      "type": "levert",
+      "van": "gegevensbron:cbs-cbs-tijdlijn-migratie-1849-2025"
+    },
+    {
       "naar": "gegevensset:bronset-cbs-cbs-veiligheidsmonitor-2025",
       "type": "levert",
       "van": "gegevensbron:cbs-cbs-veiligheidsmonitor-2025"
+    },
+    {
+      "naar": "gegevensset:sociale-cohesie-historie",
+      "type": "afgeleid-van",
+      "van": "gegevensbron:cbs-veiligheidsmonitor-2025"
     },
     {
       "naar": "gegevensset:bronset-commission-europa-eu-europese-commissie-uitgaven-en-inkomsten-van-de-europese-unie",
@@ -267,6 +347,51 @@
       "van": "gegevensbron:population-un-org-verenigde-naties-world-population-prospects"
     },
     {
+      "naar": "gegevensset:bronset-rijksoverheid-nl-rijksoverheid-nieuwe-wet-seksuele-misdrijven",
+      "type": "levert",
+      "van": "gegevensbron:rijksoverheid-nl-rijksoverheid-nieuwe-wet-seksuele-misdrijven"
+    },
+    {
+      "naar": "gegevensset:sociale-cohesie-verbondenheid",
+      "type": "afgeleid-van",
+      "van": "gegevensbron:scp-burgerperspectieven-2025-2"
+    },
+    {
+      "naar": "gegevensset:bronset-scp-nl-scp-burgerperspectieven-2025-sociale-cohesie",
+      "type": "levert",
+      "van": "gegevensbron:scp-nl-scp-burgerperspectieven-2025-sociale-cohesie"
+    },
+    {
+      "naar": "gegevensset:bronset-scp-nl-scp-gevestigd-maar-niet-thuis-sim-2020",
+      "type": "levert",
+      "van": "gegevensbron:scp-nl-scp-gevestigd-maar-niet-thuis-sim-2020"
+    },
+    {
+      "naar": "gegevensset:bronset-scp-nl-scp-samenleven-in-de-toekomst",
+      "type": "levert",
+      "van": "gegevensbron:scp-nl-scp-samenleven-in-de-toekomst"
+    },
+    {
+      "naar": "gegevensset:bronset-scp-nl-scp-sociale-en-culturele-ontwikkelingen-2023",
+      "type": "levert",
+      "van": "gegevensbron:scp-nl-scp-sociale-en-culturele-ontwikkelingen-2023"
+    },
+    {
+      "naar": "gegevensset:sociale-cohesie-verbondenheid",
+      "type": "afgeleid-van",
+      "van": "gegevensbron:scp-samenleven-toekomst-2024"
+    },
+    {
+      "naar": "gegevensset:sociale-cohesie-verbondenheid",
+      "type": "afgeleid-van",
+      "van": "gegevensbron:scp-sco-2023"
+    },
+    {
+      "naar": "gegevensset:sociale-cohesie-verbondenheid",
+      "type": "afgeleid-van",
+      "van": "gegevensbron:scp-sim-2020"
+    },
+    {
       "naar": "gegevensset:tennet-2026-duurcurves",
       "type": "afgeleid-van",
       "van": "gegevensbron:tennet-monitor-2026-csv"
@@ -310,6 +435,11 @@
       "naar": "gegevensset:tennet-2026-weersverdelingen",
       "type": "afgeleid-van",
       "van": "gegevensbron:tennet-monitor-2026-csv"
+    },
+    {
+      "naar": "gegevensset:bronset-verdragenbank-overheid-nl-verdragenbank-nederlands-italiaans-wervingsakkoord-van-1960",
+      "type": "levert",
+      "van": "gegevensbron:verdragenbank-overheid-nl-verdragenbank-nederlands-italiaans-wervingsakkoord-van-1960"
     },
     {
       "naar": "gegevensset:bronset-volkshuisvestingnederland-nl-vro-abf-research-huishoudens-woningen-en-woningtekort-2024-2039",
@@ -357,6 +487,11 @@
       "van": "gegevensbron:zoek-officielebekendmakingen-nl-staat-van-de-volkshuisvesting-2025"
     },
     {
+      "naar": "gegevensset:sociale-cohesie-viewmodel",
+      "type": "afgeleid-van",
+      "van": "gegevensset:buurtcohesie-regio"
+    },
+    {
       "naar": "gegevensset:culturele-afstand-viewmodel",
       "type": "afgeleid-van",
       "van": "gegevensset:culturele-kaart-records"
@@ -392,6 +527,26 @@
       "van": "gegevensset:politiek-ouderschap-kamerleden"
     },
     {
+      "naar": "gegevensset:sociale-cohesie-viewmodel",
+      "type": "afgeleid-van",
+      "van": "gegevensset:sociale-cohesie-historie"
+    },
+    {
+      "naar": "gegevensset:sociale-cohesie-viewmodel",
+      "type": "afgeleid-van",
+      "van": "gegevensset:sociale-cohesie-profielen"
+    },
+    {
+      "naar": "gegevensset:sociale-cohesie-viewmodel",
+      "type": "afgeleid-van",
+      "van": "gegevensset:sociale-cohesie-tijdlijn"
+    },
+    {
+      "naar": "gegevensset:sociale-cohesie-viewmodel",
+      "type": "afgeleid-van",
+      "van": "gegevensset:sociale-cohesie-verbondenheid"
+    },
+    {
       "naar": "gegevensset:uitkeringen-viewmodel",
       "type": "afgeleid-van",
       "van": "gegevensset:uitkeringen-nationaal"
@@ -410,6 +565,11 @@
       "naar": "gegevensset:verdachten-viewmodel",
       "type": "afgeleid-van",
       "van": "gegevensset:verdachten-historisch-2022"
+    },
+    {
+      "naar": "gegevensset:sociale-cohesie-viewmodel",
+      "type": "afgeleid-van",
+      "van": "gegevensset:vertrouwen-tijdlijn"
     }
   ]
 }

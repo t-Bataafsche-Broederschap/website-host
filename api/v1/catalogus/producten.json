@@ -1,5 +1,5 @@
 {
-  "gegenereerdOp": "2026-07-10T21:42:50+02:00",
+  "gegenereerdOp": "2026-08-02T22:09:34Z",
   "producten": [
     {
       "beschrijving": "Bevolking, migratie, woningbouw en netcapaciteit in een lange tijdreeks.",
@@ -65,6 +65,22 @@
       "titel": "Begrotingsstromen van de Europese Unie"
     },
     {
+      "bronnen": [
+        "cbs-83723ned",
+        "cbs-cbs-statistische-trends-langdurige-daling-criminaliteit-ten-einde",
+        "cbs-83648ned",
+        "cbs-cbs-tijdlijn-migratie-1849-2025",
+        "cbs-cbs-onderzoeksomschrijving-geregistreerde-criminaliteit",
+        "verdragenbank-overheid-nl-verdragenbank-nederlands-italiaans-wervingsakkoord-van-1960",
+        "rijksoverheid-nl-rijksoverheid-nieuwe-wet-seksuele-misdrijven"
+      ],
+      "contentPad": "content/projecten/criminaliteit-nederland/index.html",
+      "publiekeEindpunten": {},
+      "slug": "criminaliteit-nederland",
+      "status": "bestaand",
+      "titel": "Criminaliteit in Nederland"
+    },
+    {
       "beschrijving": "Culturele waarden per land en meetjaar.",
       "bronnen": [
         "lokaal-dataset-voor-culturele-kaart-van-european-values-study-en-world-values-survey",
@@ -126,6 +142,40 @@
       "slug": "geboortecijfers-nederlandse-afkomst",
       "status": "publiek",
       "titel": "Geboortecijfers Nederlandse Afkomst"
+    },
+    {
+      "beschrijving": "Interactieve CBS-verkenning van sociale contacten, vrijwilligerswerk, vertrouwen, eenzaamheid en buurtcohesie.",
+      "bronnen": [
+        "scp-nl-scp-burgerperspectieven-2025-sociale-cohesie",
+        "scp-nl-scp-sociale-en-culturele-ontwikkelingen-2023",
+        "scp-nl-scp-gevestigd-maar-niet-thuis-sim-2020",
+        "scp-nl-scp-samenleven-in-de-toekomst",
+        "cbs-60027ned",
+        "cbs-80270ned",
+        "cbs-85541ned",
+        "cbs-85533ned",
+        "cbs-85766ned",
+        "cbs-85146ned",
+        "cbs-veiligheidsmonitor-2025",
+        "cbs-buitensluiting-2024",
+        "scp-burgerperspectieven-2025-2",
+        "scp-sco-2023",
+        "scp-sim-2020",
+        "scp-samenleven-toekomst-2024"
+      ],
+      "compatibiliteit": [
+        {
+          "bestand": "data.json",
+          "pad": "/projecten/hoe-hecht-is-nederland/data.json"
+        }
+      ],
+      "contentPad": "content/projecten/hoe-hecht-is-nederland/index.html",
+      "eigenaar": "t-Bataafsche Broederschap",
+      "metadataPad": "gegevensproducten/hoe-hecht-is-nederland/product.yaml",
+      "publiekeEindpunten": {},
+      "slug": "hoe-hecht-is-nederland",
+      "status": "publiek",
+      "titel": "Hoe hecht is Nederland?"
     },
     {
       "beschrijving": "Migratieachtergrond per gemeente met gemeentegeometrieën.",

@@ -1,5 +1,5 @@
 {
-  "gegenereerdOp": "2026-07-10T21:42:50+02:00",
+  "gegenereerdOp": "2026-08-02T22:09:34Z",
   "gegevenssets": [
     {
       "bestanden": [
@@ -114,6 +114,26 @@
     {
       "bestanden": [],
       "formaat": "odata",
+      "gegevensbron": "cbs-83648ned",
+      "id": "bronset-cbs-83648ned",
+      "laag": "ruw",
+      "product": "criminaliteit-nederland",
+      "status": "gecatalogiseerd",
+      "titel": "CBS StatLine: Geregistreerde criminaliteit; soort misdrijf, regio"
+    },
+    {
+      "bestanden": [],
+      "formaat": "odata",
+      "gegevensbron": "cbs-83723ned",
+      "id": "bronset-cbs-83723ned",
+      "laag": "ruw",
+      "product": "criminaliteit-nederland",
+      "status": "gecatalogiseerd",
+      "titel": "CBS StatLine: Geregistreerde criminaliteit; tijdreeks vanaf 1948"
+    },
+    {
+      "bestanden": [],
+      "formaat": "odata",
       "gegevensbron": "cbs-84808ned",
       "id": "bronset-cbs-84808ned",
       "laag": "ruw",
@@ -223,6 +243,26 @@
     },
     {
       "bestanden": [],
+      "formaat": "web",
+      "gegevensbron": "cbs-cbs-onderzoeksomschrijving-geregistreerde-criminaliteit",
+      "id": "bronset-cbs-cbs-onderzoeksomschrijving-geregistreerde-criminaliteit",
+      "laag": "ruw",
+      "product": "criminaliteit-nederland",
+      "status": "gecatalogiseerd",
+      "titel": "CBS: Onderzoeksomschrijving geregistreerde criminaliteit"
+    },
+    {
+      "bestanden": [],
+      "formaat": "web",
+      "gegevensbron": "cbs-cbs-statistische-trends-langdurige-daling-criminaliteit-ten-einde",
+      "id": "bronset-cbs-cbs-statistische-trends-langdurige-daling-criminaliteit-ten-einde",
+      "laag": "ruw",
+      "product": "criminaliteit-nederland",
+      "status": "gecatalogiseerd",
+      "titel": "CBS Statistische Trends: Langdurige daling criminaliteit ten einde?"
+    },
+    {
+      "bestanden": [],
       "formaat": "odata",
       "gegevensbron": "cbs-cbs-statline-bevolking-herkomstland-geboorteland-leeftijd-regio-1-januari",
       "id": "bronset-cbs-cbs-statline-bevolking-herkomstland-geboorteland-leeftijd-regio-1-januari",
@@ -230,6 +270,16 @@
       "product": "migratieachtergrond-per-gemeenten",
       "status": "gecatalogiseerd",
       "titel": "CBS StatLine: Bevolking; herkomstland, geboorteland, leeftijd, regio, 1 januari"
+    },
+    {
+      "bestanden": [],
+      "formaat": "web",
+      "gegevensbron": "cbs-cbs-tijdlijn-migratie-1849-2025",
+      "id": "bronset-cbs-cbs-tijdlijn-migratie-1849-2025",
+      "laag": "ruw",
+      "product": "criminaliteit-nederland",
+      "status": "gecatalogiseerd",
+      "titel": "CBS: Tijdlijn migratie, 1849–2025"
     },
     {
       "bestanden": [],
@@ -324,6 +374,66 @@
     {
       "bestanden": [],
       "formaat": "web",
+      "gegevensbron": "rijksoverheid-nl-rijksoverheid-nieuwe-wet-seksuele-misdrijven",
+      "id": "bronset-rijksoverheid-nl-rijksoverheid-nieuwe-wet-seksuele-misdrijven",
+      "laag": "ruw",
+      "product": "criminaliteit-nederland",
+      "status": "gecatalogiseerd",
+      "titel": "Rijksoverheid: Nieuwe Wet seksuele misdrijven"
+    },
+    {
+      "bestanden": [],
+      "formaat": "web",
+      "gegevensbron": "scp-nl-scp-burgerperspectieven-2025-sociale-cohesie",
+      "id": "bronset-scp-nl-scp-burgerperspectieven-2025-sociale-cohesie",
+      "laag": "ruw",
+      "product": "hoe-hecht-is-nederland",
+      "status": "gecatalogiseerd",
+      "titel": "SCP Burgerperspectieven 2025: sociale cohesie"
+    },
+    {
+      "bestanden": [],
+      "formaat": "web",
+      "gegevensbron": "scp-nl-scp-gevestigd-maar-niet-thuis-sim-2020",
+      "id": "bronset-scp-nl-scp-gevestigd-maar-niet-thuis-sim-2020",
+      "laag": "ruw",
+      "product": "hoe-hecht-is-nederland",
+      "status": "gecatalogiseerd",
+      "titel": "SCP: Gevestigd, maar niet thuis (SIM 2020)"
+    },
+    {
+      "bestanden": [],
+      "formaat": "web",
+      "gegevensbron": "scp-nl-scp-samenleven-in-de-toekomst",
+      "id": "bronset-scp-nl-scp-samenleven-in-de-toekomst",
+      "laag": "ruw",
+      "product": "hoe-hecht-is-nederland",
+      "status": "gecatalogiseerd",
+      "titel": "SCP: Samenleven in de toekomst"
+    },
+    {
+      "bestanden": [],
+      "formaat": "web",
+      "gegevensbron": "scp-nl-scp-sociale-en-culturele-ontwikkelingen-2023",
+      "id": "bronset-scp-nl-scp-sociale-en-culturele-ontwikkelingen-2023",
+      "laag": "ruw",
+      "product": "hoe-hecht-is-nederland",
+      "status": "gecatalogiseerd",
+      "titel": "SCP: Sociale en Culturele Ontwikkelingen 2023"
+    },
+    {
+      "bestanden": [],
+      "formaat": "web",
+      "gegevensbron": "verdragenbank-overheid-nl-verdragenbank-nederlands-italiaans-wervingsakkoord-van-1960",
+      "id": "bronset-verdragenbank-overheid-nl-verdragenbank-nederlands-italiaans-wervingsakkoord-van-1960",
+      "laag": "ruw",
+      "product": "criminaliteit-nederland",
+      "status": "gecatalogiseerd",
+      "titel": "Verdragenbank: Nederlands-Italiaans wervingsakkoord van 1960"
+    },
+    {
+      "bestanden": [],
+      "formaat": "web",
       "gegevensbron": "volkshuisvestingnederland-nl-vro-abf-research-huishoudens-woningen-en-woningtekort-2024-2039",
       "id": "bronset-volkshuisvestingnederland-nl-vro-abf-research-huishoudens-woningen-en-woningtekort-2024-2039",
       "laag": "ruw",
@@ -390,6 +500,21 @@
       "product": "autochtoonse-nederlandse-bevolking",
       "status": "gecatalogiseerd",
       "titel": "Staat van de Volkshuisvesting 2025"
+    },
+    {
+      "bestanden": [
+        {
+          "formaat": "json",
+          "pad": "/api/v1/projecten/hoe-hecht-is-nederland/provincies.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "buurtcohesie-regio",
+      "laag": "verwerkt",
+      "product": "hoe-hecht-is-nederland",
+      "publiekBestand": "/api/v1/projecten/hoe-hecht-is-nederland/provincies.json",
+      "status": "beschreven",
+      "titel": "Buurtcohesie naar provincie"
     },
     {
       "bestanden": [
@@ -665,6 +790,81 @@
       "bestanden": [
         {
           "formaat": "json",
+          "pad": "/api/v1/projecten/hoe-hecht-is-nederland/historie.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "sociale-cohesie-historie",
+      "laag": "verwerkt",
+      "product": "hoe-hecht-is-nederland",
+      "publiekBestand": "/api/v1/projecten/hoe-hecht-is-nederland/historie.json",
+      "status": "beschreven",
+      "titel": "Historische lijnen voor participatie en buurtcohesie"
+    },
+    {
+      "bestanden": [
+        {
+          "formaat": "json",
+          "pad": "/api/v1/projecten/hoe-hecht-is-nederland/profielen.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "sociale-cohesie-profielen",
+      "laag": "verwerkt",
+      "product": "hoe-hecht-is-nederland",
+      "publiekBestand": "/api/v1/projecten/hoe-hecht-is-nederland/profielen.json",
+      "status": "beschreven",
+      "titel": "Sociale-cohesie-indicatoren naar persoonskenmerk"
+    },
+    {
+      "bestanden": [
+        {
+          "formaat": "json",
+          "pad": "/api/v1/projecten/hoe-hecht-is-nederland/tijdlijn.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "sociale-cohesie-tijdlijn",
+      "laag": "verwerkt",
+      "product": "hoe-hecht-is-nederland",
+      "publiekBestand": "/api/v1/projecten/hoe-hecht-is-nederland/tijdlijn.json",
+      "status": "beschreven",
+      "titel": "Landelijke tijdlijnen voor participatie en vertrouwen"
+    },
+    {
+      "bestanden": [
+        {
+          "formaat": "json",
+          "pad": "/api/v1/projecten/hoe-hecht-is-nederland/verbondenheid.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "sociale-cohesie-verbondenheid",
+      "laag": "verwerkt",
+      "product": "hoe-hecht-is-nederland",
+      "publiekBestand": "/api/v1/projecten/hoe-hecht-is-nederland/verbondenheid.json",
+      "status": "beschreven",
+      "titel": "Verbondenheid met Nederland, buitensluiting en contact tussen groepen"
+    },
+    {
+      "bestanden": [
+        {
+          "formaat": "json",
+          "pad": "/api/v1/projecten/hoe-hecht-is-nederland/data.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "sociale-cohesie-viewmodel",
+      "laag": "publiek",
+      "product": "hoe-hecht-is-nederland",
+      "publiekBestand": "/api/v1/projecten/hoe-hecht-is-nederland/data.json",
+      "status": "beschreven",
+      "titel": "Frontend-viewmodel sociale cohesie"
+    },
+    {
+      "bestanden": [
+        {
+          "formaat": "json",
           "pad": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/duurcurves.json"
         }
       ],
@@ -885,6 +1085,21 @@
       "publiekBestand": "/api/v1/projecten/verdachten-naar-afkomst/data.json",
       "status": "beschreven",
       "titel": "Frontend-viewmodel verdachten naar afkomst"
+    },
+    {
+      "bestanden": [
+        {
+          "formaat": "json",
+          "pad": "/api/v1/projecten/hoe-hecht-is-nederland/vertrouwen.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "vertrouwen-tijdlijn",
+      "laag": "verwerkt",
+      "product": "hoe-hecht-is-nederland",
+      "publiekBestand": "/api/v1/projecten/hoe-hecht-is-nederland/vertrouwen.json",
+      "status": "beschreven",
+      "titel": "Vertrouwen in mensen en instituties door de tijd"
     },
     {
       "bestanden": [

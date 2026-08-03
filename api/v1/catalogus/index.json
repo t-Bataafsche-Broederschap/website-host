@@ -1,9 +1,9 @@
 {
   "aantallen": {
-    "afstammingsrelaties": 82,
-    "gegevensbronnen": 53,
-    "gegevenssets": 72,
-    "producten": 11
+    "afstammingsrelaties": 114,
+    "gegevensbronnen": 76,
+    "gegevenssets": 90,
+    "producten": 13
   },
   "catalogusbestanden": [
     "/api/v1/catalogus/producten.json",
@@ -11,7 +11,7 @@
     "/api/v1/catalogus/gegevenssets.json",
     "/api/v1/catalogus/afstamming.json"
   ],
-  "gegenereerdOp": "2026-07-10T21:42:50+02:00",
+  "gegenereerdOp": "2026-08-02T22:09:34Z",
   "links": {
     "afstamming": "/api/v1/catalogus/afstamming.json",
     "api": "/api/v1/index.json",

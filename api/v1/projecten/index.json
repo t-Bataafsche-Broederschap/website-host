@@ -1,5 +1,5 @@
 {
-  "aantalProjectenMetApi": 11,
+  "aantalProjectenMetApi": 12,
   "links": {
     "api": "/api/v1/index.json",
     "catalogus": "/api/v1/catalogus/index.json",
@@ -36,6 +36,12 @@
       "manifest": "/api/v1/projecten/geboortecijfers-nederlandse-afkomst/manifest.json",
       "slug": "geboortecijfers-nederlandse-afkomst",
       "titel": "Geboortecijfers Nederlandse Afkomst"
+    },
+    {
+      "href": "/api/v1/projecten/hoe-hecht-is-nederland/index.json",
+      "manifest": "/api/v1/projecten/hoe-hecht-is-nederland/manifest.json",
+      "slug": "hoe-hecht-is-nederland",
+      "titel": "Hoe hecht is Nederland?"
     },
     {
       "href": "/api/v1/projecten/migratieachtergrond-per-gemeenten/index.json",

@@ -1,5 +1,5 @@
 {
-  "gegenereerdOp": "2026-07-10T21:42:50+02:00",
+  "gegenereerdOp": "2026-08-02T22:09:34Z",
   "gegevensbronnen": [
     {
       "aanbieder": "CBS",
@@ -12,6 +12,18 @@
       "titel": "CBS StatLine: Bevolking; leeftijd, generatie en migratieachtergrond, 1996-2022",
       "type": "odata",
       "url": "https://www.cbs.nl/nl-nl/cijfers/detail/37325"
+    },
+    {
+      "aanbieder": "CBS",
+      "id": "cbs-60027ned",
+      "opmerking": "",
+      "producten": [
+        "hoe-hecht-is-nederland"
+      ],
+      "rol": "data",
+      "titel": "CBS StatLine: Maatschappelijke participatie 1997-2011",
+      "type": "odata",
+      "url": null
     },
     {
       "aanbieder": "CBS",
@@ -36,6 +48,18 @@
       "titel": "CBS StatLine: Bevolking met migratieachtergrond; geslacht, leeftijd, 1 januari 1972-2022",
       "type": "odata",
       "url": "https://www.cbs.nl/nl-nl/cijfers/detail/70787NED"
+    },
+    {
+      "aanbieder": "CBS",
+      "id": "cbs-80270ned",
+      "opmerking": "",
+      "producten": [
+        "hoe-hecht-is-nederland"
+      ],
+      "rol": "data",
+      "titel": "CBS StatLine: Integratie naar migratieachtergrond, 2006-2011",
+      "type": "odata",
+      "url": null
     },
     {
       "aanbieder": "CBS",
@@ -75,6 +99,30 @@
     },
     {
       "aanbieder": "CBS",
+      "id": "cbs-83648ned",
+      "opmerking": "Aanvullende detailtabel naar soort misdrijf en regio.",
+      "producten": [
+        "criminaliteit-nederland"
+      ],
+      "rol": "context",
+      "titel": "CBS StatLine: Geregistreerde criminaliteit; soort misdrijf, regio",
+      "type": "odata",
+      "url": "https://www.cbs.nl/nl-nl/cijfers/detail/83648NED"
+    },
+    {
+      "aanbieder": "CBS",
+      "id": "cbs-83723ned",
+      "opmerking": "Langetermijnreeks voor misdrijven, relatieve cijfers, opgehelderde misdrijven en verdachtenregistraties.",
+      "producten": [
+        "criminaliteit-nederland"
+      ],
+      "rol": "context",
+      "titel": "CBS StatLine: Geregistreerde criminaliteit; tijdreeks vanaf 1948",
+      "type": "odata",
+      "url": "https://www.cbs.nl/nl-nl/cijfers/detail/83723NED"
+    },
+    {
+      "aanbieder": "CBS",
       "id": "cbs-84808ned",
       "opmerking": "Immigranten uit landen van de Europese Unie en de Europese Vrijhandelsassociatie naar afgeleid migratiedoel, gebruikt voor de Motieven-tab.",
       "producten": [
@@ -96,6 +144,18 @@
       "titel": "CBS StatLine: immigranten van buiten Europese Unie en Europese Vrijhandelsassociatie; migratiemotief",
       "type": "odata",
       "url": "https://www.cbs.nl/nl-nl/cijfers/detail/84809NED"
+    },
+    {
+      "aanbieder": "CBS",
+      "id": "cbs-85146ned",
+      "opmerking": "",
+      "producten": [
+        "hoe-hecht-is-nederland"
+      ],
+      "rol": "data",
+      "titel": "CBS StatLine: Veiligheidsmonitor; kerncijfers naar regio",
+      "type": "odata",
+      "url": null
     },
     {
       "aanbieder": "CBS",
@@ -196,6 +256,30 @@
     },
     {
       "aanbieder": "CBS",
+      "id": "cbs-85533ned",
+      "opmerking": "",
+      "producten": [
+        "hoe-hecht-is-nederland"
+      ],
+      "rol": "data",
+      "titel": "CBS StatLine: Vertrouwen in mensen en in organisaties",
+      "type": "odata",
+      "url": null
+    },
+    {
+      "aanbieder": "CBS",
+      "id": "cbs-85541ned",
+      "opmerking": "",
+      "producten": [
+        "hoe-hecht-is-nederland"
+      ],
+      "rol": "data",
+      "titel": "CBS StatLine: Sociale contacten en maatschappelijke participatie",
+      "type": "odata",
+      "url": null
+    },
+    {
+      "aanbieder": "CBS",
       "id": "cbs-85658ned",
       "opmerking": "",
       "producten": [
@@ -244,6 +328,18 @@
     },
     {
       "aanbieder": "CBS",
+      "id": "cbs-85766ned",
+      "opmerking": "",
+      "producten": [
+        "hoe-hecht-is-nederland"
+      ],
+      "rol": "data",
+      "titel": "CBS StatLine: Eenzaamheid naar persoonskenmerken",
+      "type": "odata",
+      "url": null
+    },
+    {
+      "aanbieder": "CBS",
       "id": "cbs-85844ned",
       "opmerking": "",
       "producten": [
@@ -265,6 +361,18 @@
       "titel": "CBS StatLine: Immi- en emigratie; nationaliteit, leeftijd en geslacht",
       "type": "odata",
       "url": "https://www.cbs.nl/nl-nl/cijfers/detail/85848NED"
+    },
+    {
+      "aanbieder": "CBS",
+      "id": "cbs-buitensluiting-2024",
+      "opmerking": "",
+      "producten": [
+        "hoe-hecht-is-nederland"
+      ],
+      "rol": "data",
+      "titel": "CBS: Buitengesloten voelen in de samenleving",
+      "type": "html",
+      "url": "https://www.cbs.nl/nl-nl/longread/statistische-trends/2026/buitengesloten-voelen-in-de-samenleving/3-resultaten"
     },
     {
       "aanbieder": "CBS",
@@ -304,6 +412,30 @@
     },
     {
       "aanbieder": "CBS",
+      "id": "cbs-cbs-onderzoeksomschrijving-geregistreerde-criminaliteit",
+      "opmerking": "Methodologische context en trendbreuk rond 2010.",
+      "producten": [
+        "criminaliteit-nederland"
+      ],
+      "rol": "context",
+      "titel": "CBS: Onderzoeksomschrijving geregistreerde criminaliteit",
+      "type": "web",
+      "url": "https://www.cbs.nl/nl-nl/onze-diensten/methoden/onderzoeksomschrijvingen/korte-onderzoeksomschrijvingen/geregistreerde-criminaliteit"
+    },
+    {
+      "aanbieder": "CBS",
+      "id": "cbs-cbs-statistische-trends-langdurige-daling-criminaliteit-ten-einde",
+      "opmerking": "Bron voor delictsoorten, online criminaliteit en slachtofferschap.",
+      "producten": [
+        "criminaliteit-nederland"
+      ],
+      "rol": "context",
+      "titel": "CBS Statistische Trends: Langdurige daling criminaliteit ten einde?",
+      "type": "web",
+      "url": "https://www.cbs.nl/nl-nl/longread/statistische-trends/2025/langdurige-daling-criminaliteit-ten-einde-?onepage=true"
+    },
+    {
+      "aanbieder": "CBS",
       "id": "cbs-cbs-statline-bevolking-herkomstland-geboorteland-leeftijd-regio-1-januari",
       "opmerking": "CBS 85458NED levert de gemeentelijke teller en totale bevolking voor 2022-2025.",
       "producten": [
@@ -316,6 +448,18 @@
     },
     {
       "aanbieder": "CBS",
+      "id": "cbs-cbs-tijdlijn-migratie-1849-2025",
+      "opmerking": "Historische context voor arbeidswerving en de wervingsstop.",
+      "producten": [
+        "criminaliteit-nederland"
+      ],
+      "rol": "context",
+      "titel": "CBS: Tijdlijn migratie, 1849–2025",
+      "type": "web",
+      "url": "https://www.cbs.nl/nl-nl/longread/diversen/2025/tijdlijn-migratie-1849-2025?onepage=true"
+    },
+    {
+      "aanbieder": "CBS",
       "id": "cbs-cbs-veiligheidsmonitor-2025",
       "opmerking": "Hoofdrapportage met toelichting, samenvatting en hoofdstukken over veiligheidsbeleving, criminaliteit, discriminatie, verdachte situaties, politie en preventie.",
       "producten": [
@@ -325,6 +469,18 @@
       "titel": "CBS: Veiligheidsmonitor 2025",
       "type": "web",
       "url": "https://www.cbs.nl/nl-nl/longread/rapportages/2026/veiligheidsmonitor-2025/"
+    },
+    {
+      "aanbieder": "CBS",
+      "id": "cbs-veiligheidsmonitor-2025",
+      "opmerking": "",
+      "producten": [
+        "hoe-hecht-is-nederland"
+      ],
+      "rol": "data",
+      "titel": "CBS Veiligheidsmonitor 2025: landelijke trends",
+      "type": "html",
+      "url": "https://www.cbs.nl/nl-nl/longread/rapportages/2026/veiligheidsmonitor-2025?onepage=true"
     },
     {
       "aanbieder": "EUBudget",
@@ -436,6 +592,54 @@
       "url": "https://www.parlement.com/de-huidige-tweede-kamer"
     },
     {
+      "aanbieder": "SCP",
+      "id": "scp-burgerperspectieven-2025-2",
+      "opmerking": "",
+      "producten": [
+        "hoe-hecht-is-nederland"
+      ],
+      "rol": "data",
+      "titel": "SCP Burgerperspectieven 2025 bericht 2: Sociale cohesie",
+      "type": "pdf",
+      "url": "https://www.scp.nl/site/binaries/site-content/collections/documents/2025/06/19/burgerperspectieven-2025-bericht-2/Burgerperspectieven+bericht+2025-2+Thema+Sociale+Cohesie.pdf"
+    },
+    {
+      "aanbieder": "SCP",
+      "id": "scp-samenleven-toekomst-2024",
+      "opmerking": "",
+      "producten": [
+        "hoe-hecht-is-nederland"
+      ],
+      "rol": "data",
+      "titel": "SCP Samenleven in de toekomst",
+      "type": "pdf",
+      "url": "https://www.scp.nl/site/binaries/site-content/collections/documents/2024/12/10/samenleven-in-de-toekomst/Onderzoek%2BSamenleven%2Bin%2Bde%2Btoekomst.pdf"
+    },
+    {
+      "aanbieder": "SCP",
+      "id": "scp-sco-2023",
+      "opmerking": "",
+      "producten": [
+        "hoe-hecht-is-nederland"
+      ],
+      "rol": "data",
+      "titel": "SCP Sociale en Culturele Ontwikkelingen 2023",
+      "type": "pdf",
+      "url": "https://www.scp.nl/site/binaries/site-content/collections/documents/2023/04/14/sociale-en-culturele-ontwikkelingen-2023/Sociale%2Ben%2BCulturele%2BOntwikkelingen%2B-%2BStand%2Bvan%2BNederland%2B2023.pdf"
+    },
+    {
+      "aanbieder": "SCP",
+      "id": "scp-sim-2020",
+      "opmerking": "",
+      "producten": [
+        "hoe-hecht-is-nederland"
+      ],
+      "rol": "data",
+      "titel": "SCP Gevestigd, maar niet thuis: SIM 2020",
+      "type": "pdf",
+      "url": "https://www.scp.nl/site/binaries/site-content/collections/documents/2022/10/11/gevestigd-maar-niet-thuis.-eerste-bevindingen-uit-de-survey-integratie-migranten-sim2020/gevestigd-maar-niet-thuis.pdf"
+    },
+    {
       "aanbieder": "TenneT",
       "id": "tennet-monitor-2026-csv",
       "opmerking": "",
@@ -532,6 +736,66 @@
       "url": "https://population.un.org/wpp/"
     },
     {
+      "aanbieder": "rijksoverheid.nl",
+      "id": "rijksoverheid-nl-rijksoverheid-nieuwe-wet-seksuele-misdrijven",
+      "opmerking": "Juridische context voor de markering in 2024.",
+      "producten": [
+        "criminaliteit-nederland"
+      ],
+      "rol": "context",
+      "titel": "Rijksoverheid: Nieuwe Wet seksuele misdrijven",
+      "type": "web",
+      "url": "https://www.rijksoverheid.nl/themas/recht-veiligheid-en-defensie/seksuele-misdrijven/wet-seksuele-misdrijven"
+    },
+    {
+      "aanbieder": "scp.nl",
+      "id": "scp-nl-scp-burgerperspectieven-2025-sociale-cohesie",
+      "opmerking": "Directe stellingen en groepsverschillen over erbij horen en betrokkenheid bij de Nederlandse samenleving, gemeten in 2024.",
+      "producten": [
+        "hoe-hecht-is-nederland"
+      ],
+      "rol": "context",
+      "titel": "SCP Burgerperspectieven 2025: sociale cohesie",
+      "type": "web",
+      "url": "https://www.scp.nl/publicaties-scp/2025/06/burgerperspectieven-2025-bericht-2"
+    },
+    {
+      "aanbieder": "scp.nl",
+      "id": "scp-nl-scp-gevestigd-maar-niet-thuis-sim-2020",
+      "opmerking": "Tweedimensionale identificatie met Nederland en de herkomstgroep voor zeven herkomstgroepen in 2020.",
+      "producten": [
+        "hoe-hecht-is-nederland"
+      ],
+      "rol": "context",
+      "titel": "SCP: Gevestigd, maar niet thuis (SIM 2020)",
+      "type": "web",
+      "url": "https://www.scp.nl/documenten/2022/10/11/gevestigd-maar-niet-thuis.-eerste-bevindingen-uit-de-survey-integratie-migranten-sim2020"
+    },
+    {
+      "aanbieder": "scp.nl",
+      "id": "scp-nl-scp-samenleven-in-de-toekomst",
+      "opmerking": "Landelijke cijfers uit 2022 over thuisgevoel en verantwoordelijkheidsgevoel naar leeftijd, opleiding en herkomst.",
+      "producten": [
+        "hoe-hecht-is-nederland"
+      ],
+      "rol": "context",
+      "titel": "SCP: Samenleven in de toekomst",
+      "type": "web",
+      "url": "https://www.scp.nl/documenten/2024/12/10/samenleven-in-de-toekomst"
+    },
+    {
+      "aanbieder": "scp.nl",
+      "id": "scp-nl-scp-sociale-en-culturele-ontwikkelingen-2023",
+      "opmerking": "Vergelijkbare SIM-metingen van thuisgevoel in 2006, 2010, 2015 en 2020, samengevat voor mensen met en zonder migratieachtergrond.",
+      "producten": [
+        "hoe-hecht-is-nederland"
+      ],
+      "rol": "context",
+      "titel": "SCP: Sociale en Culturele Ontwikkelingen 2023",
+      "type": "web",
+      "url": "https://www.scp.nl/documenten/2023/04/14/sociale-en-culturele-ontwikkelingen-2023"
+    },
+    {
       "aanbieder": "t-Bataafsche Broederschap",
       "id": "autochtoonse-bevolking-legacy-baseline",
       "opmerking": "Gechecksumde baseline totdat de volledige historische CBS-pipeline is gereconstrueerd.",
@@ -554,6 +818,18 @@
       "titel": "VEMW: Monitor Voorzieningszekerheid 2026",
       "type": "web",
       "url": "https://www.vemw.nl/kennisbank-detail/2026/06/10/monitor-voorzieningszekerheid-2026"
+    },
+    {
+      "aanbieder": "verdragenbank.overheid.nl",
+      "id": "verdragenbank-overheid-nl-verdragenbank-nederlands-italiaans-wervingsakkoord-van-1960",
+      "opmerking": "Primaire bron voor het tijdspunt in 1960.",
+      "producten": [
+        "criminaliteit-nederland"
+      ],
+      "rol": "context",
+      "titel": "Verdragenbank: Nederlands-Italiaans wervingsakkoord van 1960",
+      "type": "web",
+      "url": "https://verdragenbank.overheid.nl/nl/Verdrag/Details/008914"
     },
     {
       "aanbieder": "volkshuisvestingnederland.nl",
