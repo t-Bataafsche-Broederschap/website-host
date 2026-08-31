@@ -1,5 +1,5 @@
 {
-  "gegenereerdOp": "2026-08-02T22:09:34Z",
+  "gegenereerdOp": "2026-08-30T22:01:56Z",
   "producten": [
     {
       "beschrijving": "Bevolking, migratie, woningbouw en netcapaciteit in een lange tijdreeks.",
@@ -178,6 +178,18 @@
       "titel": "Hoe hecht is Nederland?"
     },
     {
+      "bronnen": [
+        "cbs-84808ned",
+        "cbs-84809ned",
+        "cbs-cbs-minder-immigratie-in-2024-vooral-minder-kennismigranten"
+      ],
+      "contentPad": "content/projecten/migratie-in-nederland/index.html",
+      "publiekeEindpunten": {},
+      "slug": "migratie-in-nederland",
+      "status": "bestaand",
+      "titel": "Waarom komen mensen naar Nederland?"
+    },
+    {
       "beschrijving": "Migratieachtergrond per gemeente met gemeentegeometrieën.",
       "bronnen": [
         "vzinfo-nl-vzinfo-bevolking-regionaal-migratieachtergrond",
@@ -219,6 +231,30 @@
       "slug": "politiek-ouderschap",
       "status": "publiek",
       "titel": "Politiek Ouderschap"
+    },
+    {
+      "beschrijving": "Uitgaande remittances, bestemmingscorridors en inkomens naar herkomst.",
+      "bronnen": [
+        "dnb-nl-dnb-remittances-betaald-door-nederlandse-huishoudens-aan-het-buitenland",
+        "cbs-cbs-begrip-nationaliteit",
+        "cbs-86136ned",
+        "cbs-85879ned",
+        "dnb-remittances-2026",
+        "belastingdienst-btw-tarieven-2026"
+      ],
+      "compatibiliteit": [
+        {
+          "bestand": "data.json",
+          "pad": "/projecten/remittances-nederland/data.json"
+        }
+      ],
+      "contentPad": "content/projecten/remittances-nederland/index.html",
+      "eigenaar": "t-Bataafsche Broederschap",
+      "metadataPad": "gegevensproducten/remittances-nederland/product.yaml",
+      "publiekeEindpunten": {},
+      "slug": "remittances-nederland",
+      "status": "publiek",
+      "titel": "Remittance Monitor Nederland"
     },
     {
       "beschrijving": "Scenario's en resultaten uit de Monitor Voorzieningszekerheid 2026.",

@@ -1,5 +1,5 @@
 {
-  "gegenereerdOp": "2026-08-02T22:09:34Z",
+  "gegenereerdOp": "2026-08-30T22:01:56Z",
   "gegevenssets": [
     {
       "bestanden": [
@@ -224,12 +224,32 @@
     {
       "bestanden": [],
       "formaat": "web",
+      "gegevensbron": "cbs-cbs-begrip-nationaliteit",
+      "id": "bronset-cbs-cbs-begrip-nationaliteit",
+      "laag": "ruw",
+      "product": "remittances-nederland",
+      "status": "gecatalogiseerd",
+      "titel": "CBS: begrip nationaliteit"
+    },
+    {
+      "bestanden": [],
+      "formaat": "web",
       "gegevensbron": "cbs-cbs-cbs-introduceert-nieuwe-indeling-bevolking-naar-herkomst",
       "id": "bronset-cbs-cbs-cbs-introduceert-nieuwe-indeling-bevolking-naar-herkomst",
       "laag": "ruw",
       "product": "geboortecijfers-nederlandse-afkomst",
       "status": "gecatalogiseerd",
       "titel": "CBS: CBS introduceert nieuwe indeling bevolking naar herkomst"
+    },
+    {
+      "bestanden": [],
+      "formaat": "web",
+      "gegevensbron": "cbs-cbs-minder-immigratie-in-2024-vooral-minder-kennismigranten",
+      "id": "bronset-cbs-cbs-minder-immigratie-in-2024-vooral-minder-kennismigranten",
+      "laag": "ruw",
+      "product": "migratie-in-nederland",
+      "status": "gecatalogiseerd",
+      "titel": "CBS: Minder immigratie in 2024, vooral minder kennismigranten"
     },
     {
       "bestanden": [],
@@ -310,6 +330,16 @@
       "product": "autochtoonse-nederlandse-bevolking",
       "status": "gecatalogiseerd",
       "titel": "Netbeheer Nederland: Capaciteitskaart elektriciteitsnet"
+    },
+    {
+      "bestanden": [],
+      "formaat": "web",
+      "gegevensbron": "dnb-nl-dnb-remittances-betaald-door-nederlandse-huishoudens-aan-het-buitenland",
+      "id": "bronset-dnb-nl-dnb-remittances-betaald-door-nederlandse-huishoudens-aan-het-buitenland",
+      "laag": "ruw",
+      "product": "remittances-nederland",
+      "status": "gecatalogiseerd",
+      "titel": "DNB: remittances betaald door Nederlandse huishoudens aan het buitenland"
     },
     {
       "bestanden": [],
@@ -744,6 +774,22 @@
     {
       "bestanden": [
         {
+          "aantalRecords": 6,
+          "bytes": 594,
+          "formaat": "json",
+          "pad": "content/projecten/migratie-in-nederland/migratie-data.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "migratie-in-nederland-migratie-data",
+      "laag": "publiek",
+      "product": "migratie-in-nederland",
+      "status": "bestaand",
+      "titel": "Waarom komen mensen naar Nederland? - migratie-data.json"
+    },
+    {
+      "bestanden": [
+        {
           "formaat": "json",
           "pad": "/api/v1/projecten/politiek-ouderschap/kamerleden.json"
         }
@@ -785,6 +831,21 @@
       "publiekBestand": "/api/v1/projecten/politiek-ouderschap/data.json",
       "status": "beschreven",
       "titel": "Frontend-viewmodel politiek ouderschap"
+    },
+    {
+      "bestanden": [
+        {
+          "formaat": "json",
+          "pad": "/api/v1/projecten/remittances-nederland/data.json"
+        }
+      ],
+      "formaat": "json",
+      "id": "remittances-viewmodel",
+      "laag": "publiek",
+      "product": "remittances-nederland",
+      "publiekBestand": "/api/v1/projecten/remittances-nederland/data.json",
+      "status": "beschreven",
+      "titel": "Remittances, inkomensgroepen en ecologische corridorproxy's"
     },
     {
       "bestanden": [

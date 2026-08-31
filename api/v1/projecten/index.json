@@ -1,5 +1,5 @@
 {
-  "aantalProjectenMetApi": 12,
+  "aantalProjectenMetApi": 13,
   "links": {
     "api": "/api/v1/index.json",
     "catalogus": "/api/v1/catalogus/index.json",
@@ -54,6 +54,12 @@
       "manifest": "/api/v1/projecten/politiek-ouderschap/manifest.json",
       "slug": "politiek-ouderschap",
       "titel": "Politiek Ouderschap"
+    },
+    {
+      "href": "/api/v1/projecten/remittances-nederland/index.json",
+      "manifest": "/api/v1/projecten/remittances-nederland/manifest.json",
+      "slug": "remittances-nederland",
+      "titel": "Remittance Monitor Nederland"
     },
     {
       "href": "/api/v1/projecten/tennet-monitor-voorzieningszekerheid-2026/index.json",

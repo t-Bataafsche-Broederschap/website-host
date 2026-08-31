@@ -1,6 +1,18 @@
 {
-  "gegenereerdOp": "2026-08-02T22:09:34Z",
+  "gegenereerdOp": "2026-08-30T22:01:56Z",
   "gegevensbronnen": [
+    {
+      "aanbieder": "Belastingdienst",
+      "id": "belastingdienst-btw-tarieven-2026",
+      "opmerking": "",
+      "producten": [
+        "remittances-nederland"
+      ],
+      "rol": "methodiek",
+      "titel": "Belastingdienst: btw-tarieven",
+      "type": "html",
+      "url": "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/btw/btw_berekenen_aan_uw_klanten/btw_berekenen/btw_tarief/"
+    },
     {
       "aanbieder": "CBS",
       "id": "cbs-37325",
@@ -126,7 +138,8 @@
       "id": "cbs-84808ned",
       "opmerking": "Immigranten uit landen van de Europese Unie en de Europese Vrijhandelsassociatie naar afgeleid migratiedoel, gebruikt voor de Motieven-tab.",
       "producten": [
-        "autochtoonse-nederlandse-bevolking"
+        "autochtoonse-nederlandse-bevolking",
+        "migratie-in-nederland"
       ],
       "rol": "context",
       "titel": "CBS StatLine: immigranten uit Europese Unie en Europese Vrijhandelsassociatie; afgeleid migratiedoel",
@@ -138,7 +151,8 @@
       "id": "cbs-84809ned",
       "opmerking": "Immigranten exclusief landen van de Europese Unie en de Europese Vrijhandelsassociatie naar migratiemotief van de Immigratie- en Naturalisatiedienst, gebruikt voor de Motieven-tab.",
       "producten": [
-        "autochtoonse-nederlandse-bevolking"
+        "autochtoonse-nederlandse-bevolking",
+        "migratie-in-nederland"
       ],
       "rol": "context",
       "titel": "CBS StatLine: immigranten van buiten Europese Unie en Europese Vrijhandelsassociatie; migratiemotief",
@@ -364,6 +378,30 @@
     },
     {
       "aanbieder": "CBS",
+      "id": "cbs-85879ned",
+      "opmerking": "",
+      "producten": [
+        "remittances-nederland"
+      ],
+      "rol": "data",
+      "titel": "CBS StatLine: Bbp, productie en bestedingen; kwartalen, nationale rekeningen",
+      "type": "odata",
+      "url": null
+    },
+    {
+      "aanbieder": "CBS",
+      "id": "cbs-86136ned",
+      "opmerking": "",
+      "producten": [
+        "remittances-nederland"
+      ],
+      "rol": "data",
+      "titel": "CBS StatLine: Welvaart van personen; kerncijfers naar herkomst",
+      "type": "odata",
+      "url": null
+    },
+    {
+      "aanbieder": "CBS",
       "id": "cbs-buitensluiting-2024",
       "opmerking": "",
       "producten": [
@@ -388,6 +426,18 @@
     },
     {
       "aanbieder": "CBS",
+      "id": "cbs-cbs-begrip-nationaliteit",
+      "opmerking": "Methodische uitleg waarom nationaliteit en herkomst niet hetzelfde zijn en hoe CBS dubbele nationaliteiten prioriteert.",
+      "producten": [
+        "remittances-nederland"
+      ],
+      "rol": "context",
+      "titel": "CBS: begrip nationaliteit",
+      "type": "web",
+      "url": "https://www.cbs.nl/nl-nl/onze-diensten/methoden/begrippen/nationaliteit"
+    },
+    {
+      "aanbieder": "CBS",
       "id": "cbs-cbs-cbs-introduceert-nieuwe-indeling-bevolking-naar-herkomst",
       "opmerking": "Definitiebron voor Nederlandse herkomst: zelf in Nederland geboren en beide ouders in Nederland geboren.",
       "producten": [
@@ -397,6 +447,18 @@
       "titel": "CBS: CBS introduceert nieuwe indeling bevolking naar herkomst",
       "type": "web",
       "url": "https://www.cbs.nl/nl-nl/nieuws/2022/07/cbs-introduceert-nieuwe-indeling-bevolking-naar-herkomst"
+    },
+    {
+      "aanbieder": "CBS",
+      "id": "cbs-cbs-minder-immigratie-in-2024-vooral-minder-kennismigranten",
+      "opmerking": "Recente context en de afzonderlijke reeks voor niet-EU/EFTA-kennismigranten.",
+      "producten": [
+        "migratie-in-nederland"
+      ],
+      "rol": "context",
+      "titel": "CBS: Minder immigratie in 2024, vooral minder kennismigranten",
+      "type": "web",
+      "url": "https://www.cbs.nl/item?sc_itemid=e98c2ad9-6a05-4de6-a3dc-8f31e826f654&sc_lang=nl-nl"
     },
     {
       "aanbieder": "CBS",
@@ -481,6 +543,18 @@
       "titel": "CBS Veiligheidsmonitor 2025: landelijke trends",
       "type": "html",
       "url": "https://www.cbs.nl/nl-nl/longread/rapportages/2026/veiligheidsmonitor-2025?onepage=true"
+    },
+    {
+      "aanbieder": "De Nederlandsche Bank",
+      "id": "dnb-remittances-2026",
+      "opmerking": "",
+      "producten": [
+        "remittances-nederland"
+      ],
+      "rol": "data",
+      "titel": "DNB: uitgaande overmakingen vanuit Nederland naar het buitenland",
+      "type": "xlsx",
+      "url": "https://www.dnb.nl/media/vkncb1xg/betalingsbalans-data-op-maat-vraag-remittances.xlsx"
     },
     {
       "aanbieder": "EUBudget",
@@ -686,6 +760,18 @@
       "titel": "Netbeheer Nederland: Capaciteitskaart elektriciteitsnet",
       "type": "web",
       "url": "https://data.partnersinenergie.nl/capaciteitskaart/info/algemene-info"
+    },
+    {
+      "aanbieder": "dnb.nl",
+      "id": "dnb-nl-dnb-remittances-betaald-door-nederlandse-huishoudens-aan-het-buitenland",
+      "opmerking": "DNB-reeks 2016–2025 met het totaal en de 25 in 2025 grootste bestemmingslanden, afgerond op miljoenen euro.",
+      "producten": [
+        "remittances-nederland"
+      ],
+      "rol": "context",
+      "titel": "DNB: remittances betaald door Nederlandse huishoudens aan het buitenland",
+      "type": "web",
+      "url": "https://www.dnb.nl/statistieken/data-op-maat/gepubliceerde-dataverzoeken/"
     },
     {
       "aanbieder": "github.com",

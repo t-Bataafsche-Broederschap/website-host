@@ -1,5 +1,5 @@
 {
-  "gegenereerdOp": "2026-08-02T22:09:34Z",
+  "gegenereerdOp": "2026-08-30T22:01:56Z",
   "relaties": [
     {
       "naar": "gegevensset:autochtoonse-bevolking-leeftijdsopbouw",
@@ -20,6 +20,11 @@
       "naar": "gegevensset:autochtoonse-bevolking-viewmodel",
       "type": "afgeleid-van",
       "van": "gegevensbron:autochtoonse-bevolking-legacy-baseline"
+    },
+    {
+      "naar": "gegevensset:remittances-viewmodel",
+      "type": "afgeleid-van",
+      "van": "gegevensbron:belastingdienst-btw-tarieven-2026"
     },
     {
       "naar": "gegevensset:bronset-cbs-2026",
@@ -80,6 +85,16 @@
       "naar": "gegevensset:bronset-cbs-84808ned",
       "type": "levert",
       "van": "gegevensbron:cbs-84808ned"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-84808ned",
+      "type": "levert",
+      "van": "gegevensbron:cbs-84808ned"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-84809ned",
+      "type": "levert",
+      "van": "gegevensbron:cbs-84809ned"
     },
     {
       "naar": "gegevensset:bronset-cbs-84809ned",
@@ -212,6 +227,16 @@
       "van": "gegevensbron:cbs-85848ned"
     },
     {
+      "naar": "gegevensset:remittances-viewmodel",
+      "type": "afgeleid-van",
+      "van": "gegevensbron:cbs-85879ned"
+    },
+    {
+      "naar": "gegevensset:remittances-viewmodel",
+      "type": "afgeleid-van",
+      "van": "gegevensbron:cbs-86136ned"
+    },
+    {
       "naar": "gegevensset:sociale-cohesie-verbondenheid",
       "type": "afgeleid-van",
       "van": "gegevensbron:cbs-buitensluiting-2024"
@@ -222,9 +247,19 @@
       "van": "gegevensbron:cbs-cbs-12e-volkstelling-annex-woningtelling-1947"
     },
     {
+      "naar": "gegevensset:bronset-cbs-cbs-begrip-nationaliteit",
+      "type": "levert",
+      "van": "gegevensbron:cbs-cbs-begrip-nationaliteit"
+    },
+    {
       "naar": "gegevensset:bronset-cbs-cbs-cbs-introduceert-nieuwe-indeling-bevolking-naar-herkomst",
       "type": "levert",
       "van": "gegevensbron:cbs-cbs-cbs-introduceert-nieuwe-indeling-bevolking-naar-herkomst"
+    },
+    {
+      "naar": "gegevensset:bronset-cbs-cbs-minder-immigratie-in-2024-vooral-minder-kennismigranten",
+      "type": "levert",
+      "van": "gegevensbron:cbs-cbs-minder-immigratie-in-2024-vooral-minder-kennismigranten"
     },
     {
       "naar": "gegevensset:bronset-cbs-cbs-moeders-iets-ouder-bij-geboorte-eerste-kind",
@@ -275,6 +310,16 @@
       "naar": "gegevensset:bronset-data-partnersinenergie-nl-netbeheer-nederland-capaciteitskaart-elektriciteitsnet",
       "type": "levert",
       "van": "gegevensbron:data-partnersinenergie-nl-netbeheer-nederland-capaciteitskaart-elektriciteitsnet"
+    },
+    {
+      "naar": "gegevensset:bronset-dnb-nl-dnb-remittances-betaald-door-nederlandse-huishoudens-aan-het-buitenland",
+      "type": "levert",
+      "van": "gegevensbron:dnb-nl-dnb-remittances-betaald-door-nederlandse-huishoudens-aan-het-buitenland"
+    },
+    {
+      "naar": "gegevensset:remittances-viewmodel",
+      "type": "afgeleid-van",
+      "van": "gegevensbron:dnb-remittances-2026"
     },
     {
       "naar": "gegevensset:eu-begrotingsstromen-jaarwaarden",
@@ -485,6 +530,21 @@
       "naar": "gegevensset:bronset-zoek-officielebekendmakingen-nl-staat-van-de-volkshuisvesting-2025",
       "type": "levert",
       "van": "gegevensbron:zoek-officielebekendmakingen-nl-staat-van-de-volkshuisvesting-2025"
+    },
+    {
+      "naar": "gegevensset:migratie-in-nederland-migratie-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-cbs-84808ned"
+    },
+    {
+      "naar": "gegevensset:migratie-in-nederland-migratie-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-cbs-84809ned"
+    },
+    {
+      "naar": "gegevensset:migratie-in-nederland-migratie-data",
+      "type": "verwerkt-tot",
+      "van": "gegevensset:bronset-cbs-cbs-minder-immigratie-in-2024-vooral-minder-kennismigranten"
     },
     {
       "naar": "gegevensset:sociale-cohesie-viewmodel",
